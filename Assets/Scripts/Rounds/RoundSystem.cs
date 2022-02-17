@@ -28,11 +28,12 @@ public class RoundSystem : MonoBehaviour
 
     [Header("Enemy Settings")]
     [SerializeField] GameObject Enemy;
-    [SerializeField] Transform SpawnPoint;
+    [SerializeField] Transform[] SpawnPoints;
     [SerializeField] float SpawnInterval;
     [SerializeField] int CurrentEnemiesToSpawn;
     [SerializeField] int DefaultEnemiesToSpawn;
     [SerializeField] int RoundEnemyIncreaser;
+
 
 
     private void Start()
@@ -57,12 +58,12 @@ public class RoundSystem : MonoBehaviour
     {
         if (CurrentTick >= 0 && CurrentTick <= DayTicks)
         {
-            Debug.Log("Its day time baby");
+            //Debug.Log("Its day time baby");
         }
 
         if (CurrentTick >= DayTicks && CurrentTick <= NightTicks)
         {
-            Debug.Log("Its night time baby");
+            //Debug.Log("Its night time baby");
         }
 
         if (CurrentEnemiesToSpawn <= 0)
@@ -85,7 +86,8 @@ public class RoundSystem : MonoBehaviour
 
     private void SpawnDelay()
     {
-        Instantiate(Enemy, new Vector3(0, 0, 0), Quaternion.identity);
+        int rand = Random.Range(0, SpawnPoints.Length);
+        Instantiate(Enemy, SpawnPoints[rand].transform.position, Quaternion.identity);
         CurrentEnemiesToSpawn--;
     }
 
