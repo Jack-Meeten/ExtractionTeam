@@ -17,16 +17,33 @@ public class TowerClass : MonoBehaviour
     public GameObject barrelMountPoint;
     public float turnSpeed = 90f;
 
-    public bool allowFire = true;
+    private bool allowFire = true;
+
+    public bool isAnimated;
+    public Animator _animation;
+
+    public LayerMask layerMask;
+
     protected virtual void Update()
     {
         FindAllEnemies();
 
         if (target != null)
         {
-            BaseRotate();
-            BarrelRotate();
+            if ((transform.position - target.transform.position).magnitude < range)
+            {
+                BaseRotate();
+                BarrelRotate();
+            }
             IsAimed();
+        }
+        if (isAnimated && !allowFire)
+        {
+            _animation.SetBool("Shoot", true);
+        }
+        if (isAnimated && allowFire)
+        {
+            _animation.SetBool("Shoot", false);
         }
     }
 
@@ -85,11 +102,12 @@ public class TowerClass : MonoBehaviour
     {
         var ray = new Ray(barrelMountPoint.transform.position, -transform.right);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 1000, 3))
+        if (Physics.Raycast(ray, out hit, 1000, layerMask))
         {
-            Debug.Log(hit.transform.name);
+            Debug.DrawRay(transform.position, transform.position - target.transform.position);
             if (allowFire && (transform.position - target.transform.position).magnitude < range)
             {
+                //Debug.Log(hit.transform.gameObject);
                 Debug.DrawLine(barrelMountPoint.transform.position, target.position, Color.red);
                 StartCoroutine(Shoot());
             }
