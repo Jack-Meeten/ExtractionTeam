@@ -30,10 +30,13 @@ public class SplineFinding : MonoBehaviour
     private IEnumerator Travel(int routeNumber)
     {
         coroutineAllowed = false;
-        Vector3 p0 = routes[routeNumber].GetChild(0).position;
-        Vector3 p1 = routes[routeNumber].GetChild(1).position;
-        Vector3 p2 = routes[routeNumber].GetChild(2).position;
-        Vector3 p3 = routes[routeNumber].GetChild(3).position;
+        //Transform _p = routes[0].GetChild(routeNumber).transform;
+        //get b points
+        Vector3 p0 = routes[0].GetChild(routeNumber).GetChild(0).position;
+        Vector3 p1 = routes[0].GetChild(routeNumber).GetChild(1).position;
+        Vector3 p2 = routes[0].GetChild(routeNumber).GetChild(2).position;
+        Vector3 p3 = routes[0].GetChild(routeNumber).GetChild(3).position;
+
 
         while (tParam < 1)
         {
@@ -48,8 +51,8 @@ public class SplineFinding : MonoBehaviour
         tParam = 0f;
         routeToGO += 1;
 
-        if (routeToGO > routes.Length - 1)
-            routeToGO = 0;
+        //if (routeToGO > routes.Length - 1)
+          //  routeToGO = 0;
 
         coroutineAllowed = true;
     }

@@ -20,8 +20,5 @@ public class SplineVisualiser : MonoBehaviour
 
         Gizmos.DrawLine(new Vector3(controlPoints[0].position.x, 0, controlPoints[0].position.z), new Vector3(controlPoints[1].position.x, 0, controlPoints[1].position.z));
         Gizmos.DrawLine(new Vector3(controlPoints[2].position.x, 0, controlPoints[2].position.z), new Vector3(controlPoints[3].position.x, 0, controlPoints[3].position.z));
-        Gizmos.DrawLine(new Vector3(controlPoints[4].position.x, 0, controlPoints[0].position.z), new Vector3(controlPoints[1].position.x, 0, controlPoints[5].position.z));
-        Gizmos.DrawLine(new Vector3(controlPoints[6].position.x, 0, controlPoints[2].position.z), new Vector3(controlPoints[3].position.x, 0, controlPoints[7].position.z));
-
     }
 }
