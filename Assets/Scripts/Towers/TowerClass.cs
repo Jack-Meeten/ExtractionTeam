@@ -102,12 +102,11 @@ public class TowerClass : MonoBehaviour
     {
         var ray = new Ray(barrelMountPoint.transform.position, -transform.right);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 1000, layerMask))
+        if (Physics.Raycast(ray, out hit, 1000))//layerMask
         {
             Debug.DrawRay(transform.position, transform.position - target.transform.position);
             if (allowFire && (transform.position - target.transform.position).magnitude < range)
             {
-                //Debug.Log(hit.transform.gameObject);
                 Debug.DrawLine(barrelMountPoint.transform.position, target.position, Color.red);
                 StartCoroutine(Shoot());
             }
