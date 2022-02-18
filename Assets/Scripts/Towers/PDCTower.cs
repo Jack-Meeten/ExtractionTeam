@@ -4,5 +4,12 @@ using UnityEngine;
 
 public class PDCTower : TowerClass
 {
-
+    protected override void Update()
+    {
+        base.Update();
+        if (base.target !=null)
+        {
+            Debug.DrawLine(transform.position, base.target.position, Color.yellow);
+        }
+    }
 }

@@ -8,16 +8,17 @@ public class TowerClass : MonoBehaviour
     public float Damage;
     public float rateOfFire;
     public float range;
+    public ParticleSystem MuzzleFlash;
 
     private List<Transform> enemies = new List<Transform>();
-    [SerializeField] Transform target;
+    public Transform target;
 
     public GameObject baseMountPoint;
     public GameObject barrelMountPoint;
     public float turnSpeed = 90f;
 
     public bool allowFire = true;
-    void Update()
+    protected virtual void Update()
     {
         FindAllEnemies();
 
@@ -64,7 +65,7 @@ public class TowerClass : MonoBehaviour
         var los = target.position - baseMountPoint.transform.position;//gets position difference
         los.y = 0;
         var rotation = Quaternion.LookRotation(los);//get look rotation
-        baseMountPoint.transform.rotation = Quaternion.Slerp(baseMountPoint.transform.rotation, rotation, Time.deltaTime * turnSpeed);
+        baseMountPoint.transform.rotation = Quaternion.Slerp(baseMountPoint.transform.rotation, rotation, turnSpeed * Time.deltaTime);
     }
     public void BarrelRotate()
     {
@@ -86,6 +87,7 @@ public class TowerClass : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 1000, 3))
         {
+            Debug.Log(hit.transform.name);
             if (allowFire && (transform.position - target.transform.position).magnitude < range)
             {
                 Debug.DrawLine(barrelMountPoint.transform.position, target.position, Color.red);
@@ -97,6 +99,7 @@ public class TowerClass : MonoBehaviour
     {
         allowFire = false;
         target.GetComponent<EnemyStats>().health -= Damage;
+        MuzzleFlash.Play();
         yield return new WaitForSeconds(rateOfFire * Time.deltaTime);
         allowFire = true;
     }
