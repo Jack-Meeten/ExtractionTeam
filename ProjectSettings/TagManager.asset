@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shuttle
+  - Enemy
+  - Spline
   layers:
   - Default
   - TransparentFX

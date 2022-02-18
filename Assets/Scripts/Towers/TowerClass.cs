@@ -1,32 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class TowerClass : MonoBehaviour
 {
-    public GameObject target;
     public int Damage;
-    private List<Transform> enemies = new List<Transform>();
-    void Start()
-    {
-        InvokeRepeating("FindAllEnemies", 0, 2);
-    }
+    public int rateOfFire;
 
+    private List<Transform> enemies = new List<Transform>();
+    [SerializeField] Transform target;
+
+    public GameObject baseMountPoint;
+    public GameObject barrelMountPoint;
+    public float turnSpeed = 90f;
+
+    private bool allowFire;
     void Update()
     {
-        
+        FindAllEnemies();
+
+        if (target != null)
+        {
+            BaseRotate();
+            BarrelRotate();
+            IsAimed();
+        }
     }
 
-    Transform FindAllEnemies()
+    public void FindAllEnemies()
     {
         foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
         {
             Transform enemyTransform = enemy.gameObject.transform;
-            if (enemies.Contains(enemyTransform))
+
+            if (enemies.Contains(enemyTransform) == false)
             {
-                break;
+                enemies.Add(enemyTransform);
+                Debug.Log("Added");
             }
-            enemies.Add(enemyTransform);
         }
 
         Transform bestTarget = null;
@@ -41,9 +53,45 @@ public class TowerClass : MonoBehaviour
                 closeestDistanceSqr = dSqrToTarget;
                 bestTarget = potentialTarget;
             }
-            Transform close = bestTarget;
-            return bestTarget;
+            target = bestTarget;
         }
 
+    }
+
+    private void BaseRotate()
+    {
+        var los = target.position - baseMountPoint.transform.position;//gets position difference
+        los.y = 0;
+        var rotation = Quaternion.LookRotation(los);//get look rotation
+        baseMountPoint.transform.rotation = Quaternion.Slerp(baseMountPoint.transform.rotation, rotation, Time.deltaTime * turnSpeed);
+    }
+    private void BarrelRotate()
+    {
+        var los = target.position - barrelMountPoint.transform.position;//gets position difference
+        los.x = 0;
+        var rotation = Quaternion.LookRotation(los);//get look rotation
+        barrelMountPoint.transform.rotation = Quaternion.Slerp(barrelMountPoint.transform.rotation, rotation, Time.deltaTime * turnSpeed);
+
+
+        var los2 = target.position - barrelMountPoint.transform.position;//gets position difference
+        los.z = 0;
+        var rotation2 = Quaternion.LookRotation(los2);//get look rotation
+        barrelMountPoint.transform.rotation = Quaternion.Slerp(barrelMountPoint.transform.rotation, rotation2, Time.deltaTime * turnSpeed);
+    }
+
+    private void IsAimed()
+    {
+        var ray = new Ray(barrelMountPoint.transform.position, -transform.right);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 1000, 3))
+        {
+            Debug.DrawLine(barrelMountPoint.transform.position, target.position, Color.red);
+            Shoot();
+        }
+    }
+    private void Shoot()
+    {
+        allowFire = false;
+        Debug.Log("fire");
     }
 }

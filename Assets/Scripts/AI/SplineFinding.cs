@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SplineFinding : MonoBehaviour
 {
-    [SerializeField] private Transform[] routes;
+    [SerializeField] List<Transform> routes = new List<Transform>();
     private int routeToGO;
     private float tParam;
     private Vector3 currentPosision;
@@ -17,6 +17,10 @@ public class SplineFinding : MonoBehaviour
         tParam = 0f;
         speedModifier = 0.5f;
         coroutineAllowed = true;
+        foreach (GameObject route in GameObject.FindGameObjectsWithTag("Spline"))
+        {
+            routes.Add(route.transform);
+        }
     }
 
     void Update()
