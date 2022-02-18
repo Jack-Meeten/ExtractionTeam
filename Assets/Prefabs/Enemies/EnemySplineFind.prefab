@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9133131290195037002}
   - component: {fileID: 9133131290195037001}
   - component: {fileID: 9133131290195037000}
+  - component: {fileID: -4786704532309685092}
   m_Layer: 3
   m_Name: EnemySplineFind
   m_TagString: Enemy
@@ -110,3 +111,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   routes: []
+--- !u!114 &-4786704532309685092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9133131290195037006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae338b3d2d73dbd459796eac97620420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20

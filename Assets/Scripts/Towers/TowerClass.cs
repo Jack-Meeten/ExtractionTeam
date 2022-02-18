@@ -5,8 +5,9 @@ using UnityEditor;
 
 public class TowerClass : MonoBehaviour
 {
-    public int Damage;
-    public int rateOfFire;
+    public float Damage;
+    public float rateOfFire;
+    public float range;
 
     private List<Transform> enemies = new List<Transform>();
     [SerializeField] Transform target;
@@ -15,7 +16,7 @@ public class TowerClass : MonoBehaviour
     public GameObject barrelMountPoint;
     public float turnSpeed = 90f;
 
-    private bool allowFire;
+    public bool allowFire = true;
     void Update()
     {
         FindAllEnemies();
@@ -30,6 +31,7 @@ public class TowerClass : MonoBehaviour
 
     public void FindAllEnemies()
     {
+        enemies.Clear();
         foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
         {
             Transform enemyTransform = enemy.gameObject.transform;
@@ -37,7 +39,6 @@ public class TowerClass : MonoBehaviour
             if (enemies.Contains(enemyTransform) == false)
             {
                 enemies.Add(enemyTransform);
-                Debug.Log("Added");
             }
         }
 
@@ -58,14 +59,14 @@ public class TowerClass : MonoBehaviour
 
     }
 
-    private void BaseRotate()
+    public void BaseRotate()
     {
         var los = target.position - baseMountPoint.transform.position;//gets position difference
         los.y = 0;
         var rotation = Quaternion.LookRotation(los);//get look rotation
         baseMountPoint.transform.rotation = Quaternion.Slerp(baseMountPoint.transform.rotation, rotation, Time.deltaTime * turnSpeed);
     }
-    private void BarrelRotate()
+    public void BarrelRotate()
     {
         var los = target.position - barrelMountPoint.transform.position;//gets position difference
         los.x = 0;
@@ -79,19 +80,25 @@ public class TowerClass : MonoBehaviour
         barrelMountPoint.transform.rotation = Quaternion.Slerp(barrelMountPoint.transform.rotation, rotation2, Time.deltaTime * turnSpeed);
     }
 
-    private void IsAimed()
+    public void IsAimed()
     {
         var ray = new Ray(barrelMountPoint.transform.position, -transform.right);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 1000, 3))
         {
-            Debug.DrawLine(barrelMountPoint.transform.position, target.position, Color.red);
-            Shoot();
+            if (allowFire && (transform.position - target.transform.position).magnitude < range)
+            {
+                Debug.DrawLine(barrelMountPoint.transform.position, target.position, Color.red);
+                StartCoroutine(Shoot());
+            }
         }
     }
-    private void Shoot()
+    public IEnumerator Shoot()
     {
         allowFire = false;
-        Debug.Log("fire");
+        target.GetComponent<EnemyStats>().health -= Damage;
+        yield return new WaitForSeconds(rateOfFire * Time.deltaTime);
+        allowFire = true;
     }
+
 }
