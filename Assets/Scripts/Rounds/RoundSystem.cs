@@ -10,6 +10,7 @@ public class RoundSystem : MonoBehaviour
     [SerializeField] float TickSpeed;
     [SerializeField] float TickValue;
 
+
     [Header(" ")]
     [SerializeField] bool TickActive;
     [Header(" ")]
@@ -33,6 +34,13 @@ public class RoundSystem : MonoBehaviour
     [SerializeField] int CurrentEnemiesToSpawn;
     [SerializeField] int DefaultEnemiesToSpawn;
     [SerializeField] int RoundEnemyIncreaser;
+    [Header(" ")]
+
+
+    [Header("Day Night Cycle")]
+    [SerializeField] GameObject RotationPivot;
+    [SerializeField] float LightAngle;
+    [SerializeField] float OffsetAngle;
 
 
 
@@ -52,6 +60,10 @@ public class RoundSystem : MonoBehaviour
     {
         DayCycle();
         RoundCheck();
+        AngleRotation();
+
+        // Update Light angle
+        RotationPivot.transform.rotation = Quaternion.Euler(LightAngle, OffsetAngle, 0);
     }
 
     void DayCycle()
@@ -89,6 +101,11 @@ public class RoundSystem : MonoBehaviour
         int rand = Random.Range(0, SpawnPoints.Length);
         Instantiate(Enemy, SpawnPoints[rand].transform.position, Quaternion.identity);
         CurrentEnemiesToSpawn--;
+    }
+
+    void AngleRotation()
+    {
+        LightAngle = CurrentTick / (NightTicks / 360);
     }
 
     IEnumerator TickPass()
