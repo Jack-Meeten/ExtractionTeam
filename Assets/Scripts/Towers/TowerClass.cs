@@ -117,8 +117,7 @@ public class TowerClass : MonoBehaviour
         allowFire = false;
         target.GetComponent<EnemyStats>().health -= Damage;
         MuzzleFlash.Play();
-        yield return new WaitForSeconds(rateOfFire * Time.deltaTime);
+        yield return new WaitForSeconds(Time.deltaTime / rateOfFire);
         allowFire = true;
     }
-
 }

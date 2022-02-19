@@ -8,14 +8,13 @@ public class SplineFinding : MonoBehaviour
     private int routeToGO;
     private float tParam;
     private Vector3 currentPosision;
-    private float speedModifier;
+    public float speedModifier;
     private bool coroutineAllowed;
 
     void Start()
     {
         routeToGO = 0;
         tParam = 0f;
-        speedModifier = 0.5f;
         coroutineAllowed = true;
         foreach (GameObject route in GameObject.FindGameObjectsWithTag("Spline"))
         {
