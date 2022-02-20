@@ -1,30 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OptionsMenu : MonoBehaviour
 {
     [Header("Canvas Setup")]
     [SerializeField] GameObject Canvas_MainMenu;
     [SerializeField] GameObject Canvas_SettingsMenu;
-    /*[SerializeField] GameObject Canvas_GraphicsMenu;
-    [SerializeField] GameObject Canvas_SoundMenu;
-    [SerializeField] GameObject Canvas_ControlsMenu;*/
+    [SerializeField] GameObject Canvas_VideoMenu;
+    [SerializeField] GameObject Canvas_SoundsMenu;
+    //[SerializeField] GameObject Canvas_ControlsMenu;
     [Header(" ")]
 
     [Header("Code Check")]
     [SerializeField] bool MenuActive;
     [SerializeField] bool SettingsActive;
+    [SerializeField] bool SoundsActive;
+    [SerializeField] bool VideoActive;
+    [SerializeField] bool MainMenu;
 
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        MenuActive = false;
-        SettingsActive = false;
+        if (MainMenu)
+        {
+            MenuActive = true;
+            SettingsActive = false;
+            VideoActive = false;
+            SoundsActive = false;
+        }
+
+        if (!MainMenu)
+        {
+            MenuActive = false;
+            SettingsActive = false;
+            VideoActive = false;
+            SoundsActive = false;
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         KeyCheck();
@@ -33,13 +48,23 @@ public class OptionsMenu : MonoBehaviour
 
     void KeyCheck()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !MenuActive)
+        // Main menu key check
+
+        if (Input.GetKeyDown(KeyCode.Escape) && !MenuActive && MainMenu)
         {
             Options();
             Debug.Log("ESC Key pressed!");
         }
 
-        else if (Input.GetKeyDown(KeyCode.Escape) && MenuActive)
+        // Game scene key check
+
+        if (Input.GetKeyDown(KeyCode.Escape) && !MenuActive && !MainMenu)
+        {
+            Options();
+            Debug.Log("ESC Key pressed!");
+        }
+
+        else if (Input.GetKeyDown(KeyCode.Escape) && MenuActive && !MainMenu)
         {
             Exit();
             Debug.Log("ESC Key pressed twice!");
@@ -67,15 +92,40 @@ public class OptionsMenu : MonoBehaviour
         {
             Canvas_SettingsMenu.SetActive(false);
         }
+
+        // Video checker
+        if (VideoActive)
+        {
+            Canvas_VideoMenu.SetActive(true);
+        }
+        if (!VideoActive)
+        {
+            Canvas_VideoMenu.SetActive(false);
+        }
+
+        // Sound checker
+        if (SoundsActive)
+        {
+            Canvas_SoundsMenu.SetActive(true);
+        }
+        if (!SoundsActive)
+        {
+            Canvas_SoundsMenu.SetActive(false);
+        }
     }
 
     public void Resume()
     {
+        MenuActive = false;
+        SettingsActive = false;
+        SoundsActive = false;
+        VideoActive = false;
         Debug.Log("Resuming game!");
     }
 
     public void Play()
     {
+        SceneManager.LoadScene(1);
         Debug.Log("Starting game!");
     }
 
@@ -84,22 +134,34 @@ public class OptionsMenu : MonoBehaviour
         Debug.Log("Opening options menu!");
         MenuActive = true;
         SettingsActive = false;
+        SoundsActive = false;
+        VideoActive = false;
     }
 
     public void Settings()
     {
         Debug.Log("Opening settings menu!");
-        MenuActive = false;
         SettingsActive = true;
+        MenuActive = false;
+        SoundsActive = false;
+        VideoActive = false;
     }
 
     public void Video()
     {
+        VideoActive = true;
+        SettingsActive = false;
+        MenuActive = false;
+        SoundsActive = false;
         Debug.Log("Opening Video Settings menu!");
     }
 
     public void Sound()
     {
+        SoundsActive = true;
+        SettingsActive = false;
+        MenuActive = false;
+        VideoActive = false;
         Debug.Log("Opening Sound Effects menu!");
     }
 
@@ -121,6 +183,7 @@ public class OptionsMenu : MonoBehaviour
 
     public void QuitToTitle()
     {
+        SceneManager.LoadScene(0);       
         Debug.Log("Quitting to title!");
     }
     public void QuitGame()
