@@ -73,7 +73,6 @@ public class MortarClass : MonoBehaviour
 
     public IEnumerator Shoot()
     {
-        Debug.Log("Fire");
         allowFire = false;
         Vector3 TargetPos = target.position;
         foreach (ParticleSystem flash in MuzzleFlash)
