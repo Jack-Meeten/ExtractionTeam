@@ -46,9 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f4d1d3127c1e0469b9b72fa2057f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 0.5
-  rateOfFire: 50
-  range: 5
+  Damage: 1
+  rateOfFire: 100
+  range: 10
   MuzzleFlash: {fileID: 6226238527475974589}
   target: {fileID: 0}
   baseMountPoint: {fileID: 3152930992835882517}

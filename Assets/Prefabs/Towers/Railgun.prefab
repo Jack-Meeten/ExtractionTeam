@@ -179,10 +179,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 100
   rateOfFire: 0.5
-  range: 10
+  range: 20
   MuzzleFlash: {fileID: 6457586903527542349}
   target: {fileID: 0}
-  baseMountPoint: {fileID: 1691401131167841599}
+  baseMountPoint: {fileID: 3302455322458477811}
   barrelMountPoint: {fileID: 3302455322458477811}
   turnSpeed: 100
   isAnimated: 0
