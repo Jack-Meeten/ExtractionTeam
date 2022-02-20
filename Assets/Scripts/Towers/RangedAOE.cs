@@ -11,4 +11,16 @@ public class RangedAOE : MonoBehaviour
     {
         GetComponent<SphereCollider>().radius = range;
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Enemy")
+        {
+            other.GetComponent<EnemyStats>().health -= damage;
+        }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, range);
+    }
 }

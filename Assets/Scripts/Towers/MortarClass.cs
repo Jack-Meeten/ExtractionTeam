@@ -9,15 +9,18 @@ public class MortarClass : MonoBehaviour
     public float AOERange;
     public float Damage;
     public float rateOfFire;
+    public float timeToImpact;
     public GameObject projectile;
-    public ParticleSystem MuzzleFlash;
+
+    [Header("FX")]
+    public ParticleSystem[] MuzzleFlash;
 
     private List<Transform> enemies = new List<Transform>();
     public Transform target;
 
     public bool allowFire = true;
 
-    protected virtual void Update()
+    protected virtual void FixedUpdate()
     {
         FindAllEnemies();
         if (target != null)
@@ -63,6 +66,7 @@ public class MortarClass : MonoBehaviour
     {
         if ((transform.position - target.position).magnitude > innerRange && (transform.position - target.position).magnitude < outerRange && allowFire)
         {
+            Debug.DrawLine(transform.position, target.position, Color.red);
             StartCoroutine(Shoot());
         }
     }
@@ -71,11 +75,22 @@ public class MortarClass : MonoBehaviour
     {
         Debug.Log("Fire");
         allowFire = false;
-        MuzzleFlash.Play();
-        GameObject AOE = Instantiate(projectile, target.position, transform.rotation);
+        Vector3 TargetPos = target.position;
+        foreach (ParticleSystem flash in MuzzleFlash)
+        {
+            flash.Play();
+        }
+        yield return new WaitForSeconds(Time.deltaTime / timeToImpact);
+        GameObject AOE = Instantiate(projectile, TargetPos, transform.rotation);
         AOE.GetComponent<RangedAOE>().damage = Damage;
         AOE.GetComponent<RangedAOE>().range = AOERange;
         yield return new WaitForSeconds(Time.deltaTime / rateOfFire);
         allowFire = true;
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, innerRange);
+        Gizmos.DrawWireSphere(transform.position, outerRange);
     }
 }

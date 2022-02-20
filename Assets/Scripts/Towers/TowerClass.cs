@@ -24,6 +24,8 @@ public class TowerClass : MonoBehaviour
 
     public LayerMask layerMask;
 
+    public Vector3 offset;
+
     protected virtual void Update()
     {
         FindAllEnemies();
@@ -81,7 +83,7 @@ public class TowerClass : MonoBehaviour
     {
         var los = target.position - baseMountPoint.transform.position;//gets position difference
         los.y = 0;
-        var rotation = Quaternion.LookRotation(los);//get look rotation
+        var rotation = Quaternion.LookRotation(los + offset);//get look rotation
         baseMountPoint.transform.rotation = Quaternion.Slerp(baseMountPoint.transform.rotation, rotation, turnSpeed * Time.deltaTime);
     }
     public void BarrelRotate()
@@ -100,7 +102,7 @@ public class TowerClass : MonoBehaviour
 
     public void IsAimed()
     {
-        var ray = new Ray(barrelMountPoint.transform.position, -transform.right);
+        var ray = new Ray(barrelMountPoint.transform.position, transform.right);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 1000))//layerMask
         {
@@ -119,5 +121,11 @@ public class TowerClass : MonoBehaviour
         MuzzleFlash.Play();
         yield return new WaitForSeconds(Time.deltaTime / rateOfFire);
         allowFire = true;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, range);
     }
 }
