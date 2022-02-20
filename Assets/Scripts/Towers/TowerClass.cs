@@ -17,7 +17,7 @@ public class TowerClass : MonoBehaviour
     public GameObject barrelMountPoint;
     public float turnSpeed = 90f;
 
-    private bool allowFire = true;
+    public bool allowFire = true;
 
     public bool isAnimated;
     public Animator _animation;

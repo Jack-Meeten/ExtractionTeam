@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RailGunTower : MonoBehaviour
+public class RailGunTower : TowerClass
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
-        
+        base.Update();
+        if (base.target != null)
+        {
+            Debug.DrawLine(transform.position, base.target.position, Color.cyan);
+        }
     }
 }

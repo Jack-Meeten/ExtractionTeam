@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   routes: []
-  speedModifier: 0.1
+  speedModifier: 0.2
 --- !u!114 &-4786704532309685092
 MonoBehaviour:
   m_ObjectHideFlags: 0
