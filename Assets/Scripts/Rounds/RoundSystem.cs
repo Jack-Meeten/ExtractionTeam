@@ -23,7 +23,11 @@ public class RoundSystem : MonoBehaviour
     [Header("Round Settings")]
     [SerializeField] int CurrentRound;
     [Header(" ")]
-    [SerializeField] float[] NightRounds;
+    [SerializeField] float Round1;
+    [SerializeField] float Round2;
+    [SerializeField] float Round3;
+    [SerializeField] float Round4;
+    [SerializeField] float Round5;
 
 
     [Header("Enemy Settings")]
@@ -89,11 +93,41 @@ public class RoundSystem : MonoBehaviour
     {
         if (CurrentTick >= NightTicks)
         {
-            CurrentTick = 0f;
-            CurrentRound++;
-            DefaultEnemiesToSpawn = DefaultEnemiesToSpawn + RoundEnemyIncreaser;
-            InvokeRepeating("SpawnDelay", 0, SpawnInterval);
+            CurrentTick = 0f;                               
         }
+
+        if (CurrentTick == Round1)
+        {
+            Debug.Log("Starting round number " + CurrentRound);
+            RoundMechanics();
+        }
+        if (CurrentTick == Round2)
+        {
+            Debug.Log("Starting round number " + CurrentRound);
+            RoundMechanics();
+        }
+        if (CurrentTick == Round3)
+        {
+            Debug.Log("Starting round number " + CurrentRound);
+            RoundMechanics();
+        }
+        if (CurrentTick == Round4)
+        {
+            Debug.Log("Starting round number " + CurrentRound);
+            RoundMechanics();
+        }
+        if (CurrentTick == Round5)
+        {
+            Debug.Log("Starting round number " + CurrentRound);
+            RoundMechanics();
+        }
+    }
+
+    void RoundMechanics()
+    {
+        CurrentRound+=1;
+        DefaultEnemiesToSpawn = DefaultEnemiesToSpawn + RoundEnemyIncreaser;
+        InvokeRepeating("SpawnDelay", 0, SpawnInterval);
     }
 
     private void SpawnDelay()
