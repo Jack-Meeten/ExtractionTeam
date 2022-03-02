@@ -13,28 +13,28 @@ public class RoundSystem : MonoBehaviour
 
     [Header(" ")]
     [SerializeField] bool TickActive;
-    [Header(" ")]
 
 
-    [Header("DayNight cycle Settings")]
+    [Header("DayNight Cycle Settings")]
     [SerializeField] float DayTicks;
     [SerializeField] float NightTicks;
-    [Header(" ")]
 
 
     [Header("Round Settings")]
     [SerializeField] int CurrentRound;
     [Header(" ")]
+    [SerializeField] float[] NightRounds;
 
 
     [Header("Enemy Settings")]
     [SerializeField] GameObject Enemy;
+    [Header(" ")]
+
     [SerializeField] Transform[] SpawnPoints;
     [SerializeField] float SpawnInterval;
     [SerializeField] int CurrentEnemiesToSpawn;
     [SerializeField] int DefaultEnemiesToSpawn;
     [SerializeField] int RoundEnemyIncreaser;
-    [Header(" ")]
 
 
     [Header("Day Night Cycle")]
