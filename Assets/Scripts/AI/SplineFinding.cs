@@ -5,13 +5,13 @@ using UnityEngine;
 public class SplineFinding : MonoBehaviour
 {
     [SerializeField] List<Transform> routes = new List<Transform>();
-    private int routeToGO;
-    private float tParam;
-    private Vector3 currentPosision;
+    public int routeToGO;
+    public float tParam;
+    public Vector3 currentPosision;
     public float speedModifier;
     private bool coroutineAllowed;
 
-    void Start()
+    void Awake()
     {
         routeToGO = 0;
         tParam = 0f;

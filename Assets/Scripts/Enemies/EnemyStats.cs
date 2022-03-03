@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
+    public float baseHealth = 10;
     public float health = 10;
 
 
@@ -11,7 +12,8 @@ public class EnemyStats : MonoBehaviour
     {
         if (health <= 0)
         {
-            Destroy(gameObject);
+            gameObject.GetComponent<SplineFinding>().enabled = false;
+            gameObject.SetActive(false);
         } 
     }
 }

@@ -34,6 +34,8 @@ public class RoundSystem : MonoBehaviour
     [SerializeField] GameObject Enemy;
     [Header(" ")]
 
+    public Transform spawnPoint;
+
     [SerializeField] Transform[] SpawnPoints;
     [SerializeField] float SpawnInterval;
     [SerializeField] int CurrentEnemiesToSpawn;
@@ -133,7 +135,22 @@ public class RoundSystem : MonoBehaviour
     private void SpawnDelay()
     {
         int rand = Random.Range(0, SpawnPoints.Length);
-        Instantiate(Enemy, SpawnPoints[rand].transform.position, Quaternion.identity);
+        //Instantiate(Enemy, SpawnPoints[rand].transform.position, Quaternion.identity);
+
+        //Start of Jack Code
+
+        GameObject creep = ObjectPool.sharedInstance.GetObjectPooled();
+        if (creep != null)
+        {
+            creep.transform.position = spawnPoint.position;
+            creep.GetComponent<SplineFinding>().tParam = 0;
+            creep.GetComponent<SplineFinding>().routeToGO = 0;
+            creep.GetComponent<EnemyStats>().health = creep.GetComponent<EnemyStats>().baseHealth;
+            creep.SetActive(true);
+        }
+
+        //End of Jack Code
+
         CurrentEnemiesToSpawn--;
     }
 

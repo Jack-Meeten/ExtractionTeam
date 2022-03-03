@@ -129,6 +129,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   routes: []
+  routeToGO: 0
+  tParam: 0
   speedModifier: 0.2
 --- !u!114 &-4786704532309685092
 MonoBehaviour:
@@ -142,6 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae338b3d2d73dbd459796eac97620420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseHealth: 150
   health: 150
 --- !u!114 &7339447240751296222
 MonoBehaviour:

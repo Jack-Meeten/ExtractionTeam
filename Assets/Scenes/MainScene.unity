@@ -389,6 +389,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1427354022574591804, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
   m_PrefabInstance: {fileID: 155786133}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &155786135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155786134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 819a48feb9c24f94bb034f226a9b1ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  creepToPool: {fileID: 9133131290195037006, guid: 7c035b293ebc8be4fa5fc21bc7a4af57, type: 3}
+  amountToPool: 20
 --- !u!1001 &265583372
 PrefabInstance:
   m_ObjectHideFlags: 0
