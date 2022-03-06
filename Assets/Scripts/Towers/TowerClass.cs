@@ -10,7 +10,7 @@ public class TowerClass : MonoBehaviour
     public float range;
     public ParticleSystem MuzzleFlash;
 
-    private List<Transform> enemies = new List<Transform>();
+    [SerializeField] List<Transform> enemies = new List<Transform>();
     public Transform target;
 
     public GameObject baseMountPoint;
@@ -22,18 +22,16 @@ public class TowerClass : MonoBehaviour
     public bool isAnimated;
     public Animator _animation;
 
-    public LayerMask layerMask;
-
     public Vector3 offset;
 
     protected virtual void Update()
     {
         FindAllEnemies();
-
         if (target != null)
         {
             if ((transform.position - target.transform.position).magnitude < range)
             {
+                //points turret at target
                 BaseRotate();
                 BarrelRotate();
             }
@@ -51,7 +49,9 @@ public class TowerClass : MonoBehaviour
 
     public void FindAllEnemies()
     {
+        //clears current enemies
         enemies.Clear();
+        //loops over all enemies and adds them to list, to be replaced later on
         foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
         {
             Transform enemyTransform = enemy.gameObject.transform;
@@ -61,7 +61,7 @@ public class TowerClass : MonoBehaviour
                 enemies.Add(enemyTransform);
             }
         }
-
+        //calculates nearest enemy and sets to target
         Transform bestTarget = null;
         float closeestDistanceSqr = Mathf.Infinity;
         Vector3 currentPosition = transform.position;
@@ -105,10 +105,11 @@ public class TowerClass : MonoBehaviour
         //raycast to target
         var ray = new Ray(barrelMountPoint.transform.position, transform.right);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 1000))//layerMask
+        if (Physics.Raycast(ray, out hit, 1000))
         {
             Debug.DrawRay(transform.position, transform.position - target.transform.position);
-            if (allowFire && (transform.position - target.transform.position).magnitude < range && target.gameObject.activeInHierarchy)//checks if can fire, in range and target active
+            //checks if can fire, in range and target active
+            if (allowFire && (transform.position - target.transform.position).magnitude < range && target.gameObject.activeInHierarchy)
             {
                 Debug.DrawLine(barrelMountPoint.transform.position, target.position, Color.red);
                 StartCoroutine(Shoot());

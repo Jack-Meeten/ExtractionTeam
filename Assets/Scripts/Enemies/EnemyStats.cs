@@ -12,7 +12,6 @@ public class EnemyStats : MonoBehaviour
     {
         if (health <= 0)
         {
-            gameObject.GetComponent<SplineFinding>().enabled = false;
             gameObject.SetActive(false);
         } 
     }

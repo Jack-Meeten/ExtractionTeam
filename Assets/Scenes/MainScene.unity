@@ -259,6 +259,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1427354022574591807, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1392421416}
+    - target: {fileID: 1427354022574591807, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: CurrentTick
       value: 0
       objectReference: {fileID: 0}
@@ -403,7 +407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObjects: []
   creepToPool: {fileID: 9133131290195037006, guid: 7c035b293ebc8be4fa5fc21bc7a4af57, type: 3}
-  amountToPool: 20
+  amountToPool: 30
 --- !u!1001 &265583372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1295,7 +1299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297789271567531852, guid: 5a041e0940a2c1e46ae873779bff9df4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5555345846867957477, guid: 5a041e0940a2c1e46ae873779bff9df4, type: 3}
       propertyPath: outerRange
@@ -3011,7 +3015,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297789271567531852, guid: 5a041e0940a2c1e46ae873779bff9df4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5555345846867957477, guid: 5a041e0940a2c1e46ae873779bff9df4, type: 3}
       propertyPath: outerRange

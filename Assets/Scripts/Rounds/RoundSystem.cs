@@ -139,14 +139,16 @@ public class RoundSystem : MonoBehaviour
 
         //Start of Jack Code
 
-        GameObject creep = ObjectPool.sharedInstance.GetObjectPooled();
+        GameObject creep = ObjectPool.sharedInstance.GetObjectPooled();//gets creep being managed
         if (creep != null)
         {
-            creep.transform.position = spawnPoint.position;
+            //resets creep health and spline finding, reactivates it
             creep.GetComponent<SplineFinding>().tParam = 0;
             creep.GetComponent<SplineFinding>().routeToGO = 0;
+            creep.GetComponent<SplineFinding>().coroutineAllowed = true;
             creep.GetComponent<EnemyStats>().health = creep.GetComponent<EnemyStats>().baseHealth;
             creep.SetActive(true);
+            //Debug.Log(creep.name + " : is ACTIVE");
         }
 
         //End of Jack Code
