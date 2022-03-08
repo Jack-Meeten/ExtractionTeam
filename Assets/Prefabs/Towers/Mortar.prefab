@@ -14487,9 +14487,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4003437757654079461}
   - component: {fileID: 5555345846867957477}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mortar
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

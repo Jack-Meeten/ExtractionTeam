@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 653715232073310077}
   - component: {fileID: 4942037008813384886}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gatling  Turret
   m_TagString: Tower
   m_Icon: {fileID: 0}
@@ -30,6 +30,7 @@ Transform:
   m_Children:
   - {fileID: 8662387589525072738}
   - {fileID: 5914367510389011172}
+  - {fileID: 5157551404271352140}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49,6 +50,7 @@ MonoBehaviour:
   rateOfFire: 100
   range: 5
   MuzzleFlash: {fileID: 6226238527475974589}
+  enemies: []
   target: {fileID: 0}
   baseMountPoint: {fileID: 3152930992835882517}
   barrelMountPoint: {fileID: 3152930992835882517}
@@ -56,10 +58,51 @@ MonoBehaviour:
   allowFire: 1
   isAnimated: 1
   _animation: {fileID: 7866583824963255885}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 8
   offset: {x: 0, y: 0, z: 0}
+--- !u!1 &346885725195845636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5157551404271352140}
+  - component: {fileID: 4749925130732250356}
+  m_Layer: 6
+  m_Name: DETECTBOX
+  m_TagString: Tower
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5157551404271352140
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346885725195845636}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.482, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 653715232073310077}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4749925130732250356
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346885725195845636}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3152930992835882517
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,7 +116,7 @@ GameObject:
   - component: {fileID: 4552507799106622460}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,7 +210,7 @@ GameObject:
   - component: {fileID: 765898672158099258}
   m_Layer: 0
   m_Name: Particle System
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4973,7 +5016,7 @@ GameObject:
   - component: {fileID: 6869379445936174615}
   m_Layer: 0
   m_Name: Legs
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5056,7 +5099,7 @@ GameObject:
   - component: {fileID: 7866583824963255885}
   m_Layer: 0
   m_Name: Barrel
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -169,6 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1427354022574591806}
   - component: {fileID: 1427354022574591807}
+  - component: {fileID: 155786135}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -204,14 +205,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b819524f4fa7a7d4cb0f65e98121cd57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentTick: 1
-  TickSpeed: 0.05
+  CurrentTick: 0
+  TickSpeed: 0.001
   TickValue: 1
   TickActive: 1
-  DayTicks: 1
-  NightTicks: 100
+  DayTicks: 6000
+  NightTicks: 36000
   CurrentRound: 0
+  Round1: 6001
+  Round2: 12001
+  Round3: 18001
+  Round4: 24001
+  Round5: 30001
   Enemy: {fileID: 9133131290195037006, guid: 7c035b293ebc8be4fa5fc21bc7a4af57, type: 3}
+  spawnPoint: {fileID: 0}
   SpawnPoints:
   - {fileID: 0}
   SpawnInterval: 0.5
@@ -221,6 +228,21 @@ MonoBehaviour:
   RotationPivot: {fileID: 119807795}
   LightAngle: 0
   OffsetAngle: 25
+--- !u!114 &155786135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427354022574591804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 819a48feb9c24f94bb034f226a9b1ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  creepToPool: {fileID: 9133131290195037006, guid: 7c035b293ebc8be4fa5fc21bc7a4af57, type: 3}
+  amountToPool: 30
 --- !u!1001 &1179498455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -312,15 +334,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3476492741064271348, guid: 9d20080ce3ae5bb4cbda386d2dc7c689, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 270.63016
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3476492741064271348, guid: 9d20080ce3ae5bb4cbda386d2dc7c689, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 187.76387
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3476492741064271348, guid: 9d20080ce3ae5bb4cbda386d2dc7c689, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.754669
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3476492741064271348, guid: 9d20080ce3ae5bb4cbda386d2dc7c689, type: 3}
       propertyPath: m_LocalRotation.w

@@ -137,7 +137,7 @@ public class RoundSystem : MonoBehaviour
         int rand = Random.Range(0, SpawnPoints.Length);
         //Instantiate(Enemy, SpawnPoints[rand].transform.position, Quaternion.identity);
 
-        //Start of Jack Code
+        //Start of yak Code
 
         GameObject creep = ObjectPool.sharedInstance.GetObjectPooled();//gets creep being managed
         if (creep != null)
@@ -151,7 +151,7 @@ public class RoundSystem : MonoBehaviour
             //Debug.Log(creep.name + " : is ACTIVE");
         }
 
-        //End of Jack Code
+        //End of yak Code
 
         CurrentEnemiesToSpawn--;
     }

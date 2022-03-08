@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Spline
   - Tower
+  - Placeable
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - Enemy
   - Water
   - UI
-  - 
+  - Tower
   - 
   - 
   - 
