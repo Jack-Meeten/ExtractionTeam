@@ -9,6 +9,7 @@ TagManager:
   - Spline
   - Tower
   - Placeable
+  - Resource
   layers:
   - Default
   - TransparentFX
