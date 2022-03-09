@@ -21,7 +21,7 @@ public class CameraLook : MonoBehaviour
     float xRotation;
     float yRotation;
 
-    private void Start()
+    private void Awake()
     {
         //Locks the cursor on screen
         Cursor.lockState = CursorLockMode.Locked;

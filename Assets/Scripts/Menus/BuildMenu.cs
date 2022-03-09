@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class BuildMenu : MonoBehaviour
 {
+    [Header("Config")]
     [SerializeField] GameObject CameraHolder;
-
+    [SerializeField] GameObject Camera;
+    [SerializeField] Object OriginalLocation;
+    [SerializeField] Transform OriginalPos;
+    [SerializeField] GameObject TweenTarget;
     [SerializeField] KeyCode MenuBuild = KeyCode.B;
-
-    [SerializeField] bool MenuToggle;
-
-    [SerializeField] float ToggleTimer = 1f;
+    [SerializeField] float TweenTime = 1f;
+    GameObject ObjectToDestroy;
+    [SerializeField] bool BuildingMenu;
+    [SerializeField] bool SpawnedLocation;
+    [Header(" ")]
 
 
     CameraLook look;
@@ -21,53 +26,87 @@ public class BuildMenu : MonoBehaviour
     {
         look = CameraHolder.GetComponent<CameraLook>();
         move = CameraHolder.GetComponent<CameraMove>();
+
+        BuildingMenu = false;
+        SpawnedLocation = false;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        MenuToggle = false;
-    }
 
     // Update is called once per frame
     void Update()
     {
-        ToggleCamera();
+        PlayerInput();
     }
 
-    void ToggleCamera()
+    void PlayerInput()
     {
-        if (Input.GetKeyDown(MenuBuild) && MenuToggle)
+        if (Input.GetKeyDown(MenuBuild) && !BuildingMenu)
         {
-            MenuToggle = !MenuToggle;
-
-            Debug.Log("Build menu close!");
-
-            //Get current State
-            MenuToggle = look.enabled;
-
-            //Flip it
-            MenuToggle = !MenuToggle;
-
-            //Set the current State to the flipped value
-            look.enabled = !look.enabled;
-
+            Toggle();
+            Tween();
+        }
+        else if (Input.GetKeyDown(MenuBuild) && BuildingMenu)
+        {
+            Toggle();
         }
 
-        if (Input.GetKeyDown(MenuBuild) && !MenuToggle)
-        {        
-           
-            Debug.Log("Build menu open!");
-        }
-            MenuToggle = !MenuToggle;
+        if (BuildingMenu && !SpawnedLocation) SpawnLocationSaver();
+
+        if (!BuildingMenu && SpawnedLocation) DeSpawnLocationSaver();
     }
 
-    IEnumerator ToggleDelay()
+    void Toggle()
     {
+        //Flip the boolean
+        BuildingMenu = !BuildingMenu;
 
-        //MenuToggle = MenuToggle ? true : false;
-        /*if (MenuToggle) MenuToggle = false;
-        if (!MenuToggle) MenuToggle = true;*/
-        yield return new WaitForSeconds(ToggleTimer);
+        //Set the enable state to the oposite of the state of the boolean.
+        look.enabled = !BuildingMenu;
+        move.enabled = !BuildingMenu;
+    }
+
+    void Tween()
+    {
+        LeanTween.moveX(CameraHolder, TweenTarget.transform.position.x, TweenTime);
+        LeanTween.moveY(CameraHolder, TweenTarget.transform.position.y, TweenTime);
+        LeanTween.moveZ(CameraHolder, TweenTarget.transform.position.z, TweenTime);
+
+        LeanTween.rotateX(Camera, TweenTarget.transform.eulerAngles.x, TweenTime);
+        LeanTween.rotateY(Camera, TweenTarget.transform.eulerAngles.y, TweenTime);
+        LeanTween.rotateZ(Camera, TweenTarget.transform.eulerAngles.z, TweenTime);
+    }
+
+    void SpawnLocationSaver()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        SpawnedLocation = true;
+        Instantiate(OriginalLocation, OriginalPos.position, OriginalPos.rotation);
+    }
+
+    void DeSpawnLocationSaver()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
+
+        StartCoroutine(DelaySpawn());
+        ObjectToDestroy = GameObject.FindGameObjectWithTag("Position");
+
+        LeanTween.moveX(CameraHolder, ObjectToDestroy.transform.position.x, TweenTime);
+        LeanTween.moveY(CameraHolder, ObjectToDestroy.transform.position.y, TweenTime);
+        LeanTween.moveZ(CameraHolder, ObjectToDestroy.transform.position.z, TweenTime);
+
+        LeanTween.rotateX(Camera, ObjectToDestroy.transform.eulerAngles.x, TweenTime);
+        LeanTween.rotateY(Camera, ObjectToDestroy.transform.eulerAngles.y, TweenTime);
+        LeanTween.rotateZ(Camera, ObjectToDestroy.transform.eulerAngles.z, TweenTime);
+    }
+
+    IEnumerator DelaySpawn()
+    {
+        ObjectToDestroy = GameObject.FindGameObjectWithTag("Position");
+        SpawnedLocation = false;
+        yield return new WaitForSeconds(0.1f);
+        Debug.Log("Destroying residual objects!");
+        Destroy(ObjectToDestroy);
     }
 }

@@ -192,8 +192,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6
   movementMultiplier: 10
-  UpKey: 32
-  DownKey: 306
   airDrag: 3
   orientation: {fileID: 323011172}
 --- !u!54 &1188010296
@@ -943,10 +941,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8485173971330909445}
+  - component: {fileID: 1931859704}
   m_Layer: 0
   m_Name: Camera Controls
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -963,6 +962,53 @@ Transform:
   m_Children:
   - {fileID: 1188010293}
   - {fileID: 1285274396}
+  - {fileID: 5160936893592597116}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1931859704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119936978162202741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 683c6c05421ec434fb66939b4d0697c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraHolder: {fileID: 1188010292}
+  TweenTarget: {fileID: 5930429589486497338}
+  MenuBuild: 98
+  TweenTime: 0.5
+--- !u!1 &5930429589486497338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5160936893592597116}
+  m_Layer: 0
+  m_Name: TopDownView
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5160936893592597116
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5930429589486497338}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 25, y: 40, z: 25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8485173971330909445}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}

@@ -10,6 +10,7 @@ TagManager:
   - Tower
   - Placeable
   - Resource
+  - Position
   layers:
   - Default
   - TransparentFX
