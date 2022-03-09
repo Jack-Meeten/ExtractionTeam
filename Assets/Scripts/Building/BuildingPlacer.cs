@@ -53,7 +53,7 @@ public class BuildingPlacer : MonoBehaviour
         foreach (var item in hitColliders)
         {
             //if not a tower spawn
-            if (item.tag != "Tower")
+            if (item.tag != "Tower" || item.tag != "Resource")
             {
                 Debug.Log(item.name);
                 Instantiate(tower, finalPosition, transform.rotation);
