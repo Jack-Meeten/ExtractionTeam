@@ -18,7 +18,7 @@ public class EnemyDamage : MonoBehaviour
         if (collision.gameObject == HealthTarget)
         {
             HealthTarget.GetComponent<ShuttleScript>().CurrentHealth -= EnemyDMG;
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

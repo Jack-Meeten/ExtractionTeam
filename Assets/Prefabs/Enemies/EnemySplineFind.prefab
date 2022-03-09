@@ -131,7 +131,9 @@ MonoBehaviour:
   routes: []
   routeToGO: 0
   tParam: 0
+  currentPosision: {x: 0, y: 0, z: 0}
   speedModifier: 0.2
+  coroutineAllowed: 0
 --- !u!114 &-4786704532309685092
 MonoBehaviour:
   m_ObjectHideFlags: 0
