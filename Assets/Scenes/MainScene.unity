@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1305438274175157928, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: Canvas_VideoMenu
+      value: 
+      objectReference: {fileID: 1590198300}
+    - target: {fileID: 1305438274175157928, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: Canvas_SoundsMenu
+      value: 
+      objectReference: {fileID: 1421892347}
+    - target: {fileID: 1305438274175157928, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: Canvas_SettingsMenu
+      value: 
+      objectReference: {fileID: 388930239}
     - target: {fileID: 1427354022574591804, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -553,6 +565,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 350923541}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &388930239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8003156165141619396, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+  m_PrefabInstance: {fileID: 155786133}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &419701858
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,7 +819,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-102644
+  m_Name: pb_Mesh-9218
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1050,6 +1067,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9048115659709264737, guid: 51520482b3e1b5048a835d0c0824486c, type: 3}
   m_PrefabInstance: {fileID: 265583372}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1421892347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2965778481654292483, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+  m_PrefabInstance: {fileID: 155786133}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1549205125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1060,6 +1082,14 @@ PrefabInstance:
     - target: {fileID: 328803356, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188010292, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188010294, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1548863399, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
       propertyPath: m_Enabled
@@ -1139,6 +1169,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
+--- !u!1 &1590198300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1727474645931815719, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+  m_PrefabInstance: {fileID: 155786133}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1798536660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1188010292, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
+  m_PrefabInstance: {fileID: 1549205125}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1901641983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,6 +1276,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901641983}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1931859702 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 119936978162202741, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
+  m_PrefabInstance: {fileID: 1549205125}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1931859704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931859702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 683c6c05421ec434fb66939b4d0697c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraHolder: {fileID: 1798536660}
+  MenuBuild: 98
+  MenuToggle: 0
+  ToggleTimer: 1
 --- !u!1 &3451545371812310930
 GameObject:
   m_ObjectHideFlags: 0

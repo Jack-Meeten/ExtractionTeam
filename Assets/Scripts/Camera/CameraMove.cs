@@ -12,8 +12,8 @@ public class CameraMove : MonoBehaviour
 
     // Key mapping.
     [Header("Keybindings")]
-    [SerializeField] KeyCode UpKey = KeyCode.Space;
-    [SerializeField] KeyCode DownKey = KeyCode.LeftControl;
+    //[SerializeField] KeyCode UpKey = KeyCode.Space;
+    //[SerializeField] KeyCode DownKey = KeyCode.LeftControl;
 
 
     // Movement input floats.
@@ -33,7 +33,6 @@ public class CameraMove : MonoBehaviour
 
     // Direction of the player.
     Vector3 moveDirection;
-    Vector3 UpDownDirection;
 
 
     // Rigidbody for player physics.
