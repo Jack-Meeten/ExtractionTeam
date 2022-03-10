@@ -67,6 +67,7 @@ public class RoundSystem : MonoBehaviour
         DayCycle();
         RoundCheck();
         AngleRotation();
+        SpeedStep();
 
         // Update Light angle
         RotationPivot.transform.rotation = Quaternion.Euler(LightAngle, OffsetAngle, 0);
@@ -174,5 +175,52 @@ public class RoundSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         CurrentEnemiesToSpawn = DefaultEnemiesToSpawn;
+    }
+
+    public void SpeedStep()
+    {
+        if (Input.GetKeyDown(KeyCode.Period) && Time.timeScale < 99)
+        {
+            Debug.Log(Time.timeScale);
+            Time.timeScale += 1;
+            TickValue += 1;
+        }
+        if (Input.GetKeyDown(KeyCode.Comma) && Time.timeScale > 1)
+        {
+            Debug.Log(Time.timeScale);
+            Time.timeScale -= 1;
+            TickValue -= 1;
+        }
+        if (Input.GetKeyDown("/"))
+        {
+            Time.timeScale = 1;
+            TickValue = 1;
+        }
+
+        if (CurrentTick >= Round1 - 50 && CurrentTick <= Round1)
+        {
+            TickValue = 1;
+            Time.timeScale = 1;
+        }
+        if (CurrentTick >= Round2 - 50 && CurrentTick <= Round2)
+        {
+            TickValue = 1;
+            Time.timeScale = 1;
+        }
+        if (CurrentTick >= Round3 - 50 && CurrentTick <= Round3)
+        {
+            TickValue = 1;
+            Time.timeScale = 1;
+        }
+        if (CurrentTick >= Round4 - 50 && CurrentTick <= Round4)
+        {
+            TickValue = 1;
+            Time.timeScale = 1;
+        }
+        if (CurrentTick >= Round5 - 50 && CurrentTick <= Round5)
+        {
+            TickValue = 1;
+            Time.timeScale = 1;
+        }
     }
 }

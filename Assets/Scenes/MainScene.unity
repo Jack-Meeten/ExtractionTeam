@@ -145,10 +145,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 155786138, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: manager
-      value: 
-      objectReference: {fileID: 2017425399}
     - target: {fileID: 155786139, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: Camera
       value: 
@@ -229,18 +225,6 @@ PrefabInstance:
       propertyPath: SpawnPoints.Array.data[0]
       value: 
       objectReference: {fileID: 1392421416}
-    - target: {fileID: 7501513318347586194, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: manager
-      value: 
-      objectReference: {fileID: 2017425399}
-    - target: {fileID: 7501513318347586194, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: opalium
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 7501513318347586194, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: vinculum
-      value: 1000
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
 --- !u!114 &155786139 stripped

@@ -260,6 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 169349145915393479, guid: b50c6ef82acc0ed43af0da1dd40a7c2c, type: 3}
+  manager: {fileID: 7501513318347586194}
   beginPlace: 0
 --- !u!114 &7501513318347586194
 MonoBehaviour:
@@ -273,9 +274,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc118549610456c468876a942b40a537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opalium: 0
-  vinculum: 0
+  opalium: 1000
+  vinculum: 1000
   placer: {fileID: 155786138}
+  manager: {fileID: 7501513318347586194}
 --- !u!114 &155786139
 MonoBehaviour:
   m_ObjectHideFlags: 0
