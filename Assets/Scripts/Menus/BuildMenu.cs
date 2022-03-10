@@ -13,7 +13,7 @@ public class BuildMenu : MonoBehaviour
     [SerializeField] KeyCode MenuBuild = KeyCode.B;
     [SerializeField] float TweenTime = 1f;
     GameObject ObjectToDestroy;
-    bool BuildingMenu;
+    public bool BuildingMenu;
     bool SpawnedLocation;
     [Header(" ")]
 
@@ -69,7 +69,7 @@ public class BuildMenu : MonoBehaviour
         if (!BuildingMenu && SpawnedLocation) DeSpawnLocationSaver();
     }
 
-    void Toggle()
+    public void Toggle()
     {
         //Flip the boolean
         BuildingMenu = !BuildingMenu;
