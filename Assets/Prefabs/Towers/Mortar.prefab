@@ -14487,6 +14487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4003437757654079461}
   - component: {fileID: 5555345846867957477}
+  - component: {fileID: -3413381531621414796}
   m_Layer: 6
   m_Name: Mortar
   m_TagString: Tower
@@ -14537,6 +14538,20 @@ MonoBehaviour:
   - {fileID: 8074272448240147352}
   target: {fileID: 0}
   allowFire: 1
+--- !u!114 &-3413381531621414796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5297789271567531852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c060603f10f366a40a0cc5c10b62db35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opalium: 10
+  vinculum: 10
 --- !u!1001 &754068719336020603
 PrefabInstance:
   m_ObjectHideFlags: 0

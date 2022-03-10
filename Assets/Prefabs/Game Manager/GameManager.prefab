@@ -171,7 +171,9 @@ GameObject:
   - component: {fileID: 1427354022574591807}
   - component: {fileID: 155786135}
   - component: {fileID: 155786138}
+  - component: {fileID: 7501513318347586194}
   - component: {fileID: 155786139}
+  - component: {fileID: 6587568224366433139}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -259,6 +261,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tower: {fileID: 169349145915393479, guid: b50c6ef82acc0ed43af0da1dd40a7c2c, type: 3}
   beginPlace: 0
+--- !u!114 &7501513318347586194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427354022574591804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc118549610456c468876a942b40a537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opalium: 0
+  vinculum: 0
+  placer: {fileID: 155786138}
 --- !u!114 &155786139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,6 +298,19 @@ MonoBehaviour:
   BuildCanvas: {fileID: 0}
   MovingPanel: {fileID: 0}
   PanelTime: 0.25
+--- !u!114 &6587568224366433139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427354022574591804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22fd0454f786d148978fab97aec5df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  james: {fileID: 2100000, guid: 639d51a506bd16c4195fe72966f45146, type: 2}
 --- !u!1001 &1179498455
 PrefabInstance:
   m_ObjectHideFlags: 0

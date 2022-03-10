@@ -7,6 +7,7 @@ public class BuildManager : MonoBehaviour
     public int opalium;
     public int vinculum;
     public BuildingPlacer placer;
+    public BuildManager manager;
 
     /*[SerializeField] bool cannonTurret;
     [SerializeField] bool pDTurret;
@@ -22,12 +23,16 @@ public class BuildManager : MonoBehaviour
     [SerializeField] bool stunTurret;
     [SerializeField] bool missileTurret;*/
 
-    public void click(GameObject turret)
+    public void selectTurret(GameObject turret)
     {
-        placer.beginPlace = true;
-        placer.tower = turret;
-        if (placer.beginPlace) placer.beginPlace = false;
-        else placer.beginPlace = true;
+        //placer.beginPlace = true;
+        if (turret.GetComponent<TowerStats>().opalium <= manager.opalium && turret.GetComponent<TowerStats>().vinculum <= manager.vinculum)
+        {
+            placer.tower = turret;
+
+            if (placer.beginPlace) placer.beginPlace = false;
+            else placer.beginPlace = true;
+        }
     }
 
 }

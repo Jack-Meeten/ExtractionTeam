@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 653715232073310077}
   - component: {fileID: 4942037008813384886}
+  - component: {fileID: -1515937841165538057}
   m_Layer: 6
   m_Name: Gatling  Turret
   m_TagString: Tower
@@ -59,6 +60,20 @@ MonoBehaviour:
   isAnimated: 1
   _animation: {fileID: 7866583824963255885}
   offset: {x: 0, y: 0, z: 0}
+--- !u!114 &-1515937841165538057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169349145915393479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c060603f10f366a40a0cc5c10b62db35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opalium: 10
+  vinculum: 10
 --- !u!1 &346885725195845636
 GameObject:
   m_ObjectHideFlags: 0

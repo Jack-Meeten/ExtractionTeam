@@ -6,6 +6,7 @@ public class BuildingPlacer : MonoBehaviour
 {
     private Grid grid;
     public GameObject tower;
+    public BuildManager manager;
 
     private Vector3 drawPos;
 
@@ -55,8 +56,9 @@ public class BuildingPlacer : MonoBehaviour
             //if not a tower spawn
             if (item.tag != "Tower" || item.tag != "Resource")
             {
-                Debug.Log(item.name);
                 Instantiate(tower, finalPosition, transform.rotation);
+                manager.opalium -= tower.GetComponent<TowerStats>().opalium;
+                manager.vinculum -= tower.GetComponent<TowerStats>().vinculum;
             }
         }
     }
