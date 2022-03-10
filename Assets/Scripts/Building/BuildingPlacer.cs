@@ -9,6 +9,8 @@ public class BuildingPlacer : MonoBehaviour
 
     private Vector3 drawPos;
 
+    public bool beginPlace = false;
+
     void Awake()
     {
         grid = FindObjectOfType<Grid>();
@@ -17,20 +19,18 @@ public class BuildingPlacer : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (beginPlace)
         {
-            RaycastHit hitInfo;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out hitInfo))
+            //add prefab to mouse position
             {
-                if (hitInfo.transform.tag == "Placeable")
+                RaycastHit hitInfo;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                if (Physics.Raycast(ray, out hitInfo) && Input.GetMouseButtonDown(0))
                 {
-                    PlaceCubeNear(hitInfo.point);
+                    if (hitInfo.transform.tag == "Placeable") PlaceCubeNear(hitInfo.point);
                 }
             }
-       
-        
         }
     }
 
