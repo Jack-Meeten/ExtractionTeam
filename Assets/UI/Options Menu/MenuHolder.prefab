@@ -1390,9 +1390,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5486733901014612373, guid: 7624093e7575f02439f29407869e2314, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663551885742575435, guid: 7624093e7575f02439f29407869e2314, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7094249761682890048, guid: 7624093e7575f02439f29407869e2314, type: 3}
       propertyPath: m_Name
       value: AudioMenu_Template
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094249761682890048, guid: 7624093e7575f02439f29407869e2314, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7558142018353166796, guid: 7624093e7575f02439f29407869e2314, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212899888036718633, guid: 7624093e7575f02439f29407869e2314, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7624093e7575f02439f29407869e2314, type: 3}
@@ -1508,6 +1528,10 @@ PrefabInstance:
     - target: {fileID: 4476180237706127600, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
       propertyPath: m_Name
       value: SettingsMenu_Template
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476180237706127600, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5235153869492151439, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
