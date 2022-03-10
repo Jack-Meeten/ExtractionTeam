@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BuildMenu : MonoBehaviour
 {
-    [Header("Config")]
+    [Header("Set Up")]
     [SerializeField] GameObject CameraHolder;
     [SerializeField] GameObject Camera;
     [SerializeField] Object OriginalLocation;
@@ -13,8 +13,18 @@ public class BuildMenu : MonoBehaviour
     [SerializeField] KeyCode MenuBuild = KeyCode.B;
     [SerializeField] float TweenTime = 1f;
     GameObject ObjectToDestroy;
-    [SerializeField] bool BuildingMenu;
-    [SerializeField] bool SpawnedLocation;
+    bool BuildingMenu;
+    bool SpawnedLocation;
+    [Header(" ")]
+
+
+    [Header("Animations and UI")]
+    [SerializeField] Canvas BuildCanvas;
+    [SerializeField] GameObject MovingPanel;
+    [SerializeField] float PanelTime = 0.25f;
+    bool DeployedMenu;
+    float Cooldown;
+    bool CooldownCheck;
     [Header(" ")]
 
 
@@ -29,6 +39,10 @@ public class BuildMenu : MonoBehaviour
 
         BuildingMenu = false;
         SpawnedLocation = false;
+
+        DeployedMenu = false;
+        Cooldown = PanelTime;
+        CooldownCheck = false;
     }
 
 
@@ -65,6 +79,17 @@ public class BuildMenu : MonoBehaviour
         move.enabled = !BuildingMenu;
     }
 
+    void ToggleMenu()
+    {
+        if (!CooldownCheck)
+        {
+            DeployedMenu = !DeployedMenu;
+
+            if (DeployedMenu) LeanTween.moveX(MovingPanel, MovingPanel.transform.position.x - 350, PanelTime);
+            if (!DeployedMenu) LeanTween.moveX(MovingPanel, MovingPanel.transform.position.x + 350, PanelTime);
+        }       
+    }
+
     void Tween()
     {
         LeanTween.moveX(CameraHolder, TweenTarget.transform.position.x, TweenTime);
@@ -99,6 +124,23 @@ public class BuildMenu : MonoBehaviour
         LeanTween.rotateX(Camera, ObjectToDestroy.transform.eulerAngles.x, TweenTime);
         LeanTween.rotateY(Camera, ObjectToDestroy.transform.eulerAngles.y, TweenTime);
         LeanTween.rotateZ(Camera, ObjectToDestroy.transform.eulerAngles.z, TweenTime);
+    }
+
+    public void OpenCanvas()
+    {
+        if (!CooldownCheck)
+        {
+            Debug.Log("Build deployable open!");
+            ToggleMenu();
+            StartCoroutine(ClickCooldown());
+        }
+    }
+
+    IEnumerator ClickCooldown()
+    {
+        CooldownCheck = !CooldownCheck;
+        yield return new WaitForSeconds(PanelTime);
+        CooldownCheck = !CooldownCheck;
     }
 
     IEnumerator DelaySpawn()
