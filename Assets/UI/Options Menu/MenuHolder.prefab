@@ -558,7 +558,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2063666366419999989}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -586,12 +586,11 @@ MonoBehaviour:
   Canvas_MainMenu: {fileID: 6727255834652234581}
   Canvas_SettingsMenu: {fileID: 3282723128139599382}
   Canvas_VideoMenu: {fileID: 5496088598776569044}
-  Canvas_SoundsMenu: {fileID: 7367119821207485094}
-  MenuActive: 0
+  Canvas_AudioMenu: {fileID: 7367119821207485094}
+  MenuActive: 1
   SettingsActive: 0
-  SoundsActive: 0
+  AudioActive: 0
   VideoActive: 0
-  MainMenu: 1
 --- !u!1 &2958835534131889065
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,7 +981,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7077690840999116756}
-        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: TitleMenu, Assembly-CSharp
         m_MethodName: Settings
         m_Mode: 1
         m_Arguments:
@@ -1392,11 +1391,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5486733901014612373, guid: 7624093e7575f02439f29407869e2314, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5663551885742575435, guid: 7624093e7575f02439f29407869e2314, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7094249761682890048, guid: 7624093e7575f02439f29407869e2314, type: 3}
       propertyPath: m_Name
@@ -1408,11 +1407,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7558142018353166796, guid: 7624093e7575f02439f29407869e2314, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9212899888036718633, guid: 7624093e7575f02439f29407869e2314, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7624093e7575f02439f29407869e2314, type: 3}
@@ -1437,6 +1436,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7077690840999116756}
+    - target: {fileID: 367926612226772879, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 367926612226772879, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TitleMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1780912491950007956, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
+      propertyPath: m_Name
+      value: Audio_Button
+      objectReference: {fileID: 0}
     - target: {fileID: 2937450494295128708, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1521,10 +1532,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3504792355560877033, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
+      propertyPath: m_Name
+      value: Audio_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 3725267140235864907, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7077690840999116756}
+    - target: {fileID: 3725267140235864907, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Audio
+      objectReference: {fileID: 0}
+    - target: {fileID: 3725267140235864907, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TitleMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4476180237706127600, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
       propertyPath: m_Name
       value: SettingsMenu_Template
@@ -1537,10 +1560,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7077690840999116756}
+    - target: {fileID: 5235153869492151439, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TitleMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8129664881689869769, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7077690840999116756}
+    - target: {fileID: 8129664881689869769, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TitleMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9183603810999159330, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
+      propertyPath: m_text
+      value: AUDIO SETTINGS
+      objectReference: {fileID: 0}
+    - target: {fileID: 9183603810999159330, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
+      propertyPath: m_fontSize
+      value: 40.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
 --- !u!224 &4275023075510131810 stripped

@@ -14,7 +14,7 @@ public class BuildMenu : MonoBehaviour
     [SerializeField] float TweenTime = 1f;
     GameObject ObjectToDestroy;
     public bool BuildingMenu;
-    bool SpawnedLocation;
+    [SerializeField] bool SpawnedLocation;
     [Header(" ")]
 
 
@@ -22,9 +22,9 @@ public class BuildMenu : MonoBehaviour
     [SerializeField] Canvas BuildCanvas;
     [SerializeField] GameObject MovingPanel;
     [SerializeField] float PanelTime = 0.25f;
-    bool DeployedMenu;
+    [SerializeField] bool DeployedMenu;
     float Cooldown;
-    bool CooldownCheck;
+    [SerializeField] bool CooldownCheck;
     [Header(" ")]
 
 
@@ -49,7 +49,7 @@ public class BuildMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerInput();
+        PlayerInput();        
     }
 
     void PlayerInput()
@@ -62,11 +62,22 @@ public class BuildMenu : MonoBehaviour
         else if (Input.GetKeyDown(MenuBuild) && BuildingMenu)
         {
             Toggle();
+            //ToggleMenu();
         }
+
+        //if (!BuildingMenu && !DeployedMenu) DoNotDeploy = true;
+        //else DoNotDeploy = false;
 
         if (BuildingMenu && !SpawnedLocation) SpawnLocationSaver();
 
         if (!BuildingMenu && SpawnedLocation) DeSpawnLocationSaver();
+
+        DeToggle();
+    }
+
+    void DeToggle()
+    {
+        if ((Input.GetKeyDown(MenuBuild) && DeployedMenu && !BuildingMenu)) ToggleMenu();
     }
 
     public void Toggle()

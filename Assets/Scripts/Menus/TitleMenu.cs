@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class OptionsMenu : MonoBehaviour
+public class TitleMenu : MonoBehaviour
 {
     [Header("Canvas Setup")]
     [SerializeField] GameObject Canvas_MainMenu;
@@ -20,66 +20,31 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] int MenuLayer = 0;
 
 
-    [SerializeField] GameObject BuildMenuHolder;
-    [SerializeField] GameObject CameraHolder;
-
-    BuildMenu BuildMenu;
-    CameraLook look;
-    CameraMove move;
-
     void Awake()
     {
-        MenuActive = false;
+        MenuActive = true;
         SettingsActive = false;
         AudioActive = false;
         VideoActive = false;
 
         MenuLayer = 0;
-
-        BuildMenu = BuildMenuHolder.GetComponent<BuildMenu>();
-        look = CameraHolder.GetComponent<CameraLook>();
-        move = CameraHolder.GetComponent<CameraMove>();
     }
 
     void Update()
     {
         KeyCheck();
-        CursorUnlocker();
     }
 
     void KeyCheck()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && MenuLayer == 0) Pause();
+        if (Input.GetKeyDown(KeyCode.Escape) && MenuLayer == 0) Settings();
         else if (Input.GetKeyDown(KeyCode.Escape) && MenuLayer == 1) Resume();
-        else if (Input.GetKeyDown(KeyCode.Escape) && MenuLayer == 2) Pause();
-        else if (Input.GetKeyDown(KeyCode.Escape) && MenuLayer == 3) Settings();
+        if (Input.GetKeyDown(KeyCode.Escape) && MenuLayer == 2) Settings();
     }
 
-    void CursorUnlocker()
+    public void Resume()
     {
-        if (MenuActive || SettingsActive || VideoActive || AudioActive || BuildMenu.BuildingMenu)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-
-            look.enabled = false;
-            move.enabled = false;
-        }
-
-        if (!MenuActive && !SettingsActive && !VideoActive && !AudioActive && !BuildMenu.BuildingMenu)
-        {
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = false;
-
-            look.enabled = true;
-            move.enabled = true;
-        }
-    }
-
-    public void Pause()
-    {
-        Debug.Log("Layer 0");
-        MenuLayer = 1;
+        MenuLayer = 0;
         MenuActive = true;
         SettingsActive = false;
         AudioActive = false;
@@ -94,21 +59,6 @@ public class OptionsMenu : MonoBehaviour
         }
     }
 
-    public void Resume()
-    {
-        Debug.Log("Layer 0");
-        MenuLayer = 0;
-        MenuActive = false;
-        SettingsActive = false;
-        AudioActive = false;
-        VideoActive = false;
-        
-        Canvas_MainMenu.SetActive(false);
-        Canvas_AudioMenu.SetActive(false);
-        Canvas_VideoMenu.SetActive(false);
-        Canvas_SettingsMenu.SetActive(false);
-    }
-
     public void Play()
     {
         SceneManager.LoadScene(1);
@@ -116,8 +66,7 @@ public class OptionsMenu : MonoBehaviour
 
     public void Settings()
     {
-        Debug.Log("Layer 1");
-        MenuLayer = 2;
+        MenuLayer = 1;
         SettingsActive = true;
         AudioActive = false;
         VideoActive = false;
@@ -134,8 +83,7 @@ public class OptionsMenu : MonoBehaviour
 
     public void Video()
     {
-        Debug.Log("Layer 2");
-        MenuLayer = 3;
+        MenuLayer = 2;
         VideoActive = true;
         SettingsActive = false;
         AudioActive = false;
@@ -152,8 +100,7 @@ public class OptionsMenu : MonoBehaviour
 
     public void Audio()
     {
-        Debug.Log("Layer 2");
-        MenuLayer = 3;
+        MenuLayer = 2;
         AudioActive = true;
         SettingsActive = false;
         VideoActive = false;
@@ -180,6 +127,6 @@ public class OptionsMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        SceneManager.LoadScene(0);
+        Application.Quit();
     }
 }

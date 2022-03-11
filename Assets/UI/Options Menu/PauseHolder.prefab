@@ -255,7 +255,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1224470539630363873}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
         m_MethodName: Mute
         m_Mode: 1
@@ -492,7 +492,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1224470539630363873}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
         m_MethodName: QuitToTitle
         m_Mode: 1
@@ -981,7 +981,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3476492741064271348}
-  - component: {fileID: 1224470539630363873}
+  - component: {fileID: 433414022837386553}
   m_Layer: 5
   m_Name: PauseHolder
   m_TagString: Untagged
@@ -1009,7 +1009,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1224470539630363873
+--- !u!114 &433414022837386553
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1018,10 +1018,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7133622989955049577}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c999f6ecd5824c4797fbacb433002b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 5902188754a32ab4cb94b0eb08f3cae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Canvas_MainMenu: {fileID: 2827574899309048565}
+  Canvas_MainMenu: {fileID: 0}
   Canvas_SettingsMenu: {fileID: 0}
   Canvas_VideoMenu: {fileID: 0}
   Canvas_SoundsMenu: {fileID: 0}
@@ -1030,6 +1030,8 @@ MonoBehaviour:
   SoundsActive: 0
   VideoActive: 0
   MainMenu: 0
+  BuildMenuHolder: {fileID: 0}
+  CameraHolder: {fileID: 0}
 --- !u!1 &7400928005685406528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,7 +1228,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1224470539630363873}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
@@ -1359,7 +1361,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1224470539630363873}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
         m_MethodName: Settings
         m_Mode: 1
