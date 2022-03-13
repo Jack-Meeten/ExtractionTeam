@@ -13,9 +13,9 @@ public class EnemyDamage : MonoBehaviour
         HealthTarget = GameObject.FindWithTag("Shuttle");
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject == HealthTarget)
+        if (other.gameObject == HealthTarget)
         {
             HealthTarget.GetComponent<ShuttleScript>().CurrentHealth -= EnemyDMG;
             gameObject.SetActive(false);
