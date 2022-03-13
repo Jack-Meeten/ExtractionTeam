@@ -10,6 +10,7 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] GameObject Canvas_SettingsMenu;
     [SerializeField] GameObject Canvas_VideoMenu;
     [SerializeField] GameObject Canvas_AudioMenu;
+    [SerializeField] GameObject Canvas_ControlsMenu;
     [Header(" ")]
 
     [Header("Code Check")]
@@ -17,6 +18,7 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] bool SettingsActive;
     [SerializeField] bool AudioActive;
     [SerializeField] bool VideoActive;
+    [SerializeField] bool ControlsActive;
     [SerializeField] int MenuLayer = 0;
 
 
@@ -33,6 +35,7 @@ public class OptionsMenu : MonoBehaviour
         SettingsActive = false;
         AudioActive = false;
         VideoActive = false;
+        ControlsActive = false;
 
         MenuLayer = 0;
 
@@ -45,7 +48,6 @@ public class OptionsMenu : MonoBehaviour
     {
         KeyCheck();
         CursorUnlocker();
-        Pauser();
     }
 
     void KeyCheck()
@@ -58,7 +60,7 @@ public class OptionsMenu : MonoBehaviour
 
     void CursorUnlocker()
     {
-        if (MenuActive || SettingsActive || VideoActive || AudioActive || BuildMenu.BuildingMenu)
+        if (MenuActive || SettingsActive || VideoActive || AudioActive || ControlsActive || BuildMenu.BuildingMenu)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -67,7 +69,7 @@ public class OptionsMenu : MonoBehaviour
             move.enabled = false;
         }
 
-        if (!MenuActive && !SettingsActive && !VideoActive && !AudioActive && !BuildMenu.BuildingMenu)
+        if (!MenuActive && !SettingsActive && !VideoActive && !AudioActive && !ControlsActive && !BuildMenu.BuildingMenu)
         {
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = false;
@@ -79,11 +81,11 @@ public class OptionsMenu : MonoBehaviour
 
     void Pauser()
     {
-        if (MenuActive || SettingsActive || VideoActive || AudioActive)
+        if (MenuActive || SettingsActive || VideoActive || AudioActive || ControlsActive)
         {
             Time.timeScale = 0;
         }
-        else if (!MenuActive && !SettingsActive && !VideoActive && !AudioActive)
+        else if (!MenuActive && !SettingsActive && !VideoActive && !AudioActive && !ControlsActive)
         {
             Time.timeScale = 1;
         }
@@ -97,14 +99,18 @@ public class OptionsMenu : MonoBehaviour
         SettingsActive = false;
         AudioActive = false;
         VideoActive = false;
+        ControlsActive = false;
 
-        if (MenuActive && !SettingsActive && !AudioActive && !VideoActive)
+        if (MenuActive && !SettingsActive && !AudioActive && !VideoActive && !ControlsActive)
         {
             Canvas_MainMenu.SetActive(true);
             Canvas_AudioMenu.SetActive(false);
             Canvas_VideoMenu.SetActive(false);
+            Canvas_ControlsMenu.SetActive(false);
             Canvas_SettingsMenu.SetActive(false);
         }
+
+        Pauser();
     }
 
     public void Resume()
@@ -115,10 +121,12 @@ public class OptionsMenu : MonoBehaviour
         SettingsActive = false;
         AudioActive = false;
         VideoActive = false;
+        ControlsActive = false;
         
         Canvas_MainMenu.SetActive(false);
         Canvas_AudioMenu.SetActive(false);
         Canvas_VideoMenu.SetActive(false);
+        Canvas_ControlsMenu.SetActive(false);
         Canvas_SettingsMenu.SetActive(false);
     }
 
@@ -135,12 +143,14 @@ public class OptionsMenu : MonoBehaviour
         AudioActive = false;
         VideoActive = false;
         MenuActive = false;
+        ControlsActive = false;
 
-        if (SettingsActive && !MenuActive && !AudioActive && !VideoActive)
+        if (SettingsActive && !MenuActive && !AudioActive && !VideoActive && !ControlsActive)
         {
             Canvas_SettingsMenu.SetActive(true);
             Canvas_AudioMenu.SetActive(false);
             Canvas_VideoMenu.SetActive(false);
+            Canvas_ControlsMenu.SetActive(false);
             Canvas_MainMenu.SetActive(false);
         }
     }
@@ -153,12 +163,14 @@ public class OptionsMenu : MonoBehaviour
         SettingsActive = false;
         AudioActive = false;
         MenuActive = false;
+        ControlsActive = false;
 
-        if (VideoActive && !MenuActive && !AudioActive && !SettingsActive)
+        if (VideoActive && !MenuActive && !AudioActive && !SettingsActive && !ControlsActive)
         {
             Canvas_VideoMenu.SetActive(true);
             Canvas_AudioMenu.SetActive(false);
             Canvas_SettingsMenu.SetActive(false);
+            Canvas_ControlsMenu.SetActive(false);
             Canvas_MainMenu.SetActive(false);
         }
     }
@@ -171,19 +183,36 @@ public class OptionsMenu : MonoBehaviour
         SettingsActive = false;
         VideoActive = false;
         MenuActive = false;
+        ControlsActive = false;
 
-        if (AudioActive && !MenuActive && !VideoActive && !SettingsActive)
+        if (AudioActive && !MenuActive && !VideoActive && !SettingsActive && !ControlsActive)
         {
             Canvas_AudioMenu.SetActive(true);
             Canvas_VideoMenu.SetActive(false);
             Canvas_SettingsMenu.SetActive(false);
+            Canvas_ControlsMenu.SetActive(false);
             Canvas_MainMenu.SetActive(false);
         }
     }
 
     public void Controls()
     {
-        Debug.Log("Opening Controls menu!");
+        Debug.Log("Layer 2");
+        MenuLayer = 3;
+        ControlsActive = true;
+        AudioActive = false;
+        SettingsActive = false;
+        VideoActive = false;
+        MenuActive = false;
+
+        if (ControlsActive && !AudioActive && !MenuActive && !VideoActive && !SettingsActive)
+        {
+            Canvas_ControlsMenu.SetActive(true);
+            Canvas_AudioMenu.SetActive(false);
+            Canvas_VideoMenu.SetActive(false);
+            Canvas_SettingsMenu.SetActive(false);            
+            Canvas_MainMenu.SetActive(false);
+        }
     }
 
     public void Mute()
