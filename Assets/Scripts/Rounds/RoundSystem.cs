@@ -197,6 +197,7 @@ public class RoundSystem : MonoBehaviour
         }
         if (Input.GetKeyDown("/"))
         {
+            Debug.Log(Time.timeScale);
             Time.timeScale = 1;
             TickValue = 1;
         }
