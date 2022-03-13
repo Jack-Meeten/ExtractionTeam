@@ -208,7 +208,7 @@ public class OptionsMenu : MonoBehaviour
         if (ControlsActive && !AudioActive && !MenuActive && !VideoActive && !SettingsActive)
         {
             Canvas_ControlsMenu.SetActive(true);
-            Canvas_AudioMenu.SetActive(true);
+            Canvas_AudioMenu.SetActive(false);
             Canvas_VideoMenu.SetActive(false);
             Canvas_SettingsMenu.SetActive(false);            
             Canvas_MainMenu.SetActive(false);
