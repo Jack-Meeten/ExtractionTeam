@@ -5,11 +5,7 @@ using UnityEngine;
 public class FlameThrower : TowerClass
 {
     public Collider aOE;
-    public List<GameObject> enemies;
-    private void Start()
-    {
-        enemies = new List<GameObject>();
-    }
+    public List<GameObject> _enemy = new List<GameObject>();
 
     protected override void Update()
     {
@@ -18,12 +14,12 @@ public class FlameThrower : TowerClass
 
     private void OnTriggerEnter(Collider other)
     {
-        enemies.Add(other.gameObject);
+        _enemy.Add(other.gameObject);
         Debug.Log("added");
     }
     private void OnTriggerExit(Collider other)
     {
-        enemies.Remove(other.gameObject);
+        _enemy.Remove(other.gameObject);
         Debug.Log("removed");
     }
 }
