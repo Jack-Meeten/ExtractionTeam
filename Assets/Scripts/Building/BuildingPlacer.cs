@@ -7,6 +7,7 @@ public class BuildingPlacer : MonoBehaviour
     private Grid grid;
     public GameObject tower;
     public BuildManager manager;
+    public LayerMask lM;
 
     private Vector3 drawPos;
 
@@ -42,12 +43,12 @@ public class BuildingPlacer : MonoBehaviour
         drawPos = finalPosition;
 
         //makes box and checks whats in it
-        Collider[] hitColliders = Physics.OverlapBox(finalPosition, transform.localScale / 2, Quaternion.identity);
+        Collider[] hitColliders = Physics.OverlapBox(new Vector3(finalPosition.x, finalPosition.y - 5, finalPosition.z), transform.localScale / 2, Quaternion.identity);
         int i = 0;
         //Check when there is a new collider coming into contact with the box
         while (i < hitColliders.Length)
         {
-            Debug.Log("Hit : " + hitColliders[i].name + i);
+            //Debug.Log("Hit : " + hitColliders[i].name + i);
             //Increase the number of Colliders in the array
             i++;
         }
@@ -56,7 +57,7 @@ public class BuildingPlacer : MonoBehaviour
             //if not a tower spawn
             if (item.tag != "Tower" || item.tag != "Resource")
             {
-                Instantiate(tower, finalPosition, transform.rotation);
+                Instantiate(tower, new Vector3(finalPosition.x, finalPosition.y + 0.225f, finalPosition.z), transform.rotation);
                 manager.opalium -= tower.GetComponent<TowerStats>().opalium;
                 manager.vinculum -= tower.GetComponent<TowerStats>().vinculum;
             }

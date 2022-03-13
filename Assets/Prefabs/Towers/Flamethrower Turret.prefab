@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3153056261646625403}
-  - component: {fileID: 2344747417749221570}
+  - component: {fileID: 2127859999835170392}
   m_Layer: 6
   m_Name: Flamethrower Turret
   m_TagString: Tower
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -30,10 +30,11 @@ Transform:
   m_Children:
   - {fileID: 4146845407953028276}
   - {fileID: 6616789976470977565}
+  - {fileID: 4965002022270662326}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &2344747417749221570
+--- !u!114 &2127859999835170392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,22 +43,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2344747417749221569}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f94a4cac9621242917fb533689d25b, type: 3}
+  m_Script: {fileID: 11500000, guid: c060603f10f366a40a0cc5c10b62db35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 1
-  rateOfFire: 0.001
-  range: 5
-  MuzzleFlash: {fileID: 6616789976470977555}
-  enemies: []
-  target: {fileID: 0}
-  baseMountPoint: {fileID: 7436343319874189105}
-  barrelMountPoint: {fileID: 7436343319874189105}
-  turnSpeed: 90
-  allowFire: 1
-  isAnimated: 0
-  _animation: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
+  opalium: 10
+  vinculum: 10
 --- !u!1 &2634393518600885970
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,7 +61,7 @@ GameObject:
   - component: {fileID: 3332323196756132205}
   m_Layer: 6
   m_Name: Base
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,7 +74,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2634393518600885970}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00007891655, y: 0.08871819, z: 0.0020529628}
+  m_LocalPosition: {x: -0.00007891655, y: 0.098, z: 0.0020529628}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8676291963687064223}
@@ -141,6 +131,50 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &5005671375250037370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4965002022270662326}
+  - component: {fileID: 3991609155331615538}
+  m_Layer: 6
+  m_Name: DETECT BOX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4965002022270662326
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5005671375250037370}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.098, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3153056261646625403}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3991609155331615538
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5005671375250037370}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.42, y: 1.63, z: 1.88}
+  m_Center: {x: 0, y: 0.71, z: 0}
 --- !u!1 &6616789976470977554
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,7 +201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6616789976470977554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.098, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3153056261646625403}
@@ -4959,6 +4993,7 @@ GameObject:
   - component: {fileID: 549326663605429332}
   - component: {fileID: 7426615504698043794}
   - component: {fileID: 7436343319874189106}
+  - component: {fileID: 1695680289653908921}
   m_Layer: 6
   m_Name: Turret
   m_TagString: Untagged
@@ -5038,8 +5073,35 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7436343319874189105}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.31, y: 2.67, z: 3.93}
   m_Center: {x: 0, y: 0.32, z: 2.02}
+--- !u!114 &1695680289653908921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7436343319874189105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6f94a4cac9621242917fb533689d25b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 1
+  rateOfFire: 0.01
+  range: 5
+  MuzzleFlash: {fileID: 6616789976470977555}
+  enemies: []
+  target: {fileID: 0}
+  baseMountPoint: {fileID: 7436343319874189105}
+  barrelMountPoint: {fileID: 7436343319874189105}
+  turnSpeed: 90
+  allowFire: 1
+  isAnimated: 0
+  _animation: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
+  aOE: {fileID: 7436343319874189106}
+  quickTickDamage: 2

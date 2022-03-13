@@ -5,21 +5,33 @@ using UnityEngine;
 public class FlameThrower : TowerClass
 {
     public Collider aOE;
-    public List<GameObject> _enemy = new List<GameObject>();
+    private List<GameObject> _enemy = new List<GameObject>();
+    private bool canTick = true;
+    public float quickTickDamage;
 
     protected override void Update()
     {
         base.Update();
+        StartCoroutine(tickDamage());
     }
 
     private void OnTriggerEnter(Collider other)
     {
         _enemy.Add(other.gameObject);
-        Debug.Log("added");
     }
     private void OnTriggerExit(Collider other)
     {
         _enemy.Remove(other.gameObject);
-        Debug.Log("removed");
+    }
+
+    IEnumerator tickDamage()
+    {
+        canTick = false;
+        foreach (GameObject obj in _enemy)
+        {
+            obj.GetComponent<EnemyStats>().health -= quickTickDamage;
+        }
+
+        yield return new WaitForSeconds(Time.deltaTime / rateOfFire);
     }
 }
