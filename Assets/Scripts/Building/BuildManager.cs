@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BuildManager : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class BuildManager : MonoBehaviour
     public int vinculum;
     public BuildingPlacer placer;
     public BuildManager manager;
+
+    [SerializeField] TextMeshProUGUI OpaliumText;
+    [SerializeField] TextMeshProUGUI VinculumText;
 
     /*[SerializeField] bool cannonTurret;
     [SerializeField] bool pDTurret;
@@ -23,6 +27,13 @@ public class BuildManager : MonoBehaviour
     [SerializeField] bool stunTurret;
     [SerializeField] bool missileTurret;*/
 
+    void Update()
+    {
+        // Update the resources number on the UI
+        OpaliumText.text = opalium.ToString();
+        VinculumText.text = vinculum.ToString();
+    }
+
     public void selectTurret(GameObject turret)
     {
         //placer.beginPlace = true;
@@ -34,5 +45,4 @@ public class BuildManager : MonoBehaviour
             else placer.beginPlace = true;
         }
     }
-
 }

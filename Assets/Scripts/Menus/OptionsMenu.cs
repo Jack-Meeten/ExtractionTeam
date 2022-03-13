@@ -45,6 +45,7 @@ public class OptionsMenu : MonoBehaviour
     {
         KeyCheck();
         CursorUnlocker();
+        Pauser();
     }
 
     void KeyCheck()
@@ -73,6 +74,18 @@ public class OptionsMenu : MonoBehaviour
 
             look.enabled = true;
             move.enabled = true;
+        }
+    }
+
+    void Pauser()
+    {
+        if (MenuActive || SettingsActive || VideoActive || AudioActive)
+        {
+            Time.timeScale = 0;
+        }
+        else if (!MenuActive && !SettingsActive && !VideoActive && !AudioActive)
+        {
+            Time.timeScale = 1;
         }
     }
 

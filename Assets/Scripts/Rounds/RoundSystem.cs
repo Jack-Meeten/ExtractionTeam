@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class RoundSystem : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class RoundSystem : MonoBehaviour
     [SerializeField] float Round3;
     [SerializeField] float Round4;
     [SerializeField] float Round5;
-
+    [SerializeField] TextMeshProUGUI RoundText;
 
     [Header("Enemy Settings")]
     [SerializeField] GameObject Enemy;
@@ -71,6 +72,9 @@ public class RoundSystem : MonoBehaviour
 
         // Update Light angle
         RotationPivot.transform.rotation = Quaternion.Euler(LightAngle, OffsetAngle, 0);
+
+        // Update the round number on the UI
+        RoundText.text = CurrentRound.ToString();
     }
 
     void DayCycle()
