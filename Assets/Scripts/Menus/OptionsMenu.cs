@@ -79,6 +79,14 @@ public class OptionsMenu : MonoBehaviour
         }
     }
 
+    void Pauser()
+    {
+        if (MenuActive || SettingsActive || VideoActive || AudioActive || ControlsActive)
+        {
+            Time.timeScale = 0;
+        }
+    }
+
     public void Pause()
     {
         Debug.Log("Layer 0");
@@ -98,10 +106,7 @@ public class OptionsMenu : MonoBehaviour
             Canvas_SettingsMenu.SetActive(false);
         }
 
-        if (MenuActive || SettingsActive || VideoActive || AudioActive || ControlsActive)
-        {
-            Time.timeScale = 0;
-        }
+        Pauser();
     }
 
     public void Resume()
@@ -149,6 +154,8 @@ public class OptionsMenu : MonoBehaviour
             Canvas_ControlsMenu.SetActive(false);
             Canvas_MainMenu.SetActive(false);
         }
+
+        Pauser();
     }
 
     public void Video()
