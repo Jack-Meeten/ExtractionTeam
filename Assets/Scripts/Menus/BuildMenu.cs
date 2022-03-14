@@ -30,12 +30,16 @@ public class BuildMenu : MonoBehaviour
 
     CameraLook look;
     CameraMove move;
+    PanningControls PCScript;
 
+    // Camera dependencies.
+    [SerializeField] Transform orientation;
 
     private void Awake()
     {
         look = CameraHolder.GetComponent<CameraLook>();
         move = CameraHolder.GetComponent<CameraMove>();
+        PCScript = CameraHolder.GetComponent<PanningControls>();
 
         BuildingMenu = false;
         SpawnedLocation = false;
@@ -62,11 +66,7 @@ public class BuildMenu : MonoBehaviour
         else if (Input.GetKeyDown(MenuBuild) && BuildingMenu)
         {
             Toggle();
-            //ToggleMenu();
         }
-
-        //if (!BuildingMenu && !DeployedMenu) DoNotDeploy = true;
-        //else DoNotDeploy = false;
 
         if (BuildingMenu && !SpawnedLocation) SpawnLocationSaver();
 
@@ -88,6 +88,9 @@ public class BuildMenu : MonoBehaviour
         //Set the enable state to the oposite of the state of the boolean.
         look.enabled = !BuildingMenu;
         move.enabled = !BuildingMenu;
+        PCScript.enabled = !look.enabled;
+
+        orientation.rotation = Quaternion.Euler(0, -180, 0);
     }
 
     void ToggleMenu()
