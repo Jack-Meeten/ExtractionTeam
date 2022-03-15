@@ -7,7 +7,6 @@ public class BuildingPlacer : MonoBehaviour
     private Grid grid;
     public GameObject tower;
     public BuildManager manager;
-    public LayerMask lM;
 
     private Vector3 drawPos;
 

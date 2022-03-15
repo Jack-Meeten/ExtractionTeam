@@ -15,6 +15,9 @@ public class BuildMenu : MonoBehaviour
     GameObject ObjectToDestroy;
     public bool BuildingMenu;
     [SerializeField] bool SpawnedLocation;
+
+    public BuildingPlacer buildPlacer;
+
     [Header(" ")]
 
 
@@ -66,6 +69,7 @@ public class BuildMenu : MonoBehaviour
         else if (Input.GetKeyDown(MenuBuild) && BuildingMenu)
         {
             Toggle();
+            buildPlacer.beginPlace = false;
         }
 
         if (BuildingMenu && !SpawnedLocation) SpawnLocationSaver();

@@ -11,6 +11,15 @@ public class SplineFinding : MonoBehaviour
     public float speedModifier;
     public bool coroutineAllowed;
 
+    public float speed;
+    public Vector3 prevVector;
+    public float prevtime;
+    public Vector3 currentVector;
+    public float ds;
+    public float pecentDiff;
+    public float variableSM;
+
+
     void Awake()
     {
         routeToGO = 0;
@@ -20,6 +29,7 @@ public class SplineFinding : MonoBehaviour
         {
             routes.Add(route.transform);
         }
+        variableSM = speedModifier;
     }
 
     void Update()
@@ -28,6 +38,18 @@ public class SplineFinding : MonoBehaviour
         {
             StartCoroutine(Travel(routeToGO));
         }
+        currentVector = transform.position;
+        speed = (currentVector - prevVector).magnitude / (tParam - prevtime);
+
+        //ds = 12 - speed;
+        //pecentDiff = (ds / 100);
+        //variableSM = speedModifier * pecentDiff;
+    }
+
+    private void LateUpdate()
+    {
+        prevVector = transform.position;
+        prevtime = tParam;
     }
 
     private IEnumerator Travel(int routeNumber)
@@ -43,7 +65,7 @@ public class SplineFinding : MonoBehaviour
 
         while (tParam < 1)
         {
-            tParam += Time.deltaTime * speedModifier;
+            tParam += Time.deltaTime * variableSM;
 
             currentPosision = Mathf.Pow(1 - tParam, 3) * p0 + 3 * Mathf.Pow(1 - tParam, 2) * tParam * p1 + 3 * (1 - tParam) * Mathf.Pow(tParam, 2) * p2 + Mathf.Pow(tParam, 3) * p3;
 
