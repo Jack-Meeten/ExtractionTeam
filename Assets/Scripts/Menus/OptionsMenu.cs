@@ -200,7 +200,6 @@ public class OptionsMenu : MonoBehaviour
 
     public void Controls()
     {
-        Debug.Log("Layer 2");
         MenuLayer = 3;
         ControlsActive = true;
         AudioActive = false;
