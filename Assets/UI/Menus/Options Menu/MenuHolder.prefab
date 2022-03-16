@@ -587,10 +587,13 @@ MonoBehaviour:
   Canvas_SettingsMenu: {fileID: 3282723128139599382}
   Canvas_VideoMenu: {fileID: 5496088598776569044}
   Canvas_AudioMenu: {fileID: 7367119821207485094}
+  Canvas_ControlsMenu: {fileID: 8768325344491358472}
   MenuActive: 1
   SettingsActive: 0
   AudioActive: 0
   VideoActive: 0
+  ControlsActive: 0
+  MenuLayer: 0
 --- !u!1 &2958835534131889065
 GameObject:
   m_ObjectHideFlags: 0
@@ -1582,14 +1585,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
---- !u!224 &4275023075510131810 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2937450494295128708, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
-  m_PrefabInstance: {fileID: 1409632726513919718}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3282723128139599382 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4476180237706127600, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
+  m_PrefabInstance: {fileID: 1409632726513919718}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &4275023075510131810 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2937450494295128708, guid: 2116e44dfbe8750488d6d70b8a1e6ff3, type: 3}
   m_PrefabInstance: {fileID: 1409632726513919718}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4766075313455725572
@@ -1826,8 +1829,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8293923375575169631, guid: 868137e6e3df5bb4798922830eab248b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7077690840999116756}
+    - target: {fileID: 8293923375575169631, guid: 868137e6e3df5bb4798922830eab248b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293923375575169631, guid: 868137e6e3df5bb4798922830eab248b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TitleMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 868137e6e3df5bb4798922830eab248b, type: 3}
+--- !u!1 &8768325344491358472 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2049031866645840696, guid: 868137e6e3df5bb4798922830eab248b, type: 3}
+  m_PrefabInstance: {fileID: 7332078797960235568}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3824576407808998821 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5824096785988892565, guid: 868137e6e3df5bb4798922830eab248b, type: 3}
