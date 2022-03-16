@@ -5,7 +5,8 @@ using UnityEngine;
 public class BuildingPlacer : MonoBehaviour
 {
     private Grid grid;
-    public GameObject tower;
+    [HideInInspector] public GameObject tower;
+    [HideInInspector]public GameObject towerBlueprint;
     public BuildManager manager;
 
     private Vector3 drawPos;
@@ -30,6 +31,12 @@ public class BuildingPlacer : MonoBehaviour
                 if (Physics.Raycast(ray, out hitInfo) && Input.GetMouseButtonDown(0))
                 {
                     if (hitInfo.transform.tag == "Placeable") PlaceCubeNear(hitInfo.point);
+                }
+
+                towerBlueprint.transform.position = grid.GetPointOnGrid(hitInfo.point);
+                if (!beginPlace)
+                {
+                    Destroy(towerBlueprint);
                 }
             }
         }

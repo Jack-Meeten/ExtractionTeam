@@ -45,4 +45,9 @@ public class BuildManager : MonoBehaviour
             else placer.beginPlace = true;
         }
     }
+    public void bpTurret(GameObject blueprintTurret)
+    {
+        GameObject bP = Instantiate(blueprintTurret, transform.position, transform.rotation);
+        placer.towerBlueprint = bP;
+    }
 }
