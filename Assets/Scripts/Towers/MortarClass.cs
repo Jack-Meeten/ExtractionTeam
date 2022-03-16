@@ -64,7 +64,7 @@ public class MortarClass : MonoBehaviour
 
     private void IsAimed()
     {
-        if ((transform.position - target.position).magnitude > innerRange && (transform.position - target.position).magnitude < outerRange && allowFire && target.gameObject.activeInHierarchy)
+        if ((transform.position - target.position).magnitude > innerRange && (transform.position - target.position).magnitude < outerRange && allowFire && target.gameObject.activeInHierarchy && target.GetComponent<EnemyStats>().health > 0)
         {
             Debug.DrawLine(transform.position, target.position, Color.red);
             StartCoroutine(Shoot());

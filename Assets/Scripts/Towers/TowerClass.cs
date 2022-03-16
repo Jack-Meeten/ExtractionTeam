@@ -29,7 +29,7 @@ public class TowerClass : MonoBehaviour
         FindAllEnemies();
         if (target != null)
         {
-            if ((transform.position - target.transform.position).magnitude < range)
+            if ((transform.position - target.transform.position).magnitude < range && target.GetComponent<EnemyStats>().health > 0)
             {
                 //points turret at target
                 BaseRotate();
@@ -109,7 +109,7 @@ public class TowerClass : MonoBehaviour
         {
             Debug.DrawRay(transform.position, transform.position - target.transform.position);
             //checks if can fire, in range and target active
-            if (allowFire && (transform.position - target.transform.position).magnitude < range && target.gameObject.activeInHierarchy)
+            if (allowFire && (transform.position - target.transform.position).magnitude < range && target.gameObject.activeInHierarchy && target.GetComponent<EnemyStats>().health > 0)
             {
                 Debug.DrawLine(barrelMountPoint.transform.position, target.position, Color.red);
                 StartCoroutine(Shoot());

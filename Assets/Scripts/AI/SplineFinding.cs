@@ -11,13 +11,13 @@ public class SplineFinding : MonoBehaviour
     public float speedModifier;
     public bool coroutineAllowed;
 
-    public float speed;
-    public Vector3 prevVector;
-    public float prevtime;
-    public Vector3 currentVector;
-    public float ds;
-    public float pecentDiff;
-    public float variableSM;
+    private float speed;
+    private Vector3 prevVector;
+    private float prevtime;
+    private Vector3 currentVector;
+    private float ds;
+    private float pecentDiff;
+    private float variableSM;
 
 
     void Awake()
@@ -43,7 +43,7 @@ public class SplineFinding : MonoBehaviour
 
         //ds = 12 - speed;
         //pecentDiff = (ds / 100);
-        //variableSM = speedModifier * pecentDiff;
+        //variableSM = (speedModifier * pecentDiff);
     }
 
     private void LateUpdate()
@@ -65,7 +65,7 @@ public class SplineFinding : MonoBehaviour
 
         while (tParam < 1)
         {
-            tParam += Time.deltaTime * variableSM;
+            tParam += Time.deltaTime * speedModifier;
 
             currentPosision = Mathf.Pow(1 - tParam, 3) * p0 + 3 * Mathf.Pow(1 - tParam, 2) * tParam * p1 + 3 * (1 - tParam) * Mathf.Pow(tParam, 2) * p2 + Mathf.Pow(tParam, 3) * p3;
 
