@@ -5090,8 +5090,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f94a4cac9621242917fb533689d25b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 1
-  rateOfFire: 0.01
+  Damage: 1.2
+  rateOfFire: 5
   range: 5
   MuzzleFlash: {fileID: 6616789976470977555}
   enemies: []
@@ -5104,4 +5104,4 @@ MonoBehaviour:
   _animation: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
   aOE: {fileID: 7436343319874189106}
-  quickTickDamage: 2
+  quickTickDamage: 0
