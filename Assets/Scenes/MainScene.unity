@@ -243,6 +243,38 @@ PrefabInstance:
       propertyPath: frustumSettings.qualitySettings
       value: 
       objectReference: {fileID: 789115442}
+    - target: {fileID: 778921974, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 778921974, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 778921974, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1375608449}
+    - target: {fileID: 778921974, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 778921974, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: bpTurret
+      objectReference: {fileID: 0}
+    - target: {fileID: 778921974, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: BuildManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 778921974, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 4230588843936345342, guid: 0dfb9f54f8bee4d47ab11f455dd85614, type: 3}
+    - target: {fileID: 778921974, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1299966976, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -283,12 +315,48 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1563335298, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563335298, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563335298, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1375608449}
+    - target: {fileID: 1563335298, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563335298, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: bpTurret
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563335298, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: BuildManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563335298, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 3111510723918552416, guid: bfb68bafce7a22e4b8834a9e345bdece, type: 3}
+    - target: {fileID: 1563335298, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2026022804, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2026022804, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026022804, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2026022804, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
@@ -296,7 +364,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1375608449}
     - target: {fileID: 2026022804, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1375608449}
+    - target: {fileID: 2026022804, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026022804, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2026022804, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
@@ -304,7 +380,15 @@ PrefabInstance:
       value: selectTurret
       objectReference: {fileID: 0}
     - target: {fileID: 2026022804, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: bpTurret
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026022804, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BuildManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026022804, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: BuildManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2026022804, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
@@ -312,7 +396,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3472166162419610257, guid: 3a15c2c29d580dc4d916ec63b1024bdf, type: 3}
     - target: {fileID: 2026022804, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 3194667023376857917, guid: d9e989f95d89dc0468a39e31a1d3a52b, type: 3}
+    - target: {fileID: 2026022804, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026022804, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1427354022574591804, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
