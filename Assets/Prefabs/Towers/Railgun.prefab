@@ -4938,7 +4938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943e6cfb0d9d70a409fb331278f9dded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 100
+  Damage: 120
   rateOfFire: 0.008
   range: 10
   MuzzleFlash: {fileID: 4233877568417362297}
@@ -4963,8 +4963,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c060603f10f366a40a0cc5c10b62db35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opalium: 10
-  vinculum: 10
+  opalium: 50
+  vinculum: 100
 --- !u!1 &4489030860468811116
 GameObject:
   m_ObjectHideFlags: 0

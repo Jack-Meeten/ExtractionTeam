@@ -14595,8 +14595,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c060603f10f366a40a0cc5c10b62db35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opalium: 10
-  vinculum: 10
+  opalium: 150
+  vinculum: 150
 --- !u!1001 &754068719336020603
 PrefabInstance:
   m_ObjectHideFlags: 0
