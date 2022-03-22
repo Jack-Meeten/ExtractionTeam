@@ -63,7 +63,7 @@ public class BuildingPlacer : MonoBehaviour
             //if not a tower spawn
             if (item.tag != "Tower" || item.tag != "Resource")
             {
-                Instantiate(tower, new Vector3(finalPosition.x, finalPosition.y + 0.225f, finalPosition.z), transform.rotation);
+                Instantiate(tower, new Vector3(finalPosition.x, finalPosition.y, finalPosition.z), transform.rotation);//+ 0.225f
                 manager.opalium -= tower.GetComponent<TowerStats>().opalium;
                 manager.vinculum -= tower.GetComponent<TowerStats>().vinculum;
             }

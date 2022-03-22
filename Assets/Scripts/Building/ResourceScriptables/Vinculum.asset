@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Vinculum
   m_EditorClassIdentifier: 
   number: 0
-  _name: Opalium
+  _name: Vinculum
   amountPerAction: 20

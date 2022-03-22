@@ -118,13 +118,6 @@ MonoBehaviour:
   currentPosision: {x: 0, y: 0, z: 0}
   speedModifier: 0.2
   coroutineAllowed: 0
-  speed: 0
-  prevVector: {x: 0, y: 0, z: 0}
-  prevtime: 0
-  currentVector: {x: 0, y: 0, z: 0}
-  ds: 0
-  pecentDiff: 0
-  variableSM: 0.2
 --- !u!114 &-4786704532309685092
 MonoBehaviour:
   m_ObjectHideFlags: 0

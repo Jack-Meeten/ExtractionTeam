@@ -33,7 +33,6 @@ public class ResourceVein : MonoBehaviour
         }
         if (whileCaptured && collect)
         {
-            Debug.Log("dfsdf");
             StartCoroutine(OverTime(resource.number, resource.amountPerAction));
         }
     }
