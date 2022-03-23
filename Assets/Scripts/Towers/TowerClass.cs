@@ -24,6 +24,11 @@ public class TowerClass : MonoBehaviour
 
     public Vector3 offset;
 
+    public bool close = true;
+    public bool far = false;
+    public bool weak = false;
+    public bool strong = false;
+
     protected virtual void Update()
     {
         FindAllEnemies();
@@ -65,14 +70,44 @@ public class TowerClass : MonoBehaviour
         Transform bestTarget = null;
         float closeestDistanceSqr = Mathf.Infinity;
         Vector3 currentPosition = transform.position;
+
+        float lowestHealth = Mathf.Infinity;
         foreach (Transform potentialTarget in enemies)
         {
             Vector3 dirToTarget = potentialTarget.position - currentPosition;
             float dSqrToTarget = dirToTarget.sqrMagnitude;
-            if (dSqrToTarget < closeestDistanceSqr)
+            float health = potentialTarget.GetComponent<EnemyStats>().health;
+            if (close)
             {
-                closeestDistanceSqr = dSqrToTarget;
-                bestTarget = potentialTarget;
+                if (dSqrToTarget < closeestDistanceSqr)
+                {
+                    closeestDistanceSqr = dSqrToTarget;
+                    bestTarget = potentialTarget;
+                }
+            }
+            if (far)
+            {
+                if (dSqrToTarget > closeestDistanceSqr)
+                {
+                    closeestDistanceSqr = dSqrToTarget;
+                    bestTarget = potentialTarget;
+                }
+            }
+            if (weak)
+            {
+                if (health < lowestHealth)
+                {
+                    lowestHealth = health;
+                    bestTarget = potentialTarget;
+                }
+            }
+            if (strong)
+            {
+                if (health > lowestHealth)
+                {
+                    lowestHealth = health;
+                    bestTarget = potentialTarget;
+                }
             }
             target = bestTarget;
         }
@@ -129,5 +164,34 @@ public class TowerClass : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, range);
+    }
+
+    public void CloseFire()
+    {
+        close = true;
+        far = false;
+        weak = false;
+        strong = false;
+    }
+    public void FarFire()
+    {
+        close = false;
+        far = true;
+        weak = false;
+        strong = false;
+    }
+    public void WeakFire()
+    {
+        close = false;
+        far = false;
+        weak = true;
+        strong = false;
+    }
+    public void StrongFire()
+    {
+        close = false;
+        far = false;
+        weak = false;
+        strong = true;
     }
 }
