@@ -56,7 +56,7 @@ public class BuildMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerInput();        
+        PlayerInput();
     }
 
     void PlayerInput()
@@ -95,6 +95,8 @@ public class BuildMenu : MonoBehaviour
         PCScript.enabled = !look.enabled;
 
         orientation.rotation = Quaternion.Euler(0, -180, 0);
+
+        ToggleMenu();
     }
 
     void ToggleMenu()
@@ -103,9 +105,9 @@ public class BuildMenu : MonoBehaviour
         {
             DeployedMenu = !DeployedMenu;
 
-            if (DeployedMenu) LeanTween.moveX(MovingPanel, MovingPanel.transform.position.x - 350, PanelTime);
-            if (!DeployedMenu) LeanTween.moveX(MovingPanel, MovingPanel.transform.position.x + 350, PanelTime);
-        }       
+            if (DeployedMenu) LeanTween.moveX(MovingPanel, 1920, PanelTime);
+            if (!DeployedMenu) LeanTween.moveX(MovingPanel, 2270, PanelTime);
+        }
     }
 
     void Tween()
@@ -157,7 +159,7 @@ public class BuildMenu : MonoBehaviour
     IEnumerator ClickCooldown()
     {
         CooldownCheck = !CooldownCheck;
-        yield return new WaitForSeconds(PanelTime);
+        yield return new WaitForSeconds(PanelTime * 2);
         CooldownCheck = !CooldownCheck;
     }
 
