@@ -100,7 +100,7 @@ public class RoundSystem : MonoBehaviour
     {
         if (CurrentTick >= NightTicks)
         {
-            CurrentTick = 0f;                               
+            CurrentTick = 0f;
         }
 
         if (CurrentTick == Round1)
@@ -151,7 +151,7 @@ public class RoundSystem : MonoBehaviour
             creep.GetComponent<SplineFinding>().tParam = 0;
             creep.GetComponent<SplineFinding>().routeToGO = 0;
             creep.GetComponent<SplineFinding>().coroutineAllowed = true;
-            creep.GetComponent<EnemyStats>().health = creep.GetComponent<EnemyStats>().baseHealth;
+            creep.GetComponent<EnemyStats>().health = creep.GetComponent<EnemyStats>().baseHealth * 1.002f;
             creep.SetActive(true);
             //Debug.Log(creep.name + " : is ACTIVE");
         }
