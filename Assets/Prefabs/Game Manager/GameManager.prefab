@@ -321,17 +321,19 @@ MonoBehaviour:
   DayTicks: 6000
   NightTicks: 36000
   CurrentRound: 0
+  MaxRounds: 50
   Round1: 6001
   Round2: 12001
   Round3: 18001
   Round4: 24001
   Round5: 30001
   RoundText: {fileID: 5522826400952991967}
+  Shuttle: {fileID: 0}
   Enemy: {fileID: 9133131290195037006, guid: 7c035b293ebc8be4fa5fc21bc7a4af57, type: 3}
   spawnPoint: {fileID: 0}
   SpawnPoints:
   - {fileID: 0}
-  SpawnInterval: 0.5
+  SpawnInterval: 1
   CurrentEnemiesToSpawn: 15
   DefaultEnemiesToSpawn: 15
   RoundEnemyIncreaser: 4
@@ -385,7 +387,7 @@ MonoBehaviour:
   vinculum: 1000
   placer: {fileID: 155786138}
   manager: {fileID: 7501513318347586194}
-  OpaliumText: {fileID: 4398606566160147719}
+  OpaliumText: {fileID: 1640402203902806440}
   VinculumText: {fileID: 6676091937644204685}
 --- !u!114 &155786139
 MonoBehaviour:
@@ -1102,15 +1104,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2909686883350281048, guid: 2fee8d83c1a13294b9cf520dc2e92e6a, type: 3}
       propertyPath: m_fontSize
-      value: 23.15
+      value: 66.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459523143565938944, guid: 2fee8d83c1a13294b9cf520dc2e92e6a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3.90271
       objectReference: {fileID: 0}
     - target: {fileID: 4924813243186374228, guid: 2fee8d83c1a13294b9cf520dc2e92e6a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 351319836465610608}
+    - target: {fileID: 4924841258988971070, guid: 2fee8d83c1a13294b9cf520dc2e92e6a, type: 3}
+      propertyPath: m_Name
+      value: Opalium_TXT (TMP)
+      objectReference: {fileID: 0}
     - target: {fileID: 5318060318532308178, guid: 2fee8d83c1a13294b9cf520dc2e92e6a, type: 3}
       propertyPath: m_fontSize
       value: 23.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7062937172452581501, guid: 2fee8d83c1a13294b9cf520dc2e92e6a, type: 3}
+      propertyPath: m_fontSize
+      value: 67
       objectReference: {fileID: 0}
     - target: {fileID: 8414825215185139110, guid: 2fee8d83c1a13294b9cf520dc2e92e6a, type: 3}
       propertyPath: m_Pivot.x
@@ -1505,9 +1519,9 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8414825215185139110, guid: 2fee8d83c1a13294b9cf520dc2e92e6a, type: 3}
   m_PrefabInstance: {fileID: 8414825215058848213}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4398606566160147719 stripped
+--- !u!114 &1640402203902806440 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5318060318532308178, guid: 2fee8d83c1a13294b9cf520dc2e92e6a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7062937172452581501, guid: 2fee8d83c1a13294b9cf520dc2e92e6a, type: 3}
   m_PrefabInstance: {fileID: 8414825215058848213}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

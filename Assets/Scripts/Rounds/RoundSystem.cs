@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class RoundSystem : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class RoundSystem : MonoBehaviour
 
     [Header("Round Settings")]
     [SerializeField] int CurrentRound;
+    [SerializeField] int MaxRounds = 50;
     [Header(" ")]
     [SerializeField] float Round1;
     [SerializeField] float Round2;
@@ -30,6 +32,11 @@ public class RoundSystem : MonoBehaviour
     [SerializeField] float Round4;
     [SerializeField] float Round5;
     [SerializeField] TextMeshProUGUI RoundText;
+
+    [Header("Shuttle Settings")]
+    [SerializeField] GameObject Shuttle;
+    ShuttleScript ShuttleScr;
+    [Header(" ")]
 
     [Header("Enemy Settings")]
     [SerializeField] GameObject Enemy;
@@ -61,6 +68,8 @@ public class RoundSystem : MonoBehaviour
         CurrentEnemiesToSpawn = DefaultEnemiesToSpawn;
 
         StartCoroutine(TickPass());
+
+        ShuttleScr = Shuttle.GetComponent<ShuttleScript>();
     }
 
     private void Update()
@@ -69,6 +78,7 @@ public class RoundSystem : MonoBehaviour
         RoundCheck();
         AngleRotation();
         SpeedStep();
+        WinLose();
 
         // Update Light angle
         RotationPivot.transform.rotation = Quaternion.Euler(LightAngle, OffsetAngle, 0);
@@ -79,20 +89,27 @@ public class RoundSystem : MonoBehaviour
 
     void DayCycle()
     {
-        if (CurrentTick >= 0 && CurrentTick <= DayTicks)
-        {
-            //Debug.Log("Its day time baby");
-        }
-
-        if (CurrentTick >= DayTicks && CurrentTick <= NightTicks)
-        {
-            //Debug.Log("Its night time baby");
-        }
-
         if (CurrentEnemiesToSpawn <= 0)
         {
             CancelInvoke("SpawnDelay");
             StartCoroutine(ResetEnemiesSpawn());
+        }
+    }
+
+    void WinLose()
+    {
+        //Lose condition
+        if (ShuttleScr.CurrentHealth <= 0)
+        {
+            SceneManager.LoadScene(0);
+            Debug.Log("Player loses!");
+        }
+
+        //Win condition
+        if (CurrentRound >= MaxRounds)
+        {
+            SceneManager.LoadScene(0);
+            Debug.Log("Player wins!");
         }
     }
 

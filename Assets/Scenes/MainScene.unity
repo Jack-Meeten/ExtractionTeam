@@ -138,10 +138,6 @@ PrefabInstance:
       propertyPath: frustumSettings.qualitySettings
       value: 
       objectReference: {fileID: 789115442}
-    - target: {fileID: 1152166853319854966, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.6524048
-      objectReference: {fileID: 0}
     - target: {fileID: 1427354022574591804, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -191,45 +187,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1427354022574591807, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: Shuttle
+      value: 
+      objectReference: {fileID: 292970593}
+    - target: {fileID: 1427354022574591807, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1392421416}
     - target: {fileID: 1427354022574591807, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: SpawnInterval
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1427354022574591807, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: SpawnPoints.Array.data[0]
       value: 
       objectReference: {fileID: 1392421416}
-    - target: {fileID: 3318048581724530630, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -5.7999268
-      objectReference: {fileID: 0}
-    - target: {fileID: 3318048581724530630, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -13.100006
-      objectReference: {fileID: 0}
-    - target: {fileID: 3503796091506953707, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_Name
-      value: Opalium_TXT (TMP)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4260861112978949185, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 7.299988
-      objectReference: {fileID: 0}
-    - target: {fileID: 5270370831153019093, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -3.90271
-      objectReference: {fileID: 0}
-    - target: {fileID: 5471871642792001436, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 13.299988
-      objectReference: {fileID: 0}
-    - target: {fileID: 7501513318347586194, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: OpaliumText
-      value: 
-      objectReference: {fileID: 908883175}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
 --- !u!1001 &265583372
@@ -402,6 +370,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd2f1ee080eebae4a8d6754d36dd3d50, type: 3}
+--- !u!1 &292970593 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6444428230397253512, guid: cd2f1ee080eebae4a8d6754d36dd3d50, type: 3}
+  m_PrefabInstance: {fileID: 292970592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &419701858
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,17 +728,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8ac66cd427b9d5e469595aded59820af, type: 3}
   m_PrefabInstance: {fileID: 804266632}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &908883175 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1640402203902806440, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-  m_PrefabInstance: {fileID: 155786133}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1147876031 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1283007521, guid: cd2f1ee080eebae4a8d6754d36dd3d50, type: 3}
@@ -872,7 +834,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-364140
+  m_Name: pb_Mesh-6390
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
