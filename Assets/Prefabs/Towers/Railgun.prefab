@@ -4902,7 +4902,7 @@ GameObject:
   - component: {fileID: 1075924217356866324}
   m_Layer: 0
   m_Name: Railgun
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4951,6 +4951,10 @@ MonoBehaviour:
   isAnimated: 0
   _animation: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
+  close: 1
+  far: 0
+  weak: 0
+  strong: 0
 --- !u!114 &1075924217356866324
 MonoBehaviour:
   m_ObjectHideFlags: 0

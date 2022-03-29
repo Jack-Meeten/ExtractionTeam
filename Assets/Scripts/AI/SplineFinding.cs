@@ -42,7 +42,7 @@ public class SplineFinding : MonoBehaviour
         speed = (currentVector - prevVector).magnitude / (tParam - prevtime);
 
         //ds = 12 - speed;
-        //pecentDiff = (ds / 100);
+        //pecentDiff = ds / 100;
         //variableSM = (speedModifier * pecentDiff);
     }
 
