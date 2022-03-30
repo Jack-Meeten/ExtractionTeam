@@ -4,26 +4,27 @@ using UnityEngine;
 
 public class MortarClass : MonoBehaviour
 {
-    public float innerRange;
-    public float outerRange;
-    public float AOERange;
-    public float Damage;
-    public float rateOfFire;
-    public float timeToImpact;
-    public GameObject projectile;
+    [Header("Tower Stats")]
+    [SerializeField] float innerRange;
+    [SerializeField] float outerRange;
+    [SerializeField] float AOERange;
+    [SerializeField] float Damage;
+    [SerializeField] float rateOfFire;
+    [SerializeField] float timeToImpact;
+    [SerializeField] GameObject projectile;
 
     [Header("FX")]
-    public ParticleSystem[] MuzzleFlash;
+    [SerializeField] ParticleSystem[] MuzzleFlash;
+    public Transform target; //[HideInInspector] 
 
-    private List<Transform> enemies = new List<Transform>();
-    public Transform target;
+    bool allowFire = true;
+    bool close, far, weak, strong;
+    List<Transform> enemies = new List<Transform>();
 
-    public bool allowFire = true;
-
-    private bool close = true;
-    private bool far = false;
-    private bool weak = false;
-    private bool strong = false;
+    private void Awake()
+    {
+        CloseFire();
+    }
 
     protected virtual void FixedUpdate()
     {
@@ -36,7 +37,9 @@ public class MortarClass : MonoBehaviour
 
     public void FindAllEnemies()
     {
+        //clears current enemies
         enemies.Clear();
+        //loops over all enemies and adds them to list, to be replaced later on
         foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
         {
             Transform enemyTransform = enemy.gameObject.transform;
@@ -46,19 +49,52 @@ public class MortarClass : MonoBehaviour
                 enemies.Add(enemyTransform);
             }
         }
-
+        //calculates nearest enemy and sets to target
         Transform bestTarget = null;
         float closeestDistanceSqr = Mathf.Infinity;
+        float furthestDistanceSqr = 0;
         Vector3 currentPosition = transform.position;
+
+        float lowestHealth = Mathf.Infinity;
+        float highestHealth = 0;
         foreach (Transform potentialTarget in enemies)
         {
             Vector3 dirToTarget = potentialTarget.position - currentPosition;
             float dSqrToTarget = dirToTarget.sqrMagnitude;
-            if ((transform.position - potentialTarget.position).magnitude > innerRange && (transform.position - potentialTarget.position).magnitude < outerRange)
+            float health = potentialTarget.GetComponent<EnemyStats>().health;
+
+            if (close)
             {
-                if (dSqrToTarget < closeestDistanceSqr )
+                if (dSqrToTarget < closeestDistanceSqr)
                 {
                     closeestDistanceSqr = dSqrToTarget;
+                    bestTarget = potentialTarget;
+                }
+            }
+
+            if (far)
+            {
+                if (dSqrToTarget >= furthestDistanceSqr)
+                {
+                    furthestDistanceSqr = dSqrToTarget;
+                    bestTarget = potentialTarget;
+                }
+            }
+
+            if (weak)
+            {
+                if (health < lowestHealth)
+                {
+                    lowestHealth = health;
+                    bestTarget = potentialTarget;
+                }
+            }
+
+            if (strong)
+            {
+                if (health >= highestHealth)
+                {
+                    highestHealth = health;
                     bestTarget = potentialTarget;
                 }
             }
@@ -91,12 +127,6 @@ public class MortarClass : MonoBehaviour
         yield return new WaitForSeconds(Time.deltaTime / rateOfFire);
         allowFire = true;
     }
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, innerRange);
-        Gizmos.DrawWireSphere(transform.position, outerRange);
-    }
 
     public void CloseFire()
     {
@@ -125,5 +155,12 @@ public class MortarClass : MonoBehaviour
         far = false;
         weak = false;
         strong = true;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, innerRange);
+        Gizmos.DrawWireSphere(transform.position, outerRange);
     }
 }

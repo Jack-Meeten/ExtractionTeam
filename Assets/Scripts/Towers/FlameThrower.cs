@@ -9,9 +9,9 @@ public class FlameThrower : TowerClass
     private bool canTick = true;
     public float quickTickDamage;
 
-    protected override void Update()
+    void Update()//protected override 
     {
-        base.Update();
+        //base.Update();
         StartCoroutine(tickDamage());
     }
 

@@ -1,35 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
+using UnityEngine.Audio;
 
 public class TowerClass : MonoBehaviour
 {
-    public float Damage;
+    [Header("Tower Stats")]
+    [SerializeField] float Damage;
     public float rateOfFire;
-    public float range;
-    public ParticleSystem MuzzleFlash;
+    [SerializeField] float range;
+    [SerializeField] ParticleSystem MuzzleFlash;
+    [SerializeField] AudioClip shootSound;
 
     [SerializeField] List<Transform> enemies = new List<Transform>();
-    public Transform target;
+    public Transform target;//[HideInInspector]
 
-    public GameObject baseMountPoint;
-    public GameObject barrelMountPoint;
-    public float turnSpeed = 90f;
+    [SerializeField] GameObject baseMountPoint;
+    [SerializeField] GameObject barrelMountPoint;
+    [SerializeField] float turnSpeed = 90f;
 
-    public bool allowFire = true;
+    [SerializeField] bool isAnimated;
+    [SerializeField] Animator _animation;
 
-    public bool isAnimated;
-    public Animator _animation;
+    bool close, far, weak, strong;
+    bool allowFire = true;
 
-    public Vector3 offset;
+    private void Awake()
+    {
+        CloseFire();
+    }
 
-    private bool close = true;
-    private bool far = false;
-    private bool weak = false;
-    private bool strong = false;
-
-    protected virtual void Update()
+    void FixedUpdate()
     {
         FindAllEnemies();
         if (target != null)
@@ -79,11 +80,10 @@ public class TowerClass : MonoBehaviour
             Vector3 dirToTarget = potentialTarget.position - currentPosition;
             float dSqrToTarget = dirToTarget.sqrMagnitude;
             float health = potentialTarget.GetComponent<EnemyStats>().health;
-            Debug.Log(dSqrToTarget + " dst to arg   " + furthestDistanceSqr);
 
             if (close)
             {
-                if (dSqrToTarget < closeestDistanceSqr)
+                if ((transform.position - potentialTarget.position).magnitude < range && dSqrToTarget < closeestDistanceSqr)
                 {
                     closeestDistanceSqr = dSqrToTarget;
                     bestTarget = potentialTarget;
@@ -92,7 +92,7 @@ public class TowerClass : MonoBehaviour
 
             if (far)
             {
-                if (dSqrToTarget >= furthestDistanceSqr)
+                if ((transform.position - potentialTarget.position).magnitude < range && dSqrToTarget >= furthestDistanceSqr)
                 {
                     furthestDistanceSqr = dSqrToTarget;
                     bestTarget = potentialTarget;
@@ -101,7 +101,7 @@ public class TowerClass : MonoBehaviour
 
             if (weak)
             {
-                if (health < lowestHealth)
+                if ((transform.position - potentialTarget.position).magnitude < range && health < lowestHealth)
                 {
                     lowestHealth = health;
                     bestTarget = potentialTarget;
@@ -110,7 +110,7 @@ public class TowerClass : MonoBehaviour
 
             if (strong)
             {
-                if (health >= highestHealth)
+                if ((transform.position - potentialTarget.position).magnitude < range && health > highestHealth)
                 {
                     highestHealth = health;
                     bestTarget = potentialTarget;
@@ -125,7 +125,7 @@ public class TowerClass : MonoBehaviour
     {
         var los = target.position - baseMountPoint.transform.position;//gets position difference
         los.y = 0;
-        var rotation = Quaternion.LookRotation(los + offset);//get look rotation
+        var rotation = Quaternion.LookRotation(los);//get look rotation
         baseMountPoint.transform.rotation = Quaternion.Slerp(baseMountPoint.transform.rotation, rotation, turnSpeed * Time.deltaTime);
     }
     public void BarrelRotate()
@@ -151,7 +151,7 @@ public class TowerClass : MonoBehaviour
         {
             Debug.DrawRay(transform.position, transform.position - target.transform.position);
             //checks if can fire, in range and target active
-            if (allowFire && (transform.position - target.transform.position).magnitude < range && target.gameObject.activeInHierarchy && target.GetComponent<EnemyStats>().health > 0)
+            if (allowFire && (target.gameObject.activeInHierarchy && target.GetComponent<EnemyStats>().health > 0))
             {
                 Debug.DrawLine(barrelMountPoint.transform.position, target.position, Color.red);
                 StartCoroutine(Shoot());
@@ -163,14 +163,9 @@ public class TowerClass : MonoBehaviour
         allowFire = false;
         target.GetComponent<EnemyStats>().health -= Damage;
         MuzzleFlash.Play();
+        GetComponent<AudioSource>().PlayOneShot(shootSound);
         yield return new WaitForSeconds(Time.deltaTime / rateOfFire);
         allowFire = true;
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, range);
     }
 
     public void CloseFire()
@@ -201,4 +196,11 @@ public class TowerClass : MonoBehaviour
         weak = false;
         strong = true;
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, range);
+    }
+
 }

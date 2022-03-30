@@ -187,7 +187,7 @@ public class RoundSystem : MonoBehaviour
     {
         while (TickActive == true)
         {
-            CurrentTick = CurrentTick + TickValue;
+            CurrentTick += TickValue;
             yield return new WaitForSeconds(TickSpeed);
         }
     }

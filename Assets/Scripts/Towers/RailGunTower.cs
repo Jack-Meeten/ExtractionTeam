@@ -5,9 +5,9 @@ using UnityEngine;
 public class RailGunTower : TowerClass
 {
 
-    protected override void Update()
+    void Update()//protected override 
     {
-        base.Update();
+        //base.Update();
         if (base.target != null)
         {
             Debug.DrawLine(transform.position, base.target.position, Color.cyan);

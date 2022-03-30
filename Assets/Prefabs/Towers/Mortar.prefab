@@ -4806,50 +4806,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!1 &2720425181938175945
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1973807012872802517}
-  - component: {fileID: 7216262014726092813}
-  m_Layer: 6
-  m_Name: Detect Box
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1973807012872802517
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2720425181938175945}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.421, z: 0.164}
-  m_LocalScale: {x: 0.77569, y: 1, z: 1.2129}
-  m_Children: []
-  m_Father: {fileID: 4003437757654079461}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &7216262014726092813
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2720425181938175945}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2785022087991649230
 GameObject:
   m_ObjectHideFlags: 0
@@ -14532,6 +14488,7 @@ GameObject:
   - component: {fileID: 4003437757654079461}
   - component: {fileID: 5555345846867957477}
   - component: {fileID: -3413381531621414796}
+  - component: {fileID: 4822060410375041748}
   m_Layer: 6
   m_Name: Mortar
   m_TagString: Tower
@@ -14554,7 +14511,6 @@ Transform:
   - {fileID: 3282338667405477398}
   - {fileID: 4043236843525718886}
   - {fileID: 2269449441404262598}
-  - {fileID: 1973807012872802517}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14582,7 +14538,6 @@ MonoBehaviour:
   - {fileID: 217688461857789450}
   - {fileID: 8074272448240147352}
   target: {fileID: 0}
-  allowFire: 1
 --- !u!114 &-3413381531621414796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14597,6 +14552,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   opalium: 150
   vinculum: 150
+--- !u!65 &4822060410375041748
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5297789271567531852}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1.36}
+  m_Center: {x: 0, y: 0.49, z: 0.17}
 --- !u!1001 &754068719336020603
 PrefabInstance:
   m_ObjectHideFlags: 0
