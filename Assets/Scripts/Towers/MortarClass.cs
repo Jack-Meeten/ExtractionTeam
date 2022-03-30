@@ -20,6 +20,11 @@ public class MortarClass : MonoBehaviour
 
     public bool allowFire = true;
 
+    private bool close = true;
+    private bool far = false;
+    private bool weak = false;
+    private bool strong = false;
+
     protected virtual void FixedUpdate()
     {
         FindAllEnemies();
@@ -91,5 +96,34 @@ public class MortarClass : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, innerRange);
         Gizmos.DrawWireSphere(transform.position, outerRange);
+    }
+
+    public void CloseFire()
+    {
+        close = true;
+        far = false;
+        weak = false;
+        strong = false;
+    }
+    public void FarFire()
+    {
+        close = false;
+        far = true;
+        weak = false;
+        strong = false;
+    }
+    public void WeakFire()
+    {
+        close = false;
+        far = false;
+        weak = true;
+        strong = false;
+    }
+    public void StrongFire()
+    {
+        close = false;
+        far = false;
+        weak = false;
+        strong = true;
     }
 }

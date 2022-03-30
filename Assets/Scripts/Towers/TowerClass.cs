@@ -24,10 +24,10 @@ public class TowerClass : MonoBehaviour
 
     public Vector3 offset;
 
-    public bool close = true;
-    public bool far = false;
-    public bool weak = false;
-    public bool strong = false;
+    private bool close = true;
+    private bool far = false;
+    private bool weak = false;
+    private bool strong = false;
 
     protected virtual void Update()
     {
@@ -69,14 +69,18 @@ public class TowerClass : MonoBehaviour
         //calculates nearest enemy and sets to target
         Transform bestTarget = null;
         float closeestDistanceSqr = Mathf.Infinity;
+        float furthestDistanceSqr = 0;
         Vector3 currentPosition = transform.position;
 
         float lowestHealth = Mathf.Infinity;
+        float highestHealth = 0;
         foreach (Transform potentialTarget in enemies)
         {
             Vector3 dirToTarget = potentialTarget.position - currentPosition;
             float dSqrToTarget = dirToTarget.sqrMagnitude;
             float health = potentialTarget.GetComponent<EnemyStats>().health;
+            Debug.Log(dSqrToTarget + " dst to arg   " + furthestDistanceSqr);
+
             if (close)
             {
                 if (dSqrToTarget < closeestDistanceSqr)
@@ -85,14 +89,16 @@ public class TowerClass : MonoBehaviour
                     bestTarget = potentialTarget;
                 }
             }
+
             if (far)
             {
-                if (dSqrToTarget > closeestDistanceSqr)
+                if (dSqrToTarget >= furthestDistanceSqr)
                 {
-                    closeestDistanceSqr = dSqrToTarget;
+                    furthestDistanceSqr = dSqrToTarget;
                     bestTarget = potentialTarget;
                 }
             }
+
             if (weak)
             {
                 if (health < lowestHealth)
@@ -101,11 +107,12 @@ public class TowerClass : MonoBehaviour
                     bestTarget = potentialTarget;
                 }
             }
+
             if (strong)
             {
-                if (health > lowestHealth)
+                if (health >= highestHealth)
                 {
-                    lowestHealth = health;
+                    highestHealth = health;
                     bestTarget = potentialTarget;
                 }
             }

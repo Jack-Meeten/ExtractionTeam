@@ -35,4 +35,49 @@ public class SellMenu : MonoBehaviour
         Destroy(selectedTower);
         empty.SetActive(false);
     }
+    public void near()
+    {
+        if (selectedTower.transform.GetComponent<TowerClass>())
+        {
+            selectedTower.transform.GetComponent<TowerClass>().CloseFire();
+        }
+        if (selectedTower.transform.GetComponent<MortarClass>())
+        {
+            selectedTower.transform.GetComponent<MortarClass>().CloseFire();
+        }
+    }
+    public void far()
+    {
+        if (selectedTower.transform.GetComponent<TowerClass>())
+        {
+            selectedTower.transform.GetComponent<TowerClass>().FarFire();
+        }
+        if (selectedTower.transform.GetComponent<MortarClass>())
+        {
+            selectedTower.transform.GetComponent<MortarClass>().FarFire();
+        }
+    }
+
+    public void high()
+    {
+        if (selectedTower.transform.GetComponent<TowerClass>())
+        {
+            selectedTower.transform.GetComponent<TowerClass>().StrongFire();
+        }
+        if (selectedTower.transform.GetComponent<MortarClass>())
+        {
+            selectedTower.transform.GetComponent<MortarClass>().StrongFire();
+        }
+    }
+    public void low()
+    {
+        if (selectedTower.transform.GetComponent<TowerClass>())
+        {
+            selectedTower.transform.GetComponent<TowerClass>().WeakFire();
+        }
+        if (selectedTower.transform.GetComponent<MortarClass>())
+        {
+            selectedTower.transform.GetComponent<MortarClass>().WeakFire();
+        }
+    }
 }
