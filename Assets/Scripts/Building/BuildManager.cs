@@ -36,7 +36,6 @@ public class BuildManager : MonoBehaviour
 
     public void selectTurret(GameObject turret)
     {
-        //placer.beginPlace = true;
         if (turret.GetComponent<TowerStats>().opalium <= manager.opalium && turret.GetComponent<TowerStats>().vinculum <= manager.vinculum)
         {
             placer.tower = turret;

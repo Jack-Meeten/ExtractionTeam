@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class BuildingPlacer : MonoBehaviour
 {
     private Grid grid;
     [HideInInspector] public GameObject tower;
-    [HideInInspector]public GameObject towerBlueprint;
-    public BuildManager manager;
+    public GameObject towerBlueprint;
+    [SerializeField] BuildManager manager;
+    [SerializeField] BuildMenu bM;
 
     private Vector3 drawPos;
 
@@ -28,18 +30,16 @@ public class BuildingPlacer : MonoBehaviour
                 RaycastHit hitInfo;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-                if (Physics.Raycast(ray, out hitInfo) && Input.GetMouseButtonDown(0))
+                if (Physics.Raycast(ray, out hitInfo) && Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
                 {
                     if (hitInfo.transform.tag == "Placeable") PlaceCubeNear(hitInfo.point);
                 }
 
                 towerBlueprint.transform.position = grid.GetPointOnGrid(hitInfo.point);
-                if (!beginPlace)
-                {
-                    Destroy(towerBlueprint);
-                }
             }
         }
+
+        CheckBuildMode();
     }
 
     private void PlaceCubeNear(Vector3 clickPoint)
@@ -63,10 +63,23 @@ public class BuildingPlacer : MonoBehaviour
             //if not a tower spawn
             if (item.tag != "Tower" || item.tag != "Resource")
             {
-                Instantiate(tower, new Vector3(finalPosition.x, finalPosition.y, finalPosition.z), transform.rotation);//+ 0.225f
+                Instantiate(tower, new Vector3(finalPosition.x, finalPosition.y - 0.3f, finalPosition.z), transform.rotation);//+ 0.225f
                 manager.opalium -= tower.GetComponent<TowerStats>().opalium;
                 manager.vinculum -= tower.GetComponent<TowerStats>().vinculum;
             }
+        }
+    }
+
+    private void CheckBuildMode()
+    {
+        if (!bM.BuildingMenu)
+        {
+            Destroy(towerBlueprint);
+            beginPlace = false;
+        }
+        if (!beginPlace)
+        {
+            Destroy(towerBlueprint);
         }
     }
 

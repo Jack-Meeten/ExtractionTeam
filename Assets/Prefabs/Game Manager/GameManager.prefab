@@ -801,6 +801,7 @@ MonoBehaviour:
   tower: {fileID: 169349145915393479, guid: b50c6ef82acc0ed43af0da1dd40a7c2c, type: 3}
   towerBlueprint: {fileID: 0}
   manager: {fileID: 7501513318347586194}
+  bM: {fileID: 155786139}
   beginPlace: 0
 --- !u!114 &7501513318347586194
 MonoBehaviour:

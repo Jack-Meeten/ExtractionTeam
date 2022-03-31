@@ -6,9 +6,14 @@ using UnityEngine.UI;
 public class JamesMode : MonoBehaviour
 {
     public Material james;
+    bool yames = false;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.J))
+        {
+            yames = true;
+        }
+        if (yames)
         {
             James();
         }
@@ -21,13 +26,6 @@ public class JamesMode : MonoBehaviour
         for (int i = 0; i < rend.Length; i++)
         {
             rend[i].GetComponent<Renderer>().material = james;
-        }
-
-        Image[] image = FindObjectsOfType(typeof(Image)) as Image[];
-
-        for (int i = 0; i < image.Length; i++)
-        {
-            image[i].GetComponent<Image>().material = james;
         }
     }
 }
