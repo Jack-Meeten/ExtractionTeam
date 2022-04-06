@@ -14,20 +14,6 @@ public class BuildManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI OpaliumText;
     [SerializeField] TextMeshProUGUI VinculumText;
 
-    /*[SerializeField] bool cannonTurret;
-    [SerializeField] bool pDTurret;
-    [SerializeField] bool debuffTurret;
-    [SerializeField] bool mortarTurret;
-    [SerializeField] bool gatlingTurret;
-    [SerializeField] bool slownessTurret;
-    [SerializeField] bool poisonTurret;
-    [SerializeField] bool laserPDTurret;
-    [SerializeField] bool damageDebuffTurret;
-    [SerializeField] bool artilleryTurret;
-    [SerializeField] bool railgunTurret;
-    [SerializeField] bool stunTurret;
-    [SerializeField] bool missileTurret;*/
-
     void Update()
     {
         // Update the resources number on the UI

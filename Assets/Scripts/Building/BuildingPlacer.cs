@@ -32,11 +32,7 @@ public class BuildingPlacer : MonoBehaviour
 
                 if (Physics.Raycast(ray, out hitInfo) && Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
                 {
-                    if (hitInfo.transform.tag == "Placeable")
-                    {
-                        Debug.Log("click");
-                        PlaceCubeNear(hitInfo.point);
-                    }
+                    if (hitInfo.transform.tag == "Placeable") PlaceCubeNear(hitInfo.point);
                 }
 
                 towerBlueprint.transform.position = grid.GetPointOnGrid(hitInfo.point);
@@ -59,15 +55,25 @@ public class BuildingPlacer : MonoBehaviour
         {
             //Increase the number of Colliders in the array
             i++;
+            Debug.Log(hitColliders.Length);
         }
-        foreach (var item in hitColliders)
+        if (hitColliders.Length == 0)
         {
-            //if not a tower spawn
-            if (item.tag != "Tower" || item.tag != "Resource")
+            Instantiate(tower, new Vector3(finalPosition.x, finalPosition.y - 0.3f, finalPosition.z), transform.rotation);//+ 0.225f
+            manager.opalium -= tower.GetComponent<TowerStats>().opalium;
+            manager.vinculum -= tower.GetComponent<TowerStats>().vinculum;
+        }
+        else
+        {
+            foreach (var item in hitColliders)
             {
-                Instantiate(tower, new Vector3(finalPosition.x, finalPosition.y - 0.3f, finalPosition.z), transform.rotation);//+ 0.225f
-                manager.opalium -= tower.GetComponent<TowerStats>().opalium;
-                manager.vinculum -= tower.GetComponent<TowerStats>().vinculum;
+                //if not a tower spawn
+                if (item.tag != "Tower" || item.tag != "Resource")
+                {
+                    Instantiate(tower, new Vector3(finalPosition.x, finalPosition.y + 0.5f, finalPosition.z), transform.rotation);//+ 0.225f
+                    manager.opalium -= tower.GetComponent<TowerStats>().opalium;
+                    manager.vinculum -= tower.GetComponent<TowerStats>().vinculum;
+                }
             }
         }
     }
