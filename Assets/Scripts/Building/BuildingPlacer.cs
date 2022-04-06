@@ -32,7 +32,11 @@ public class BuildingPlacer : MonoBehaviour
 
                 if (Physics.Raycast(ray, out hitInfo) && Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
                 {
-                    if (hitInfo.transform.tag == "Placeable") PlaceCubeNear(hitInfo.point);
+                    if (hitInfo.transform.tag == "Placeable")
+                    {
+                        Debug.Log("click");
+                        PlaceCubeNear(hitInfo.point);
+                    }
                 }
 
                 towerBlueprint.transform.position = grid.GetPointOnGrid(hitInfo.point);
@@ -45,7 +49,6 @@ public class BuildingPlacer : MonoBehaviour
     private void PlaceCubeNear(Vector3 clickPoint)
     {
         var finalPosition = grid.GetPointOnGrid(clickPoint);
-
         drawPos = finalPosition;
 
         //makes box and checks whats in it
@@ -54,7 +57,6 @@ public class BuildingPlacer : MonoBehaviour
         //Check when there is a new collider coming into contact with the box
         while (i < hitColliders.Length)
         {
-            //Debug.Log("Hit : " + hitColliders[i].name + i);
             //Increase the number of Colliders in the array
             i++;
         }

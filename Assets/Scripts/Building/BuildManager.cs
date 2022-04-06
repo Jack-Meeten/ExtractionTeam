@@ -9,6 +9,7 @@ public class BuildManager : MonoBehaviour
     public int vinculum;
     public BuildingPlacer placer;
     public BuildManager manager;
+    public GameObject grid;
 
     [SerializeField] TextMeshProUGUI OpaliumText;
     [SerializeField] TextMeshProUGUI VinculumText;
@@ -32,6 +33,10 @@ public class BuildManager : MonoBehaviour
         // Update the resources number on the UI
         OpaliumText.text = opalium.ToString();
         VinculumText.text = vinculum.ToString();
+        if (!placer.beginPlace)
+        {
+            grid.SetActive(false);
+        }
     }
 
     public void selectTurret(GameObject turret)
@@ -40,8 +45,16 @@ public class BuildManager : MonoBehaviour
         {
             placer.tower = turret;
 
-            if (placer.beginPlace) placer.beginPlace = false;
-            else placer.beginPlace = true;
+            if (placer.beginPlace)
+            {
+                placer.beginPlace = false;
+                grid.SetActive(false);
+            }
+            else
+            {
+                placer.beginPlace = true;
+                grid.SetActive(true);
+            }
         }
     }
     public void bpTurret(GameObject blueprintTurret)
