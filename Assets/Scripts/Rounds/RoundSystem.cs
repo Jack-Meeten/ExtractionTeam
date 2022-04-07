@@ -157,14 +157,13 @@ public class RoundSystem : MonoBehaviour
     private void SpawnDelay()
     {
         int rand = Random.Range(0, SpawnPoints.Length);
-        //Instantiate(Enemy, SpawnPoints[rand].transform.position, Quaternion.identity);
-
         //Start of yak Code
 
         GameObject creep = ObjectPool.sharedInstance.GetObjectPooled();//gets creep being managed
         if (creep != null)
         {
             //resets creep health and spline finding, reactivates it
+            creep.GetComponent<SplineFinding>().routes = SpawnPoints[rand] ;
             creep.GetComponent<SplineFinding>().tParam = 0;
             creep.GetComponent<SplineFinding>().routeToGO = 0;
             creep.GetComponent<SplineFinding>().coroutineAllowed = true;

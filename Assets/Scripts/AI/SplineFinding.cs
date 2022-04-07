@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SplineFinding : MonoBehaviour
 {
-    public List<Transform> routes = new List<Transform>();
+    [HideInInspector]public Transform routes;
     public int routeToGO;
     public float tParam;
     public Vector3 currentPosision;
@@ -25,10 +25,6 @@ public class SplineFinding : MonoBehaviour
         routeToGO = 0;
         tParam = 0f;
         coroutineAllowed = true;
-        foreach (GameObject route in GameObject.FindGameObjectsWithTag("Spline"))
-        {
-            routes.Add(route.transform);
-        }
         variableSM = speedModifier;
     }
 
@@ -57,10 +53,10 @@ public class SplineFinding : MonoBehaviour
         coroutineAllowed = false;
         //Transform _p = routes[0].GetChild(routeNumber).transform;
         //get b points
-        Vector3 p0 = routes[0].GetChild(routeNumber).GetChild(0).position;
-        Vector3 p1 = routes[0].GetChild(routeNumber).GetChild(1).position;
-        Vector3 p2 = routes[0].GetChild(routeNumber).GetChild(2).position;
-        Vector3 p3 = routes[0].GetChild(routeNumber).GetChild(3).position;
+        Vector3 p0 = routes.GetChild(routeNumber).GetChild(0).position;
+        Vector3 p1 = routes.GetChild(routeNumber).GetChild(1).position;
+        Vector3 p2 = routes.GetChild(routeNumber).GetChild(2).position;
+        Vector3 p3 = routes.GetChild(routeNumber).GetChild(3).position;
 
 
         while (tParam < 1)
