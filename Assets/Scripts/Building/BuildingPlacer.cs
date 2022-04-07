@@ -35,7 +35,7 @@ public class BuildingPlacer : MonoBehaviour
                     if (hitInfo.transform.tag == "Placeable") PlaceCubeNear(hitInfo.point);
                 }
 
-                towerBlueprint.transform.position = grid.GetPointOnGrid(hitInfo.point);
+                towerBlueprint.transform.position = new Vector3(grid.GetPointOnGrid(hitInfo.point).x, grid.GetPointOnGrid(hitInfo.point).y + 0.5f, grid.GetPointOnGrid(hitInfo.point).z);
             }
         }
 
@@ -59,7 +59,7 @@ public class BuildingPlacer : MonoBehaviour
         }
         if (hitColliders.Length == 0)
         {
-            Instantiate(tower, new Vector3(finalPosition.x, finalPosition.y - 0.3f, finalPosition.z), transform.rotation);//+ 0.225f
+            Instantiate(tower, new Vector3(finalPosition.x, finalPosition.y + 0.5f, finalPosition.z), transform.rotation);//+ 0.225f
             manager.opalium -= tower.GetComponent<TowerStats>().opalium;
             manager.vinculum -= tower.GetComponent<TowerStats>().vinculum;
         }

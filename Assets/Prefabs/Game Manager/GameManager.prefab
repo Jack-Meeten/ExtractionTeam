@@ -819,6 +819,7 @@ MonoBehaviour:
   vinculum: 1000
   placer: {fileID: 155786138}
   manager: {fileID: 7501513318347586194}
+  grid: {fileID: 0}
   OpaliumText: {fileID: 1640402203902806440}
   VinculumText: {fileID: 6676091937644204685}
 --- !u!114 &155786139
@@ -1805,7 +1806,35 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1188010295, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
       propertyPath: airDrag
-      value: 5
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285274396, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.43763897
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285274396, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.43763897
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285274396, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.43763897
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285274396, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 24.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285274396, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 22.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285274396, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003891051, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -64.2
       objectReference: {fileID: 0}
     - target: {fileID: 2119133400, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
       propertyPath: frustumSettings.qualitySettings
@@ -1814,6 +1843,18 @@ PrefabInstance:
     - target: {fileID: 119936978162202741, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
       propertyPath: m_Name
       value: Camera Controls
+      objectReference: {fileID: 0}
+    - target: {fileID: 5160936893592597116, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 22.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 5160936893592597116, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 5160936893592597116, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 25.42
       objectReference: {fileID: 0}
     - target: {fileID: 6178738532341166969, guid: 02d3f8a54a9f2ee4d9fbd98b63c29a7b, type: 3}
       propertyPath: airDrag
