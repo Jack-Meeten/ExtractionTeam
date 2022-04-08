@@ -56,6 +56,8 @@ public class RoundSystem : MonoBehaviour
     [SerializeField] float LightAngle;
     [SerializeField] float OffsetAngle;
 
+    int rand;
+
 
 
     private void Start()
@@ -150,13 +152,14 @@ public class RoundSystem : MonoBehaviour
     void RoundMechanics()
     {
         CurrentRound+=1;
+        rand = Random.Range(0, SpawnPoints.Length);
+
         DefaultEnemiesToSpawn = DefaultEnemiesToSpawn + RoundEnemyIncreaser;
         InvokeRepeating("SpawnDelay", 0, SpawnInterval);
     }
 
     private void SpawnDelay()
     {
-        int rand = Random.Range(0, SpawnPoints.Length);
         //Start of yak Code
 
         GameObject creep = ObjectPool.sharedInstance.GetObjectPooled();//gets creep being managed
