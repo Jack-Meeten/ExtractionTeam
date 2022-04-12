@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
@@ -58,6 +59,8 @@ public class RoundSystem : MonoBehaviour
 
     int rand;
 
+    List<int> hashList = new List<int>();
+
 
 
     private void Start()
@@ -72,6 +75,8 @@ public class RoundSystem : MonoBehaviour
         StartCoroutine(TickPass());
 
         ShuttleScr = Shuttle.GetComponent<ShuttleScript>();
+
+        ButtonSetUp();
     }
 
     private void Update()
@@ -146,6 +151,10 @@ public class RoundSystem : MonoBehaviour
         {
             Debug.Log("Starting round number " + CurrentRound);
             RoundMechanics();
+
+            int techNum = -1;
+            techNum ++;
+            CheckTechnology(techNum);
         }
     }
 
@@ -246,5 +255,22 @@ public class RoundSystem : MonoBehaviour
             TickValue = 1;
             Time.timeScale = 1;
         }
+    }
+
+    void ButtonSetUp()
+    {
+        foreach (GameObject item in GameObject.FindGameObjectsWithTag("Tech"))
+        {
+            Debug.Log(item + " Hash ID:   " + item.GetHashCode());
+            hashList.Add(item.GetHashCode());
+            item.name = item.GetHashCode().ToString();
+        }
+    }
+
+    void CheckTechnology(int techNum)
+    {
+        GameObject unlocking = GameObject.Find(hashList[techNum].ToString());
+        Debug.Log(unlocking);
+        unlocking.GetComponent<Button>().enabled = true;
     }
 }

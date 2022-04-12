@@ -401,46 +401,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 156115637, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 185.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 156115637, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 31.899996
-      objectReference: {fileID: 0}
-    - target: {fileID: 428105228, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.14154558
-      objectReference: {fileID: 0}
-    - target: {fileID: 428105228, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.14154558
-      objectReference: {fileID: 0}
-    - target: {fileID: 428105228, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.14154558
-      objectReference: {fileID: 0}
-    - target: {fileID: 428105228, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 22.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 428105228, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 428105228, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 18.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 601497264, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 185.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 601497264, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 31.9
-      objectReference: {fileID: 0}
     - target: {fileID: 726699464, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: frustumSettings.baseSettings
       value: 
@@ -449,26 +409,6 @@ PrefabInstance:
       propertyPath: frustumSettings.qualitySettings
       value: 
       objectReference: {fileID: 789115442}
-    - target: {fileID: 809320075, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 108.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1070115217, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 185.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 1070115217, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 31.899996
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183236362, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 185.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183236362, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 31.899996
-      objectReference: {fileID: 0}
     - target: {fileID: 1427354022574591804, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -525,10 +465,6 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 3451545371972757620}
-    - target: {fileID: 1427354022574591807, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: SpawnPoints.Array.size
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 1427354022574591807, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: SpawnPoints.Array.data[0]
       value: 
@@ -2066,7 +2002,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh50714
+  m_Name: pb_Mesh28486
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
