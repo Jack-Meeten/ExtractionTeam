@@ -59,9 +59,12 @@ public class BuildingPlacer : MonoBehaviour
         }
         if (hitColliders.Length == 0)
         {
-            Instantiate(tower, new Vector3(finalPosition.x, finalPosition.y + 0.5f, finalPosition.z), transform.rotation);//+ 0.225f
-            manager.opalium -= tower.GetComponent<TowerStats>().opalium;
-            manager.vinculum -= tower.GetComponent<TowerStats>().vinculum;
+            if (manager.opalium >= tower.GetComponent<TowerStats>().opalium && manager.vinculum >= tower.GetComponent<TowerStats>().vinculum)
+            {
+                Instantiate(tower, new Vector3(finalPosition.x, finalPosition.y + 0.5f, finalPosition.z), transform.rotation);//+ 0.225f
+                manager.opalium -= tower.GetComponent<TowerStats>().opalium;
+                manager.vinculum -= tower.GetComponent<TowerStats>().vinculum;
+            }
         }
         else
         {
@@ -70,9 +73,12 @@ public class BuildingPlacer : MonoBehaviour
                 //if not a tower spawn
                 if (item.tag != "Tower" || item.tag != "Resource")
                 {
-                    Instantiate(tower, new Vector3(finalPosition.x, finalPosition.y + 0.5f, finalPosition.z), transform.rotation);//+ 0.225f
-                    manager.opalium -= tower.GetComponent<TowerStats>().opalium;
-                    manager.vinculum -= tower.GetComponent<TowerStats>().vinculum;
+                    if (manager.opalium >= tower.GetComponent<TowerStats>().opalium && manager.vinculum >= tower.GetComponent<TowerStats>().vinculum)
+                    {
+                        Instantiate(tower, new Vector3(finalPosition.x, finalPosition.y + 0.5f, finalPosition.z), transform.rotation);//+ 0.225f
+                        manager.opalium -= tower.GetComponent<TowerStats>().opalium;
+                        manager.vinculum -= tower.GetComponent<TowerStats>().vinculum;
+                    }
                 }
             }
         }

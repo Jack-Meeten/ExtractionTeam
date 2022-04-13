@@ -60,6 +60,7 @@ public class RoundSystem : MonoBehaviour
     int rand;
 
     List<int> hashList = new List<int>();
+    int techNum = -1;
 
 
 
@@ -129,30 +130,30 @@ public class RoundSystem : MonoBehaviour
 
         if (CurrentTick == Round1)
         {
-            Debug.Log("Starting round number " + CurrentRound);
+            //Debug.Log("Starting round number " + CurrentRound);
             RoundMechanics();
         }
         if (CurrentTick == Round2)
         {
-            Debug.Log("Starting round number " + CurrentRound);
+            //Debug.Log("Starting round number " + CurrentRound);
             RoundMechanics();
         }
         if (CurrentTick == Round3)
         {
-            Debug.Log("Starting round number " + CurrentRound);
+            //Debug.Log("Starting round number " + CurrentRound);
             RoundMechanics();
         }
         if (CurrentTick == Round4)
         {
-            Debug.Log("Starting round number " + CurrentRound);
+            //Debug.Log("Starting round number " + CurrentRound);
             RoundMechanics();
         }
         if (CurrentTick == Round5)
         {
-            Debug.Log("Starting round number " + CurrentRound);
+            //Debug.Log("Starting round number " + CurrentRound);
             RoundMechanics();
 
-            int techNum = -1;
+            //int techNum = -1;
             techNum ++;
             CheckTechnology(techNum);
         }
@@ -213,19 +214,19 @@ public class RoundSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Period) && Time.timeScale < 99)
         {
-            Debug.Log(Time.timeScale);
+            //Debug.Log(Time.timeScale);
             Time.timeScale += 1;
             TickValue += 1;
         }
         if (Input.GetKeyDown(KeyCode.Comma) && Time.timeScale > 1)
         {
-            Debug.Log(Time.timeScale);
+            //Debug.Log(Time.timeScale);
             Time.timeScale -= 1;
             TickValue -= 1;
         }
         if (Input.GetKeyDown("/"))
         {
-            Debug.Log(Time.timeScale);
+            //Debug.Log(Time.timeScale);
             Time.timeScale = 1;
             TickValue = 1;
         }
@@ -261,7 +262,7 @@ public class RoundSystem : MonoBehaviour
     {
         foreach (GameObject item in GameObject.FindGameObjectsWithTag("Tech"))
         {
-            Debug.Log(item + " Hash ID:   " + item.GetHashCode());
+            //Debug.Log(item + " Hash ID:   " + item.GetHashCode());
             hashList.Add(item.GetHashCode());
             item.name = item.GetHashCode().ToString();
         }
@@ -272,5 +273,6 @@ public class RoundSystem : MonoBehaviour
         GameObject unlocking = GameObject.Find(hashList[techNum].ToString());
         Debug.Log(unlocking);
         unlocking.GetComponent<Button>().enabled = true;
+        unlocking.transform.GetChild(1).gameObject.SetActive(false);
     }
 }

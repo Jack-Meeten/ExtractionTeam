@@ -168,7 +168,7 @@ public class BuildMenu : MonoBehaviour
         ObjectToDestroy = GameObject.FindGameObjectWithTag("Position");
         SpawnedLocation = false;
         yield return new WaitForSeconds(0.1f);
-        Debug.Log("Destroying residual objects!");
+        //Debug.Log("Destroying residual objects!");
         Destroy(ObjectToDestroy);
     }
 }
