@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
+
+[RequireComponent(typeof(TowerStats))]
+[RequireComponent(typeof(AudioSource))]
+
 public class TowerClass : MonoBehaviour
 {
     [Header("Tower Stats")]

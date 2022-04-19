@@ -14528,7 +14528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   innerRange: 5
   outerRange: 30
-  AOERange: 5
+  AOERange: 2
   Damage: 40
   rateOfFire: 0.0075
   timeToImpact: 0.01
