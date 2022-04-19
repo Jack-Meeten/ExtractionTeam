@@ -10509,7 +10509,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7778912572336969962}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 283310453492839963}
+        m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
+        m_MethodName: selectTurret
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8410736748948575300, guid: 696c4f3bdec4846419583a30ee88d959, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 283310453492839963}
+        m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
+        m_MethodName: bpTurret
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4169212005885481489, guid: e9d6c25e38f15944cbbfcd2dc250725e, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7778912572402810660
 GameObject:
   m_ObjectHideFlags: 0
@@ -10630,7 +10654,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7778912572402810663}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 283310453492839963}
+        m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
+        m_MethodName: selectTurret
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5932129627937297002, guid: 001b16deed38bb64f93bc1a4b5251e79, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 283310453492839963}
+        m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
+        m_MethodName: bpTurret
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5622516317647554416, guid: 01106ec1e0853cb429965301e27be75d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7778912572409828873
 GameObject:
   m_ObjectHideFlags: 0
@@ -11360,6 +11408,7 @@ GameObject:
   - component: {fileID: 7778912572833402492}
   - component: {fileID: 7778912572833402435}
   - component: {fileID: 7778912572833402434}
+  - component: {fileID: 434103203}
   m_Layer: 5
   m_Name: Cannon
   m_TagString: Untagged
@@ -11467,7 +11516,45 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7778912572833402435}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 283310453492839963}
+        m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
+        m_MethodName: selectTurret
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2696666805171979202, guid: dfae3d8773ed0734aaa94b5887c38d2f, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 283310453492839963}
+        m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
+        m_MethodName: bpTurret
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8649690069892869525, guid: dec953b8e8c348d40a64a63e9e164423, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &434103203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7778912572833402432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: Cannon
+  content: CAMERON WRITE THE FUXKING TOOLTIPS
 --- !u!1 &7778912572863771139
 GameObject:
   m_ObjectHideFlags: 0
@@ -11908,7 +11995,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7778912573054401237}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 283310453492839963}
+        m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
+        m_MethodName: selectTurret
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7865751347146511995, guid: 4d3b77f938343d24e803c60932e7e8f5, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 283310453492839963}
+        m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
+        m_MethodName: bpTurret
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5687321391937148546, guid: 3eb98fcfaa642534fa7133ab0a36b562, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7778912573188624902
 GameObject:
   m_ObjectHideFlags: 0
@@ -12181,7 +12292,6 @@ GameObject:
   - component: {fileID: 7778912573313827137}
   - component: {fileID: 7778912573313827139}
   - component: {fileID: 7778912573313827136}
-  - component: {fileID: 7778912573313827138}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -12231,11 +12341,11 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: 3
+  m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
@@ -12346,20 +12456,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!114 &7778912573313827138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7778912573313827149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d939edc51ed46ca4da9e9afd32201153, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SobelResolution: 1.2
-  outlineColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7778912573456396461
 GameObject:
   m_ObjectHideFlags: 0
@@ -12594,7 +12690,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7778912573506228250}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 283310453492839963}
+        m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
+        m_MethodName: selectTurret
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5691699343303560363, guid: 01a9e9764cb1dfb41b1346da03d50867, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 283310453492839963}
+        m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
+        m_MethodName: bpTurret
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4773956146733856746, guid: e7ed0e22dadbc1f4f8b99f44e857f204, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7778912573544026361
 GameObject:
   m_ObjectHideFlags: 0
@@ -18418,7 +18538,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8663453637649417141}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 23.5, y: 0, z: 25.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -18515,8 +18635,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc118549610456c468876a942b40a537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opalium: 1000
-  vinculum: 1000
+  opalium: 10000
+  vinculum: 10000
   placer: {fileID: 7778912573816657683}
   manager: {fileID: 283310453492839963}
   grid: {fileID: 0}

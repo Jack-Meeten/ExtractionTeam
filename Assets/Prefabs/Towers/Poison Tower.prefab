@@ -14,10 +14,10 @@ GameObject:
   - component: {fileID: -7455572976812122434}
   - component: {fileID: 7048167111711150678}
   - component: {fileID: -6958067126550832789}
-  - component: {fileID: 8334979272011692121}
+  - component: {fileID: 7164053337641917140}
   m_Layer: 0
   m_Name: Poison Tower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,11 +211,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b521d44bd9ba0140b3aa1be7369e2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collider: {fileID: 8334979272011692121}
+  _collider: {fileID: 2607727276533106967}
   radius: 2.5
-  tickDamage: 5
---- !u!135 &8334979272011692121
-SphereCollider:
+  tickDamage: 0.1
+--- !u!65 &7164053337641917140
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -225,7 +225,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.45751727
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7940215128762690985
 GameObject:
@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 1871564687473773511}
   - component: {fileID: 3973208163982549230}
   - component: {fileID: 6945743242859337557}
+  - component: {fileID: 2607727276533106967}
   m_Layer: 0
   m_Name: Poison Tank
   m_TagString: Untagged
@@ -309,3 +310,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &2607727276533106967
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7940215128762690985}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.17824648
+  m_Center: {x: 0, y: 0, z: 0}
