@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class RoundSystem : MonoBehaviour
 {
     [Header("Tick Settings")]
-
+    [Header(" ")]
     [SerializeField] float CurrentTick;
     [SerializeField] float TickSpeed;
     [SerializeField] float TickValue;
@@ -19,11 +19,13 @@ public class RoundSystem : MonoBehaviour
 
 
     [Header("DayNight Cycle Settings")]
+    [Header(" ")]
     [SerializeField] float DayTicks;
     [SerializeField] float NightTicks;
 
 
     [Header("Round Settings")]
+    [Header(" ")]
     [SerializeField] int CurrentRound;
     [SerializeField] int MaxRounds = 50;
     [Header(" ")]
@@ -34,12 +36,16 @@ public class RoundSystem : MonoBehaviour
     [SerializeField] float Round5;
     [SerializeField] TextMeshProUGUI RoundText;
 
+
     [Header("Shuttle Settings")]
+    [Header(" ")]
     [SerializeField] GameObject Shuttle;
     ShuttleScript ShuttleScr;
     [Header(" ")]
 
+
     [Header("Enemy Settings")]
+    [Header(" ")]
     [SerializeField] GameObject Enemy;
     [Header(" ")]
 
@@ -50,13 +56,22 @@ public class RoundSystem : MonoBehaviour
     [SerializeField] int CurrentEnemiesToSpawn;
     [SerializeField] int DefaultEnemiesToSpawn;
     [SerializeField] int RoundEnemyIncreaser;
+    [Header(" ")]
 
 
     [Header("Day Night Cycle")]
+    [Header(" ")]
     [SerializeField] GameObject RotationPivot;
     [SerializeField] float LightAngle;
     [SerializeField] float OffsetAngle;
+    [Header(" ")]
 
+    [Header("Win/Lose Screens")]
+    [SerializeField] GameObject Options_Holder;
+    OptionsMenu OptionsScr;
+    [Header(" ")]
+
+    // Yak's magic code
     int rand;
 
     List<int> hashList = new List<int>();
@@ -73,15 +88,19 @@ public class RoundSystem : MonoBehaviour
 
         CurrentEnemiesToSpawn = DefaultEnemiesToSpawn;
 
-        StartCoroutine(TickPass());
 
         ShuttleScr = Shuttle.GetComponent<ShuttleScript>();
+        OptionsScr = Options_Holder.GetComponent<OptionsMenu>();
 
+        StartCoroutine(TickPass());
+       
         ButtonSetUp();
     }
 
     private void Update()
     {
+        Debug.Log(Time.timeScale);
+
         DayCycle();
         RoundCheck();
         AngleRotation();
@@ -108,17 +127,20 @@ public class RoundSystem : MonoBehaviour
     {
         //Lose condition
         if (ShuttleScr.CurrentHealth <= 0)
-        {
-            SceneManager.LoadScene(0);
-            Debug.Log("Player loses!");
+        {            
+            OptionsScr.Lose();
         }
 
         //Win condition
         if (CurrentRound >= MaxRounds)
         {
-            SceneManager.LoadScene(0);
-            Debug.Log("Player wins!");
+            OptionsScr.Win();
         }
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     void RoundCheck()
@@ -185,7 +207,7 @@ public class RoundSystem : MonoBehaviour
             //Debug.Log(creep.name + " : is ACTIVE");
         }
 
-        //End of yak Code
+        //End of yak's magic Code
 
         CurrentEnemiesToSpawn--;
     }

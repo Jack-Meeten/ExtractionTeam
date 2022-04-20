@@ -11,6 +11,8 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] GameObject Canvas_VideoMenu;
     [SerializeField] GameObject Canvas_AudioMenu;
     [SerializeField] GameObject Canvas_ControlsMenu;
+    [SerializeField] GameObject Canvas_WinScreen;
+    [SerializeField] GameObject Canvas_LoseScreen;
     [Header(" ")]
 
     [Header("Code Check")]
@@ -28,6 +30,13 @@ public class OptionsMenu : MonoBehaviour
     BuildMenu BuildMenu;
     CameraLook look;
     CameraMove move;
+
+
+    void Start()
+    {
+        Canvas_WinScreen.SetActive(false);
+        Canvas_LoseScreen.SetActive(false);
+    }
 
     void Awake()
     {
@@ -220,6 +229,20 @@ public class OptionsMenu : MonoBehaviour
     public void Mute()
     {
         Debug.Log("Muting game!");
+    }
+
+    public void Win()
+    {
+        Canvas_WinScreen.SetActive(true);
+        Time.timeScale = 0;
+        Debug.Log("Game has been won!");
+    }
+
+    public void Lose()
+    {
+        Canvas_LoseScreen.SetActive(true);
+        Time.timeScale = 0;
+        Debug.Log("Game has been lost!");
     }
 
     public void QuitGame()
