@@ -154,6 +154,7 @@ public class RoundSystem : MonoBehaviour
         {
             //Debug.Log("Starting round number " + CurrentRound);
             RoundMechanics();
+            rand = Random.Range(0, SpawnPoints.Length);
         }
         if (CurrentTick == Round2)
         {
@@ -184,7 +185,6 @@ public class RoundSystem : MonoBehaviour
     void RoundMechanics()
     {
         CurrentRound+=1;
-        rand = Random.Range(0, SpawnPoints.Length);
 
         DefaultEnemiesToSpawn = DefaultEnemiesToSpawn + RoundEnemyIncreaser;
         InvokeRepeating("SpawnDelay", 0, SpawnInterval);

@@ -13,8 +13,7 @@ public class EnemyStats : MonoBehaviour
         if (health <= 0)
         {
             Vector3 p = transform.position;
-            p.y -= 10;
-            transform.position = p;
+            transform.position = new Vector3(transform.position.x, -20, transform.position.z);
 
             gameObject.SetActive(false);
         } 
