@@ -78,8 +78,6 @@ public class RoundSystem : MonoBehaviour
     int techNum = -1;
 
     [SerializeField] GameObject CameraHolder;
-    CameraLook Look;
-    CameraMove Move;
 
     void Start()
     {
@@ -98,17 +96,9 @@ public class RoundSystem : MonoBehaviour
        
         ButtonSetUp();
 
-        CameraFix();
+        Time.timeScale = 1;
     }
 
-    void CameraFix()
-    {
-        Look = CameraHolder.GetComponent<CameraLook>();
-        Move = CameraHolder.GetComponent<CameraMove>();
-
-        Look.enabled = true;
-        Move.enabled = true;
-    }
 
     private void Update()
     {
