@@ -77,9 +77,11 @@ public class RoundSystem : MonoBehaviour
     List<int> hashList = new List<int>();
     int techNum = -1;
 
+    [SerializeField] GameObject CameraHolder;
+    CameraLook Look;
+    CameraMove Move;
 
-
-    private void Start()
+    void Start()
     {
         TickActive = true;
 
@@ -95,6 +97,17 @@ public class RoundSystem : MonoBehaviour
         StartCoroutine(TickPass());
        
         ButtonSetUp();
+
+        CameraFix();
+    }
+
+    void CameraFix()
+    {
+        Look = CameraHolder.GetComponent<CameraLook>();
+        Move = CameraHolder.GetComponent<CameraMove>();
+
+        Look.enabled = true;
+        Move.enabled = true;
     }
 
     private void Update()
