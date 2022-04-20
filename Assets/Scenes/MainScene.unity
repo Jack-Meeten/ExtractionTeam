@@ -2157,7 +2157,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27982
+  m_Name: pb_Mesh101980
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3316,66 +3316,6 @@ PrefabInstance:
       propertyPath: grid
       value: 
       objectReference: {fileID: 1844433581}
-    - target: {fileID: 7778912572248077978, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7778912572248077978, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7778912572248077978, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7778912572248077978, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 7778912573816657693}
-    - target: {fileID: 7778912572248077978, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 7778912573816657693}
-    - target: {fileID: 7778912572248077978, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7778912572248077978, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7778912572248077978, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: selectTurret
-      objectReference: {fileID: 0}
-    - target: {fileID: 7778912572248077978, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: bpTurret
-      objectReference: {fileID: 0}
-    - target: {fileID: 7778912572248077978, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: BuildManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7778912572248077978, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: BuildManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7778912572248077978, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 5133506528301065387, guid: 0c1144acdd9a5394bbcb154b9d0c539f, type: 3}
-    - target: {fileID: 7778912572248077978, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 4084216720663114362, guid: 91908c5c9c849af4195d5a7fd6acac8e, type: 3}
-    - target: {fileID: 7778912572248077978, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7778912572248077978, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 7778912573313827137, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: frustumSettings.baseSettings
       value: 
@@ -3458,17 +3398,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
---- !u!114 &7778912573816657693 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 283310453492839963, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-  m_PrefabInstance: {fileID: 7778912573816657692}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc118549610456c468876a942b40a537, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &8328065656410332229
 MeshRenderer:
   m_ObjectHideFlags: 0
