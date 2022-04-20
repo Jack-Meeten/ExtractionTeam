@@ -9,10 +9,13 @@ public class FlameThrower : TowerClass
     private bool canTick = true;
     public float quickTickDamage;
 
-    void Update()//protected override 
+    void FixedUpdate()
     {
         //base.Update();
-        StartCoroutine(tickDamage());
+        if (canTick)
+        {
+            StartCoroutine(tickDamage());
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,5 +36,6 @@ public class FlameThrower : TowerClass
         }
 
         yield return new WaitForSeconds(Time.deltaTime / rateOfFire);
+        canTick = true;
     }
 }
