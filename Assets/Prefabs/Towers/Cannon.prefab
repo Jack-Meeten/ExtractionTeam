@@ -132,7 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 1.5
   rateOfFire: 1
-  range: 2
+  range: 2.5
   MuzzleFlash:
   - {fileID: 5905031003875527050}
   shootSound: {fileID: 0}

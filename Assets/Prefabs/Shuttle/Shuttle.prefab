@@ -1150,6 +1150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7ef81dee22f9849be9ade1b7003a81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingHealth: 1000
-  CurrentHealth: 1000
+  StartingHealth: 2000
+  CurrentHealth: 2000
   healthBar: {fileID: 1283007521}

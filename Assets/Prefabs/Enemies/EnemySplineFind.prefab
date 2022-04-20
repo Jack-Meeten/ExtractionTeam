@@ -112,11 +112,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12d67aecec5f6b4d8a589599798206a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  routes: []
+  routes: {fileID: 0}
   routeToGO: 0
   tParam: 0
   currentPosision: {x: 0, y: 0, z: 0}
-  speedModifier: 0.2
+  speedModifier: 0.05
   coroutineAllowed: 0
 --- !u!114 &-4786704532309685092
 MonoBehaviour:
@@ -130,8 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae338b3d2d73dbd459796eac97620420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHealth: 150
-  health: 150
+  baseHealth: 100
+  health: 100
 --- !u!114 &7339447240751296222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 566094fb00cdec74baec6e856fc47042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyDMG: 10
+  EnemyDMG: 40
   HealthTarget: {fileID: 6444428230397253512, guid: cd2f1ee080eebae4a8d6754d36dd3d50, type: 3}
 --- !u!54 &-5503477998667992628
 Rigidbody:
