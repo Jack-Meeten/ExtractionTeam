@@ -101,9 +101,7 @@ public class RoundSystem : MonoBehaviour
 
 
     private void Update()
-    {
-        Debug.Log(Time.timeScale);
-
+    {      
         DayCycle();
         RoundCheck();
         AngleRotation();
