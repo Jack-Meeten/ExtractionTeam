@@ -212,8 +212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collider: {fileID: 2607727276533106967}
-  radius: 2.5
-  tickDamage: 0.1
+  radius: 1.5
+  tickDamage: 25
 --- !u!65 &7164053337641917140
 BoxCollider:
   m_ObjectHideFlags: 0

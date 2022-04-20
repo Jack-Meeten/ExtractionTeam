@@ -213,10 +213,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   innerRange: 1.5
-  outerRange: 5
-  AOERange: 4
-  Damage: 90
-  rateOfFire: 0.0075
+  outerRange: 4
+  AOERange: 3
+  Damage: 75
+  rateOfFire: 0.25
   timeToImpact: 0.01
   projectile: {fileID: 8818276085463265703, guid: 06f11511d2a4c2745a1193c0887f94c6, type: 3}
   MuzzleFlash: []
