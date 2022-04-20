@@ -231,10 +231,20 @@ public class OptionsMenu : MonoBehaviour
         Debug.Log("Muting game!");
     }
 
+    void ShowCursor()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+
+        look.enabled = false;
+        move.enabled = false;
+    }
+
     public void Win()
     {
         Canvas_WinScreen.SetActive(true);
         Time.timeScale = 0;
+        ShowCursor();
         Debug.Log("Game has been won!");
     }
 
@@ -242,6 +252,7 @@ public class OptionsMenu : MonoBehaviour
     {
         Canvas_LoseScreen.SetActive(true);
         Time.timeScale = 0;
+        ShowCursor();
         Debug.Log("Game has been lost!");
     }
 
