@@ -133,7 +133,8 @@ MonoBehaviour:
   Damage: 1.5
   rateOfFire: 1
   range: 2
-  MuzzleFlash: {fileID: 5905031003875527050}
+  MuzzleFlash:
+  - {fileID: 5905031003875527050}
   shootSound: {fileID: 0}
   enemies: []
   target: {fileID: 0}

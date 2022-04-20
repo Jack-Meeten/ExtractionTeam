@@ -4951,6 +4951,7 @@ GameObject:
   - component: {fileID: 1695680289653908921}
   - component: {fileID: 6150248051716846272}
   - component: {fileID: 7823385393959506343}
+  - component: {fileID: 8892073022690666644}
   m_Layer: 6
   m_Name: Turret
   m_TagString: Untagged
@@ -5050,7 +5051,8 @@ MonoBehaviour:
   Damage: 1.3
   rateOfFire: 2
   range: 5
-  MuzzleFlash: {fileID: 6616789976470977555}
+  MuzzleFlash:
+  - {fileID: 6616789976470977555}
   shootSound: {fileID: 8300000, guid: a16119e6082cfbb48b05da8f3d617929, type: 3}
   enemies: []
   target: {fileID: 0}
@@ -5170,3 +5172,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8892073022690666644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7436343319874189105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c060603f10f366a40a0cc5c10b62db35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opalium: 0
+  vinculum: 0

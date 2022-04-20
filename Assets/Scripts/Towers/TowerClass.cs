@@ -13,7 +13,7 @@ public class TowerClass : MonoBehaviour
     [SerializeField] float Damage;
     public float rateOfFire;
     [SerializeField] float range;
-    [SerializeField] ParticleSystem MuzzleFlash;
+    [SerializeField] ParticleSystem[] MuzzleFlash;
     [SerializeField] AudioClip shootSound;
 
     [SerializeField] List<Transform> enemies = new List<Transform>();
@@ -166,7 +166,10 @@ public class TowerClass : MonoBehaviour
     {
         allowFire = false;
         target.GetComponent<EnemyStats>().health -= Damage;
-        MuzzleFlash.Play();
+        foreach (ParticleSystem flash in MuzzleFlash)
+        {
+            flash.Play();
+        }
         GetComponent<AudioSource>().PlayOneShot(shootSound);
         yield return new WaitForSeconds(Time.deltaTime / rateOfFire);
         allowFire = true;
