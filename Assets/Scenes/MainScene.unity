@@ -690,6 +690,14 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1147876031}
+    - target: {fileID: 144559400320906465, guid: cd2f1ee080eebae4a8d6754d36dd3d50, type: 3}
+      propertyPath: CurrentHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 144559400320906465, guid: cd2f1ee080eebae4a8d6754d36dd3d50, type: 3}
+      propertyPath: StartingHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 6444428230397253506, guid: cd2f1ee080eebae4a8d6754d36dd3d50, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2157,7 +2165,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh101980
+  m_Name: pb_Mesh43002
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

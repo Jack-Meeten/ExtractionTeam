@@ -33,6 +33,8 @@ public class TitleMenu : MonoBehaviour
 
 
         MenuLayer = 0;
+
+        Cursor.visible = true;
     }
 
     void Update()
