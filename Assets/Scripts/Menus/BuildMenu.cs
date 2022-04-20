@@ -26,8 +26,6 @@ public class BuildMenu : MonoBehaviour
     [SerializeField] GameObject MovingPanel;
     [SerializeField] float PanelTime = 0.25f;
     [SerializeField] bool DeployedMenu;
-    float Cooldown;
-    [SerializeField] bool CooldownCheck;
     [Header(" ")]
 
 
@@ -53,8 +51,6 @@ public class BuildMenu : MonoBehaviour
         SpawnedLocation = false;
 
         DeployedMenu = false;
-        Cooldown = PanelTime;
-        CooldownCheck = false;
     }
 
 
@@ -106,22 +102,17 @@ public class BuildMenu : MonoBehaviour
 
     void ToggleMenu()
     {
-        if (!CooldownCheck)
+        Debug.Log("Toggling Menu!");
+        DeployedMenu = !DeployedMenu;
+
+        if (DeployedMenu)
         {
-            DeployedMenu = !DeployedMenu;
+            MP_MovingPanel.anchoredPosition = Vector3.Lerp(MP_FinalPos.anchoredPosition, MP_OriginalPos.anchoredPosition, PanelTime * Time.deltaTime);
+        }
 
-            /*if (DeployedMenu) LeanTween.moveX(MovingPanel, 1920, PanelTime);
-            if (!DeployedMenu) LeanTween.moveX(MovingPanel, 2270, PanelTime);*/
-
-            if (DeployedMenu)
-            {
-                MP_MovingPanel.anchoredPosition = Vector3.Lerp(MP_FinalPos.anchoredPosition, MP_OriginalPos.anchoredPosition, PanelTime * Time.deltaTime);
-            }
-
-            if (!DeployedMenu)
-            {              
-                MP_MovingPanel.anchoredPosition = Vector3.Lerp(MP_OriginalPos.anchoredPosition, MP_FinalPos.anchoredPosition, PanelTime * Time.deltaTime);
-            }
+        if (!DeployedMenu)
+        {              
+            MP_MovingPanel.anchoredPosition = Vector3.Lerp(MP_OriginalPos.anchoredPosition, MP_FinalPos.anchoredPosition, PanelTime * Time.deltaTime);
         }
     }
 
@@ -163,19 +154,8 @@ public class BuildMenu : MonoBehaviour
 
     public void OpenCanvas()
     {
-        if (!CooldownCheck)
-        {
-            Debug.Log("Build deployable open!");
-            ToggleMenu();
-            StartCoroutine(ClickCooldown());
-        }
-    }
-
-    IEnumerator ClickCooldown()
-    {
-        CooldownCheck = !CooldownCheck;
-        yield return new WaitForSeconds(PanelTime * 2);
-        CooldownCheck = !CooldownCheck;
+        Debug.Log("Build deployable open!");
+        ToggleMenu();
     }
 
     IEnumerator DelaySpawn()
