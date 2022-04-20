@@ -122,11 +122,11 @@ public class MortarClass : MonoBehaviour
         {
             flash.Play();
         }
-        yield return new WaitForSeconds(Time.deltaTime / timeToImpact);
+        yield return new WaitForSeconds(timeToImpact);
         GameObject AOE = Instantiate(projectile, TargetPos, transform.rotation);
         AOE.GetComponent<RangedAOE>().damage = Damage;
         AOE.GetComponent<RangedAOE>().range = AOERange;
-        yield return new WaitForSeconds(Time.deltaTime / rateOfFire);
+        yield return new WaitForSeconds(rateOfFire);
         allowFire = true;
     }
 

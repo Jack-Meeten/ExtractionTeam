@@ -171,7 +171,7 @@ public class TowerClass : MonoBehaviour
             flash.Play();
         }
         GetComponent<AudioSource>().PlayOneShot(shootSound);
-        yield return new WaitForSeconds(Time.deltaTime / rateOfFire);
+        yield return new WaitForSeconds(rateOfFire);
         allowFire = true;
     }
 
