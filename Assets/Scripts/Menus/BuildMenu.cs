@@ -35,6 +35,11 @@ public class BuildMenu : MonoBehaviour
     CameraMove move;
     PanningControls PCScript;
 
+
+    [SerializeField] RectTransform MP_MovingPanel;
+    [SerializeField] RectTransform MP_OriginalPos;
+    [SerializeField] RectTransform MP_FinalPos;
+
     // Camera dependencies.
     [SerializeField] Transform orientation;
 
@@ -105,8 +110,18 @@ public class BuildMenu : MonoBehaviour
         {
             DeployedMenu = !DeployedMenu;
 
-            if (DeployedMenu) LeanTween.moveX(MovingPanel, 1920, PanelTime);
-            if (!DeployedMenu) LeanTween.moveX(MovingPanel, 2270, PanelTime);
+            /*if (DeployedMenu) LeanTween.moveX(MovingPanel, 1920, PanelTime);
+            if (!DeployedMenu) LeanTween.moveX(MovingPanel, 2270, PanelTime);*/
+
+            if (DeployedMenu)
+            {
+                MP_MovingPanel.anchoredPosition = Vector3.Lerp(MP_FinalPos.anchoredPosition, MP_OriginalPos.anchoredPosition, PanelTime * Time.deltaTime);
+            }
+
+            if (!DeployedMenu)
+            {              
+                MP_MovingPanel.anchoredPosition = Vector3.Lerp(MP_OriginalPos.anchoredPosition, MP_FinalPos.anchoredPosition, PanelTime * Time.deltaTime);
+            }
         }
     }
 
