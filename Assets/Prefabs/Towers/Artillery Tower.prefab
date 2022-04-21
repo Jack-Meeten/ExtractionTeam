@@ -216,7 +216,7 @@ MonoBehaviour:
   outerRange: 4
   AOERange: 3
   Damage: 75
-  rateOfFire: 0.25
+  rateOfFire: 5
   timeToImpact: 0.01
   projectile: {fileID: 8818276085463265703, guid: 06f11511d2a4c2745a1193c0887f94c6, type: 3}
   MuzzleFlash: []

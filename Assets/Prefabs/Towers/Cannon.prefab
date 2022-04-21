@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f4d1d3127c1e0469b9b72fa2057f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 1.5
+  Damage: 50
   rateOfFire: 1
   range: 2.5
   MuzzleFlash:

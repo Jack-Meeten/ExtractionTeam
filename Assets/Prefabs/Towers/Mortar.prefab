@@ -14530,8 +14530,8 @@ MonoBehaviour:
   innerRange: 1
   outerRange: 3.5
   AOERange: 2.5
-  Damage: 50
-  rateOfFire: 0.5
+  Damage: 25
+  rateOfFire: 3
   timeToImpact: 0.01
   projectile: {fileID: 8818276085463265703, guid: 06f11511d2a4c2745a1193c0887f94c6, type: 3}
   MuzzleFlash:

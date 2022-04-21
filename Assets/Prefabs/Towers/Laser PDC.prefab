@@ -5020,7 +5020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 4
-  rateOfFire: 10
+  rateOfFire: 0.1
   range: 2.5
   MuzzleFlash:
   - {fileID: 699226613190269901}

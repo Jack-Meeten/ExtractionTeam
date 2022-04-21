@@ -283,5 +283,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _collider: {fileID: 3447980432053186629}
   radius: 2.5
-  rateOfFire: 0.5
+  rateOfFire: 2
   damagePerTick: 85

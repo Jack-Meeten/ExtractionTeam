@@ -716,11 +716,11 @@ PrefabInstance:
       objectReference: {fileID: 1147876031}
     - target: {fileID: 144559400320906465, guid: cd2f1ee080eebae4a8d6754d36dd3d50, type: 3}
       propertyPath: CurrentHealth
-      value: 50
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 144559400320906465, guid: cd2f1ee080eebae4a8d6754d36dd3d50, type: 3}
       propertyPath: StartingHealth
-      value: 50
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 6444428230397253506, guid: cd2f1ee080eebae4a8d6754d36dd3d50, type: 3}
       propertyPath: m_RootOrder
@@ -3531,13 +3531,45 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: Round1
+      value: 6001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: Round2
+      value: 12001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: Round3
+      value: 18001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: Round4
+      value: 24001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: Round5
+      value: 30001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: Shuttle
       value: 
       objectReference: {fileID: 292970593}
     - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: DayTicks
+      value: 6000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: NightTicks
+      value: 30000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 3451545371972757620}
+    - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: SpawnInterval
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: SpawnPoints.Array.data[0]
       value: 
