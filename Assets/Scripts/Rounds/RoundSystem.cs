@@ -113,6 +113,9 @@ public class RoundSystem : MonoBehaviour
 
         // Update the round number on the UI
         RoundText.text = CurrentRound.ToString();
+
+        // Enemy Cap
+        if (CurrentEnemiesToSpawn >= 65) CurrentEnemiesToSpawn = 65;
     }
 
     void DayCycle()
@@ -154,8 +157,7 @@ public class RoundSystem : MonoBehaviour
         if (CurrentTick == Round1)
         {
             //Debug.Log("Starting round number " + CurrentRound);
-            RoundMechanics();
-            rand = Random.Range(0, SpawnPoints.Length);
+            RoundMechanics();            
         }
         if (CurrentTick == Round2)
         {
@@ -186,7 +188,7 @@ public class RoundSystem : MonoBehaviour
     void RoundMechanics()
     {
         CurrentRound+=1;
-
+        rand = Random.Range(0, SpawnPoints.Length);
         DefaultEnemiesToSpawn = DefaultEnemiesToSpawn + RoundEnemyIncreaser;
         InvokeRepeating("SpawnDelay", 0, SpawnInterval);
     }

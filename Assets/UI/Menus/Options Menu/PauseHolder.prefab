@@ -1026,6 +1026,8 @@ MonoBehaviour:
   Canvas_VideoMenu: {fileID: 0}
   Canvas_AudioMenu: {fileID: 3155729860286079562}
   Canvas_ControlsMenu: {fileID: 20732546422901571}
+  Canvas_WinScreen: {fileID: 0}
+  Canvas_LoseScreen: {fileID: 0}
   MenuActive: 0
   SettingsActive: 0
   AudioActive: 0
