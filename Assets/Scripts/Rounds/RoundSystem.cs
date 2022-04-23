@@ -179,7 +179,6 @@ public class RoundSystem : MonoBehaviour
             //Debug.Log("Starting round number " + CurrentRound);
             RoundMechanics();
 
-            //int techNum = -1;
             techNum ++;
             CheckTechnology(techNum);
         }
@@ -296,7 +295,7 @@ public class RoundSystem : MonoBehaviour
     void CheckTechnology(int techNum)
     {
         GameObject unlocking = GameObject.Find(hashList[techNum].ToString());
-        Debug.Log(unlocking);
+        //Debug.Log(unlocking);
         unlocking.GetComponent<Button>().enabled = true;
         unlocking.transform.GetChild(1).gameObject.SetActive(false);
     }
