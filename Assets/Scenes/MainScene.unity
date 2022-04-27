@@ -3713,6 +3713,10 @@ PrefabInstance:
       propertyPath: frustumSettings.qualitySettings
       value: 
       objectReference: {fileID: 789115442}
+    - target: {fileID: 7778912573816657694, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: amountToPool
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7778912573816991294, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: m_Enabled
       value: 0

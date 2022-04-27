@@ -7,31 +7,15 @@ public class ResourceVein : MonoBehaviour
     public Resource resource;
     public float time;
     public BuildManager manager;
-    private bool whileCaptured = false;
-    private bool collect = false;
+    private bool collect = true;
 
+    private void Start()
+    {
+        manager = FindObjectOfType<BuildManager>();
+    }
     private void Update()
     {
-        if (!whileCaptured)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                RaycastHit hitInfo;
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-                if (Physics.Raycast(ray, out hitInfo))
-                {
-                    if (hitInfo.transform.tag == "Resource")
-                    {
-                        collect = true;
-                        whileCaptured = true;
-                    }
-                }
-
-
-            }
-        }
-        if (whileCaptured && collect)
+        if (collect)
         {
             StartCoroutine(OverTime(resource.number, resource.amountPerAction));
         }

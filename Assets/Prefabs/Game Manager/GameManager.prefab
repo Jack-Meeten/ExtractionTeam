@@ -12600,7 +12600,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7778912572437816348}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 283310453492839963}
+        m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
+        m_MethodName: selectTurret
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8452195089004789314, guid: c7db7ef7a44049147a84cf5fea6fde68, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 283310453492839963}
+        m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
+        m_MethodName: bpTurret
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7490335546616564416, guid: b7e4e72dfd756b94ebf12c6f86b22143, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7778912572559813626
 GameObject:
   m_ObjectHideFlags: 0

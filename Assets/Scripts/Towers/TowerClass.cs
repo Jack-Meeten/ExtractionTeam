@@ -17,7 +17,7 @@ public class TowerClass : MonoBehaviour
     [SerializeField] AudioClip shootSound;
 
     [SerializeField] List<Transform> enemies = new List<Transform>();
-    public Transform target;//[HideInInspector]
+    [HideInInspector] public Transform target;
 
     [SerializeField] GameObject baseMountPoint;
     [SerializeField] GameObject barrelMountPoint;

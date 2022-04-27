@@ -190,6 +190,10 @@ public class RoundSystem : MonoBehaviour
         rand = Random.Range(0, SpawnPoints.Length);
         DefaultEnemiesToSpawn = DefaultEnemiesToSpawn + RoundEnemyIncreaser;
         InvokeRepeating("SpawnDelay", 0, SpawnInterval);
+        foreach (var item in FindObjectOfType<ObjectPool>().GetComponent<ObjectPool>().pooledObjects)
+        {
+            item.GetComponent<EnemyStats>().baseHealth = item.GetComponent<EnemyStats>().baseHealth * 1.003f;
+        }
     }
 
     private void SpawnDelay()
@@ -204,7 +208,7 @@ public class RoundSystem : MonoBehaviour
             creep.GetComponent<SplineFinding>().tParam = 0;
             creep.GetComponent<SplineFinding>().routeToGO = 0;
             creep.GetComponent<SplineFinding>().coroutineAllowed = true;
-            creep.GetComponent<EnemyStats>().health = creep.GetComponent<EnemyStats>().baseHealth * 1.002f;
+            creep.GetComponent<EnemyStats>().health = creep.GetComponent<EnemyStats>().baseHealth;
             creep.SetActive(true);
             //Debug.Log(creep.name + " : is ACTIVE");
         }

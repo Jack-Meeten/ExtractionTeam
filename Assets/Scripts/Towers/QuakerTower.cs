@@ -9,7 +9,6 @@ public class QuakerTower : DebuffTower
     bool allowFire = true;
 
     [SerializeField] float rateOfFire;
-    [SerializeField] float damagePerTick;
 
     private void FixedUpdate()
     {
@@ -24,9 +23,15 @@ public class QuakerTower : DebuffTower
         allowFire = false;
         foreach (GameObject enemy in inRange)
         {
-            enemy.GetComponent<EnemyStats>().health -= damagePerTick;
+            enemy.GetComponent<SplineFinding>().speedModifier = 0;
         }
-        yield return new WaitForSeconds(Time.deltaTime / rateOfFire);
+
+        yield return new WaitForSeconds(rateOfFire);
+
+        foreach (GameObject enemy in inRange)
+        {
+            enemy.GetComponent<SplineFinding>().speedModifier = 0.1f;
+        }
         allowFire = true;
     }
 
