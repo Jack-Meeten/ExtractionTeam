@@ -1543,26 +1543,6 @@ Transform:
   m_Father: {fileID: 75065997}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &944864618 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7778912572402810660, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-  m_PrefabInstance: {fileID: 7778912573816657692}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &944864623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 944864618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  header: Laser PD
-  content: A Point Defence tower that fires rapid lasers, good for clearing up low
-    health creeps or applying a spread of damage across a group.
 --- !u!1 &1058924215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1634,26 +1614,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1186847011 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7778912573506228255, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-  m_PrefabInstance: {fileID: 7778912573816657692}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1186847016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186847011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  header: Biohazard Tower
-  content: A special tower that applies a poisoned effect to nearby creeps, dealing
-    damage over time.
 --- !u!1 &1216359679
 GameObject:
   m_ObjectHideFlags: 0
@@ -1698,26 +1658,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   follower: {fileID: 446369944}
---- !u!1 &1305225109 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7778912572336969967, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-  m_PrefabInstance: {fileID: 7778912573816657692}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1305225114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1305225109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  header: Slowness Tower
-  content: A special tower that leaks controlled bursts of liquid nitrogen, cooling
-    and freezing enemies ever so slightly.
 --- !u!1 &1320307199
 GameObject:
   m_ObjectHideFlags: 0
@@ -2487,26 +2427,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   follower: {fileID: 1472413518}
---- !u!1 &1765969043 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7778912573054401242, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-  m_PrefabInstance: {fileID: 7778912573816657692}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1765969048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1765969043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  header: Artillery Tower
-  content: An advanced mortar tower that deals a massive amount of damage in a large
-    area.
 --- !u!1 &1805544294
 GameObject:
   m_ObjectHideFlags: 0
@@ -2567,25 +2487,6 @@ Transform:
   m_Father: {fileID: 1394342299}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1820374886 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7778912572437816801, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-  m_PrefabInstance: {fileID: 7778912573816657692}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1820374891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820374886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  header: Tesla Tower.
-  content: A special tower that deals a large amount of damage in rapid succession.
 --- !u!1 &1828059582
 GameObject:
   m_ObjectHideFlags: 0
@@ -2699,25 +2600,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &1920559736 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7778912572248077976, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-  m_PrefabInstance: {fileID: 7778912573816657692}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1920559741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920559736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  header: Quaker Tower
-  content: A special tower that deals an area of effect damage around the tower itself.
 --- !u!1 &1946509813
 GameObject:
   m_ObjectHideFlags: 0
@@ -3632,79 +3514,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 434103203, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: header
-      value: Cannon Tower
-      objectReference: {fileID: 0}
-    - target: {fileID: 434103203, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: content
-      value: A standard tower that fires heavy bolts dealing considerable damage
-        at a decent rate.
-      objectReference: {fileID: 0}
     - target: {fileID: 283310453492839963, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: grid
       value: 
       objectReference: {fileID: 1844433581}
-    - target: {fileID: 2043889819316722192, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.7335
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043889819316722192, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 286.30002
-      objectReference: {fileID: 0}
-    - target: {fileID: 2043889819316722192, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -21.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2981413337987094304, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284438508242961636, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -12.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3600000469227320442, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 156.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3882178876743617425, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4877808827443362423, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.21160126
-      objectReference: {fileID: 0}
-    - target: {fileID: 6080148490029687525, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7778912572570766725, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7778912572582784947, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: header
-      value: Missile Tower
-      objectReference: {fileID: 0}
-    - target: {fileID: 7778912572863771140, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7778912572870072035, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: header
-      value: Railgun Tower
-      objectReference: {fileID: 0}
-    - target: {fileID: 7778912572986156314, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7778912573188624955, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7778912573313827137, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: frustumSettings.baseSettings
       value: 
@@ -3713,62 +3526,18 @@ PrefabInstance:
       propertyPath: frustumSettings.qualitySettings
       value: 
       objectReference: {fileID: 789115442}
-    - target: {fileID: 7778912573816657694, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: amountToPool
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 7778912573816991294, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8663453637649417141, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: Round1
-      value: 6001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: Round2
-      value: 12001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: Round3
-      value: 18001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: Round4
-      value: 24001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: Round5
-      value: 30001
       objectReference: {fileID: 0}
     - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: Shuttle
       value: 
       objectReference: {fileID: 292970593}
     - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: DayTicks
-      value: 6000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: NightTicks
-      value: 36000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 3451545371972757620}
-    - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: SpawnInterval
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
-      propertyPath: RoundEnemyIncreaser
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8663453637649417142, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: SpawnPoints.Array.data[0]
       value: 

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class SplineVisualiser : MonoBehaviour
 {
-[SerializeField]
-    private Transform[] controlPoints;
+[SerializeField] Transform[] controlPoints;
 
     private Vector3 gizmosPosition;
 
