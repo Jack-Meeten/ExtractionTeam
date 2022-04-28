@@ -204,7 +204,7 @@ public class RoundSystem : MonoBehaviour
         if (creep != null)
         {
             //resets creep health and spline finding, reactivates it
-            creep.GetComponent<SplineFinding>().routes = SpawnPoints[rand] ;
+            creep.GetComponent<SplineFinding>().routes = SpawnPoints[rand];
             creep.GetComponent<SplineFinding>().tParam = 0;
             creep.GetComponent<SplineFinding>().routeToGO = 0;
             creep.GetComponent<SplineFinding>().coroutineAllowed = true;
