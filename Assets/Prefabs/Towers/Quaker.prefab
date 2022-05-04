@@ -173,6 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _collider: {fileID: 3447980432053186629}
   radius: 2
+  shootSound: {fileID: 8300000, guid: ecb6ffaad83260a4a84b7df0e500e69b, type: 3}
   rateOfFire: 3
 --- !u!1 &5832681548223063587
 GameObject:
@@ -427,4 +428,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _collider: {fileID: 3447980432053186629}
   radius: 2.5
+  shootSound: {fileID: 0}
   rateOfFire: 2

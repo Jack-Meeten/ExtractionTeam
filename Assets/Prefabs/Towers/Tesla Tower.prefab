@@ -286,7 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _collider: {fileID: 5497344268730826887}
   radius: 2
-  shootSound: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: 47153707d5808d443a97e341742b91cc, type: 3}
   tickDamage: 15
 --- !u!65 &8172147968467778267
 BoxCollider:

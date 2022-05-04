@@ -5024,7 +5024,7 @@ MonoBehaviour:
   range: 2.5
   MuzzleFlash:
   - {fileID: 699226613190269901}
-  shootSound: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: 60a235dd4d1e81447b4d0ba4c9271f84, type: 3}
   enemies: []
   target: {fileID: 0}
   baseMountPoint: {fileID: 6839278774897704570}

@@ -220,6 +220,7 @@ MonoBehaviour:
   timeToImpact: 0.01
   projectile: {fileID: 8818276085463265703, guid: 06f11511d2a4c2745a1193c0887f94c6, type: 3}
   MuzzleFlash: []
+  shootSound: {fileID: 8300000, guid: aac55cae9a2fe7c4fabf5794ca1b8f80, type: 3}
   target: {fileID: 0}
 --- !u!114 &2836527722459322576
 MonoBehaviour:
