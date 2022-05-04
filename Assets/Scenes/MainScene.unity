@@ -3518,6 +3518,14 @@ PrefabInstance:
       propertyPath: grid
       value: 
       objectReference: {fileID: 1844433581}
+    - target: {fileID: 7435846778788231862, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_Name
+      value: Start Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 7435846778788231862, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7778912573313827137, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: frustumSettings.baseSettings
       value: 
