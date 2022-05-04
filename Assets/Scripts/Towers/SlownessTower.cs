@@ -15,5 +15,6 @@ public class SlownessTower : DebuffTower
     private void OnTriggerExit(Collider other)
     {
         other.GetComponent<SplineFinding>().speedModifier = 0.2f;
+        GetComponent<AudioSource>().PlayOneShot(shootSound);
     }
 }

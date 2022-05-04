@@ -10,6 +10,7 @@ public class PoisonTower : DebuffTower
         if (other.tag == "Enemy")
         {
             other.GetComponent<EnemyStats>().health -= tickDamage;
+            GetComponent<AudioSource>().PlayOneShot(shootSound);
         }
     }
 }

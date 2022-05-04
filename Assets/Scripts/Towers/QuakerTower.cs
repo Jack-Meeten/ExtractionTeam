@@ -25,6 +25,7 @@ public class QuakerTower : DebuffTower
         {
             enemy.GetComponent<SplineFinding>().speedModifier = 0;
         }
+        GetComponent<AudioSource>().PlayOneShot(shootSound);
 
         yield return new WaitForSeconds(rateOfFire);
 

@@ -17,6 +17,7 @@ public class MortarClass : MonoBehaviour
 
     [Header("FX")]
     [SerializeField] ParticleSystem[] MuzzleFlash;
+    [SerializeField] AudioClip shootSound;
     public Transform target; //[HideInInspector] 
 
     bool allowFire = true;
@@ -122,6 +123,7 @@ public class MortarClass : MonoBehaviour
         {
             flash.Play();
         }
+        GetComponent<AudioSource>().PlayOneShot(shootSound);
         yield return new WaitForSeconds(timeToImpact);
         GameObject AOE = Instantiate(projectile, TargetPos, transform.rotation);
         AOE.GetComponent<RangedAOE>().damage = Damage;
