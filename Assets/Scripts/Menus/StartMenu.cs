@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class StartMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(wait());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator wait()
     {
-        
+        yield return new WaitForSecondsRealtime(34);
+        gameObject.SetActive(false);
     }
 }
