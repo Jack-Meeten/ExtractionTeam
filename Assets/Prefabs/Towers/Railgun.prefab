@@ -136,7 +136,7 @@ MonoBehaviour:
   rateOfFire: 4
   range: 3.5
   MuzzleFlash:
-  - {fileID: 0}
+  - {fileID: 5259224590585758233}
   shootSound: {fileID: 8300000, guid: d6f5b52f6c786624f9e6b1006bc79a08, type: 3}
   enemies: []
   target: {fileID: 0}

@@ -28,9 +28,6 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {       
-        OST_Source = GameManager.GetComponent<AudioSource>();
-        UI_Source = GameManager.GetComponent<AudioSource>();
-
         SFX_Volume = 0.75f;
         OST_Volume = 0.75f;
         UI_Volume = 0.75f;
@@ -50,7 +47,7 @@ public class AudioManager : MonoBehaviour
     public void PlaySFX(AudioClip SFX_Clip)
     {
         UI_Source.PlayOneShot(SFX_Clip);
-    }       
+    }
 
     public void FindAudioSources()
     {
