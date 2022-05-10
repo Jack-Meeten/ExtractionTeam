@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1364714964510552769}
   - component: {fileID: 9128922249947742000}
   - component: {fileID: 3722387930543976207}
-  - component: {fileID: 3651895555057201997}
   m_Layer: 0
   m_Name: Quaker
   m_TagString: Tower
@@ -159,22 +158,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3651895555057201997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5133506528301065387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af70158fc85f61a4a9ecfe1f9dbb8c94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 3447980432053186629}
-  radius: 2
-  shootSound: {fileID: 8300000, guid: ecb6ffaad83260a4a84b7df0e500e69b, type: 3}
-  rateOfFire: 3
 --- !u!1 &5832681548223063587
 GameObject:
   m_ObjectHideFlags: 0

@@ -92,6 +92,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1988897526772942175}
   - component: {fileID: 5497344268730826887}
+  - component: {fileID: 1944929204270137798}
+  - component: {fileID: 8236441390442475547}
+  - component: {fileID: 3358144045679862291}
   m_Layer: 2
   m_Name: Collider
   m_TagString: Untagged
@@ -126,63 +129,27 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &8452195089004789314
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9081484503475430648}
-  - component: {fileID: 2456948017704330876}
-  - component: {fileID: 1445352747749016795}
-  - component: {fileID: 8386496956884657274}
-  - component: {fileID: 8172147968467778267}
-  m_Layer: 0
-  m_Name: Tesla Tower
-  m_TagString: Tower
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9081484503475430648
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8452195089004789314}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 3584690253730014841}
-  - {fileID: 1988897526772942175}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2456948017704330876
+--- !u!114 &1944929204270137798
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8452195089004789314}
+  m_GameObject: {fileID: 5907958523015338926}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c060603f10f366a40a0cc5c10b62db35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opalium: 250
-  vinculum: 300
---- !u!82 &1445352747749016795
+  opalium: 0
+  vinculum: 0
+--- !u!82 &8236441390442475547
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8452195089004789314}
+  m_GameObject: {fileID: 5907958523015338926}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -272,13 +239,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8386496956884657274
+--- !u!114 &3358144045679862291
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8452195089004789314}
+  m_GameObject: {fileID: 5907958523015338926}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b521d44bd9ba0140b3aa1be7369e2d7, type: 3}
@@ -288,6 +255,54 @@ MonoBehaviour:
   radius: 2
   shootSound: {fileID: 8300000, guid: 47153707d5808d443a97e341742b91cc, type: 3}
   tickDamage: 15
+--- !u!1 &8452195089004789314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9081484503475430648}
+  - component: {fileID: 2456948017704330876}
+  - component: {fileID: 8172147968467778267}
+  m_Layer: 0
+  m_Name: Tesla Tower
+  m_TagString: Tower
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9081484503475430648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8452195089004789314}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3584690253730014841}
+  - {fileID: 1988897526772942175}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2456948017704330876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8452195089004789314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c060603f10f366a40a0cc5c10b62db35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opalium: 250
+  vinculum: 300
 --- !u!65 &8172147968467778267
 BoxCollider:
   m_ObjectHideFlags: 0

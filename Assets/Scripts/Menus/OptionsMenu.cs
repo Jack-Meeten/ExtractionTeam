@@ -231,7 +231,7 @@ public class OptionsMenu : MonoBehaviour
         Debug.Log("Muting game!");
     }
 
-    void ShowCursor()
+    public void ShowCursor()
     {
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
