@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collider: {fileID: 1288115962504682100}
-  radius: 2.5
+  radius: 2
   shootSound: {fileID: 0}
   slowModifier: 0.5
 --- !u!1001 &8324821683835052799

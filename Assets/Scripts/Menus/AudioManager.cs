@@ -40,8 +40,8 @@ public class AudioManager : MonoBehaviour
     private void Update()
     {
         FindAudioSources();
-        SliderUpdate();
         SetVolume();
+        SliderUpdate();
     }
 
     public void PlaySFX(AudioClip SFX_Clip)
@@ -59,17 +59,19 @@ public class AudioManager : MonoBehaviour
     {
         foreach(AudioSource _source in AudioSources)
         {
+            Debug.Log("foreach");
             if(!_source == OST_Source && !_source == UI_Source)
             {
-                _source.volume = SFX_Volume;
+                Debug.Log("sfx");
+                _source.volume = SFX_Slider.value;
             }
             if (!_source == OST_Source && _source == UI_Source)
             {
-                _source.volume = UI_Volume;
+                _source.volume = UI_Slider.value;
             }
             if (_source == OST_Source && !_source == UI_Source)
             {
-                _source.volume = OST_Volume;
+                _source.volume = OST_Slider.value;
             }
         }
     }

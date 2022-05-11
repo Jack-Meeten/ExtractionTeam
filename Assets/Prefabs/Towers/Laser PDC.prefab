@@ -9873,8 +9873,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c060603f10f366a40a0cc5c10b62db35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opalium: 0
-  vinculum: 0
+  opalium: 125
+  vinculum: 100
 --- !u!82 &8066452463490920447
 AudioSource:
   m_ObjectHideFlags: 0
