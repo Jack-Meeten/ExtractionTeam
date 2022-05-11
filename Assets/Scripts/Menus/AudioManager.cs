@@ -13,7 +13,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField] GameObject GameManager;
     [Header(" ")]
 
-
     [Header("Volume Parameters")]
     [Header(" ")]
     [SerializeField] Slider SFX_Slider;
@@ -40,8 +39,8 @@ public class AudioManager : MonoBehaviour
     private void Update()
     {
         FindAudioSources();
-        SetVolume();
         SliderUpdate();
+        SetVolume();
     }
 
     public void PlaySFX(AudioClip SFX_Clip)
@@ -59,19 +58,17 @@ public class AudioManager : MonoBehaviour
     {
         foreach(AudioSource _source in AudioSources)
         {
-            Debug.Log("foreach");
-            if(!_source == OST_Source && !_source == UI_Source)
+            if (_source == UI_Source)
             {
-                Debug.Log("sfx");
-                _source.volume = SFX_Slider.value;
+                _source.volume = UI_Volume;
             }
-            if (!_source == OST_Source && _source == UI_Source)
+            else if(_source == OST_Source)
             {
-                _source.volume = UI_Slider.value;
+                _source.volume = OST_Volume;
             }
-            if (_source == OST_Source && !_source == UI_Source)
+            else
             {
-                _source.volume = OST_Slider.value;
+                _source.volume = SFX_Volume;
             }
         }
     }
@@ -81,5 +78,11 @@ public class AudioManager : MonoBehaviour
         SFX_Volume = SFX_Slider.value;
         OST_Volume = OST_Slider.value;
         UI_Volume = UI_Slider.value;
+    }
+    public void mute()
+    {
+        SFX_Volume = 0;
+        OST_Volume = 0;
+        UI_Volume = 0;
     }
 }       

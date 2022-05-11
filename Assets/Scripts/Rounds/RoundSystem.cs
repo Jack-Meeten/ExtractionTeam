@@ -205,6 +205,7 @@ public class RoundSystem : MonoBehaviour
         {
             //resets creep health and spline finding, reactivates it
             creep.GetComponent<SplineFinding>().routes = SpawnPoints[rand];
+            creep.GetComponent<SplineFinding>().speedModifier = 0.1f;
             creep.GetComponent<SplineFinding>().tParam = 0;
             creep.GetComponent<SplineFinding>().routeToGO = 0;
             creep.GetComponent<SplineFinding>().coroutineAllowed = true;
@@ -240,50 +241,50 @@ public class RoundSystem : MonoBehaviour
 
     public void SpeedStep()
     {
-        if (Input.GetKeyDown(KeyCode.Period) && Time.timeScale < 99)
-        {
-            //Debug.Log(Time.timeScale);
-            Time.timeScale += 1;
-            TickValue += 1;
-        }
-        if (Input.GetKeyDown(KeyCode.Comma) && Time.timeScale > 1)
-        {
-            //Debug.Log(Time.timeScale);
-            Time.timeScale -= 1;
-            TickValue -= 1;
-        }
-        if (Input.GetKeyDown("/"))
-        {
-            //Debug.Log(Time.timeScale);
-            Time.timeScale = 1;
-            TickValue = 1;
-        }
+        //if (Input.GetKeyDown(KeyCode.Period) && Time.timeScale < 99)
+        //{
+        //    //Debug.Log(Time.timeScale);
+        //    Time.timeScale += 1;
+        //    TickValue += 1;
+        //}
+        //if (Input.GetKeyDown(KeyCode.Comma) && Time.timeScale > 1)
+        //{
+        //    //Debug.Log(Time.timeScale);
+        //    Time.timeScale -= 1;
+        //    TickValue -= 1;
+        //}
+        //if (Input.GetKeyDown("/"))
+        //{
+        //    //Debug.Log(Time.timeScale);
+        //    Time.timeScale = 1;
+        //    TickValue = 1;
+        //}
 
-        if (CurrentTick >= Round1 - 50 && CurrentTick <= Round1)
-        {
-            TickValue = 1;
-            Time.timeScale = 1;
-        }
-        if (CurrentTick >= Round2 - 50 && CurrentTick <= Round2)
-        {
-            TickValue = 1;
-            Time.timeScale = 1;
-        }
-        if (CurrentTick >= Round3 - 50 && CurrentTick <= Round3)
-        {
-            TickValue = 1;
-            Time.timeScale = 1;
-        }
-        if (CurrentTick >= Round4 - 50 && CurrentTick <= Round4)
-        {
-            TickValue = 1;
-            Time.timeScale = 1;
-        }
-        if (CurrentTick >= Round5 - 50 && CurrentTick <= Round5)
-        {
-            TickValue = 1;
-            Time.timeScale = 1;
-        }
+        //if (CurrentTick >= Round1 - 50 && CurrentTick <= Round1)
+        //{
+        //    TickValue = 1;
+        //    Time.timeScale = 1;
+        //}
+        //if (CurrentTick >= Round2 - 50 && CurrentTick <= Round2)
+        //{
+        //    TickValue = 1;
+        //    Time.timeScale = 1;
+        //}
+        //if (CurrentTick >= Round3 - 50 && CurrentTick <= Round3)
+        //{
+        //    TickValue = 1;
+        //    Time.timeScale = 1;
+        //}
+        //if (CurrentTick >= Round4 - 50 && CurrentTick <= Round4)
+        //{
+        //    TickValue = 1;
+        //    Time.timeScale = 1;
+        //}
+        //if (CurrentTick >= Round5 - 50 && CurrentTick <= Round5)
+        //{
+        //    TickValue = 1;
+        //    Time.timeScale = 1;
+        //}
     }
 
     void ButtonSetUp()

@@ -369,4 +369,4 @@ MonoBehaviour:
   _collider: {fileID: 2607727276533106967}
   radius: 1.5
   shootSound: {fileID: 0}
-  tickDamage: 1
+  tickDamage: 0.05

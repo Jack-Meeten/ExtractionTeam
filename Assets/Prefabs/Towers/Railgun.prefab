@@ -142,7 +142,7 @@ MonoBehaviour:
   target: {fileID: 0}
   baseMountPoint: {fileID: 6749726801381960250}
   barrelMountPoint: {fileID: 1098028327996869908}
-  turnSpeed: 0.5
+  turnSpeed: 50
   isAnimated: 0
   _animation: {fileID: 0}
 --- !u!114 &1075924217356866324

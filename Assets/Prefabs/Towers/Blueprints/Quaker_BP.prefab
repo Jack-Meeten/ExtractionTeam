@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 309066457452029797}
   - component: {fileID: 2571257453173429167}
   - component: {fileID: 770796174285399981}
+  - component: {fileID: 8721567024322048503}
   m_Layer: 0
   m_Name: Quaker_BP
   m_TagString: Untagged
@@ -96,3 +97,15 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5487947
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8721567024322048503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4084216720663114362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a90c5a45ffd38488759e9a33a88700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

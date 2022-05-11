@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StartMenu : MonoBehaviour
 {
@@ -10,6 +11,14 @@ public class StartMenu : MonoBehaviour
         ops = FindObjectOfType<OptionsMenu>();
         StartCoroutine(wait());
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            GetComponent<Image>().enabled = false;
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
+    }
 
     IEnumerator wait()
     {
@@ -17,12 +26,5 @@ public class StartMenu : MonoBehaviour
         ops.ShowCursor();
         yield return new WaitForSecondsRealtime(33);
         gameObject.SetActive(false);
-    }
-
-    public void toggleMouse()
-    {
-        if (Cursor.visible) Cursor.visible = false;
-
-        else Cursor.visible = true;
     }
 }

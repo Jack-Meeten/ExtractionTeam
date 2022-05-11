@@ -9,9 +9,9 @@ public class FlameThrower : TowerClass
     private bool canTick = true;
     public float quickTickDamage;
 
-    void FixedUpdate()
+    protected override void FixedUpdate()
     {
-        //base.Update();
+        base.FixedUpdate();
         if (canTick)
         {
             StartCoroutine(tickDamage());
@@ -33,6 +33,10 @@ public class FlameThrower : TowerClass
         foreach (GameObject obj in _enemy)
         {
             obj.GetComponent<EnemyStats>().health -= quickTickDamage;
+            if (obj.GetComponent<EnemyStats>().health <= 0)
+            {
+                _enemy.Remove(obj);
+            }
         }
 
         yield return new WaitForSeconds(Time.deltaTime / rateOfFire);

@@ -254,7 +254,7 @@ MonoBehaviour:
   _collider: {fileID: 5497344268730826887}
   radius: 2
   shootSound: {fileID: 8300000, guid: 47153707d5808d443a97e341742b91cc, type: 3}
-  tickDamage: 3
+  tickDamage: 0.1
 --- !u!1 &8452195089004789314
 GameObject:
   m_ObjectHideFlags: 0

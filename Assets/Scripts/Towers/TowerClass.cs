@@ -34,7 +34,7 @@ public class TowerClass : MonoBehaviour
         CloseFire();
     }
 
-    void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         FindAllEnemies();
         if (target != null)

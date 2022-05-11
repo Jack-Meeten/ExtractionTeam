@@ -3093,10 +3093,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 938740188, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.62263805
+      objectReference: {fileID: 0}
+    - target: {fileID: 938740188, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.23654991
+      objectReference: {fileID: 0}
+    - target: {fileID: 938740188, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.40263826
+      objectReference: {fileID: 0}
+    - target: {fileID: 938740188, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.14102708
+      objectReference: {fileID: 0}
+    - target: {fileID: 938740189, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_text
+      value: Click to continue
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047576494, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 069c524ed42cfa048bdc90f8b2238883, type: 3}
     - target: {fileID: 283310453492839963, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: grid
       value: 
       objectReference: {fileID: 1844433581}
+    - target: {fileID: 7778912573022840107, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: header
+      value: Mortar Tower(150 V, 150 O)
+      objectReference: {fileID: 0}
     - target: {fileID: 7778912573313827137, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: frustumSettings.baseSettings
       value: 

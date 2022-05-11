@@ -19,6 +19,8 @@ public class MortarClass : MonoBehaviour
     [SerializeField] ParticleSystem[] MuzzleFlash;
     [SerializeField] AudioClip shootSound;
     public Transform target; //[HideInInspector] 
+    [SerializeField] bool isAnimated;
+    [SerializeField] Animator _animation;
 
     bool allowFire = true;
     bool close, far, weak, strong;
@@ -122,6 +124,11 @@ public class MortarClass : MonoBehaviour
         foreach (ParticleSystem flash in MuzzleFlash)
         {
             flash.Play();
+        }
+        if (isAnimated)
+        {
+            _animation.SetBool("Shoot", true);
+            _animation.SetBool("Shoot", false);
         }
         GetComponent<AudioSource>().PlayOneShot(shootSound);
         yield return new WaitForSeconds(timeToImpact);
