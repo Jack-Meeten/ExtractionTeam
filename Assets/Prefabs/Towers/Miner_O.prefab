@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resource: {fileID: 11400000, guid: db265c05ad12b2a4b845636b88cc97b3, type: 2}
-  time: 3
+  time: 5
   manager: {fileID: 0}
 --- !u!114 &-3610216971241719428
 MonoBehaviour:

@@ -78,13 +78,14 @@ public class BuildingPlacer : MonoBehaviour
                         Instantiate(tower, new Vector3(finalPosition.x, finalPosition.y + 0.5f, finalPosition.z), transform.rotation);//+ 0.225f
                         manager.opalium -= tower.GetComponent<TowerStats>().opalium;
                         manager.vinculum -= tower.GetComponent<TowerStats>().vinculum;
+                        PlaceSwitch();
                     }
                 }
             }
         }
     }
 
-    private void CheckBuildMode()
+    void CheckBuildMode()
     {
         if (!bM.BuildingMenu)
         {
@@ -95,6 +96,11 @@ public class BuildingPlacer : MonoBehaviour
         {
             Destroy(towerBlueprint);
         }
+    }
+    void PlaceSwitch()
+    {
+        if (beginPlace) beginPlace = false;
+        else beginPlace = true;
     }
 
     void OnDrawGizmos()

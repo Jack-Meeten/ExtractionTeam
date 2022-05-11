@@ -782,7 +782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  header: Opalium miner
+  header: Opalium miner(50 V, 50 O)
   content: Mines Opalium to build with
 --- !u!1 &1195283731
 GameObject:
@@ -942,7 +942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  header: Vinculum Miner
+  header: Vinculum Miner(50 V, 50 O)
   content: Mines Vinculum to build with
 --- !u!1 &1416716541
 GameObject:
@@ -9941,11 +9941,11 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 5
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -13061,7 +13061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  header: Missile Tower
+  header: Missile Tower(400 V, 350 O)
   content: A heavy hitting, slow shotting tower.
 --- !u!1 &7778912571928800483
 GameObject:
@@ -13222,7 +13222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  header: Railgun Tower
+  header: Railgun Tower(300 V, 300 O)
   content: "An advanced Cannon tower that unleashes a high powered round, stunning
     enemies in the tower\u2019s vicinity."
 --- !u!1 &7778912572021244051
@@ -13458,7 +13458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  header: Quaker Tower
+  header: Quaker Tower(150 V, 150 O)
   content: A special tower that deals an area of effect damage around the tower itself.
 --- !u!1 &7778912572331180772
 GameObject:
@@ -13704,7 +13704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  header: Slowness Tower
+  header: Slowness Tower(75 V, 50 O)
   content: A special tower that leaks controlled bursts of liquid nitrogen, cooling
     and freezing enemies ever so slightly.
 --- !u!1 &7778912572402810660
@@ -13866,7 +13866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  header: Laser PD
+  header: Laser PD(100 V, 125 O)
   content: A Point Defence tower that fires rapid lasers, good for clearing up low
     health creeps or applying a spread of damage across a group.
 --- !u!1 &7778912572409828873
@@ -14027,7 +14027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  header: Mortar Tower
+  header: Mortar Tower(50 V, 75 O)
   content: A basic mortar tower fires a large explosive round that detonates on impact
     dealing large area of effect damage.
 --- !u!1 &7778912572423859834
@@ -14336,7 +14336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  header: Tesla Tower.
+  header: Tesla Tower(300 V, 250 O)
   content: A special tower that deals a large amount of damage in rapid succession.
 --- !u!1 &7778912572559813626
 GameObject:
@@ -14623,7 +14623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  header: Gatling Tower
+  header: Gatling Tower(100 V, 50 O)
   content: A basic Point Defence tower perfect for peppering lots of targets in quick
     succession.
 --- !u!1 &7778912572833402432
@@ -14784,7 +14784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  header: Cannon Tower
+  header: Cannon Tower(50 V, 50 O)
   content: A standard tower that fires heavy bolts dealing considerable damage at
     a decent rate.
 --- !u!1 &7778912572863771139
@@ -15266,7 +15266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  header: Artillery Tower
+  header: Artillery Tower(200 V, 200 O)
   content: An advanced mortar tower that deals a massive amount of damage in a large
     area.
 --- !u!1 &7778912573188624902
@@ -15524,7 +15524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  header: Flamethrower Tower
+  header: Flamethrower Tower(75 V, 75 O)
   content: ' A mid tier Point Defence tower that specialises in applying splash damage
     over a large area.'
 --- !u!1 &7778912573313827149
@@ -15978,7 +15978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682a0d05132599e4daf31683a15547a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  header: Biohazard Tower
+  header: Biohazard Tower(100 V, 75 O)
   content: A special tower that applies a poisoned effect to nearby creeps, dealing
     damage over time.
 --- !u!1 &7778912573544026361
@@ -21125,11 +21125,11 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 5
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -22302,8 +22302,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc118549610456c468876a942b40a537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opalium: 300
-  vinculum: 300
+  opalium: 150
+  vinculum: 150
   placer: {fileID: 7778912573816657683}
   manager: {fileID: 283310453492839963}
   grid: {fileID: 0}
