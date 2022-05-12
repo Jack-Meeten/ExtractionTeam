@@ -28,7 +28,7 @@ public class AudioManager : MonoBehaviour
     void Start()
     {       
         SFX_Volume = 0.75f;
-        OST_Volume = 0.75f;
+        OST_Volume = 0.5f;
         UI_Volume = 0.75f;
 
         SFX_Slider.value = SFX_Volume;
