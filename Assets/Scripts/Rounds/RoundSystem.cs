@@ -79,7 +79,7 @@ public class RoundSystem : MonoBehaviour
 
     [SerializeField] GameObject CameraHolder;
 
-    float expHealth = 1.12f;
+    float expHealth = 1.02f;
 
     void Start()
     {
