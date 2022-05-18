@@ -206,7 +206,7 @@ public class RoundSystem : MonoBehaviour
         InvokeRepeating("SpawnDelay", 0, SpawnInterval);
         foreach (var item in FindObjectOfType<ObjectPool>().GetComponent<ObjectPool>().pooledObjects)
         {
-            item.GetComponent<EnemyStats>().baseHealth = item.GetComponent<EnemyStats>().baseHealth * 1.008f;
+            item.GetComponent<EnemyStats>().baseHealth = item.GetComponent<EnemyStats>().baseHealth * expHealth;
         }
     }
 
