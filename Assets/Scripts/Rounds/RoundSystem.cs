@@ -120,15 +120,15 @@ public class RoundSystem : MonoBehaviour
         if (CurrentEnemiesToSpawn >= 65) CurrentEnemiesToSpawn = 65;
         if (CurrentRound == 25)
         {
-            expHealth = 1.18f;
+            expHealth = 1.06f;
         }
         if (CurrentRound == 25)
         {
-            expHealth = 1.24f;
+            expHealth = 1.12f;
         }
         if (CurrentRound == 35)
         {
-            expHealth = 1.48f;
+            expHealth = 1.24f;
         }
     }
 
