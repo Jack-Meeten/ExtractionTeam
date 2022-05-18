@@ -61,8 +61,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c060603f10f366a40a0cc5c10b62db35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opalium: 50
-  vinculum: 50
+  opalium: 250
+  vinculum: 250
 --- !u!65 &-3452494636570230278
 BoxCollider:
   m_ObjectHideFlags: 0

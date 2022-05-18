@@ -14530,7 +14530,7 @@ MonoBehaviour:
   innerRange: 1
   outerRange: 3.5
   AOERange: 2.5
-  Damage: 25
+  Damage: 20
   rateOfFire: 3
   timeToImpact: 0.01
   projectile: {fileID: 8818276085463265703, guid: 06f11511d2a4c2745a1193c0887f94c6, type: 3}
@@ -14538,7 +14538,10 @@ MonoBehaviour:
   - {fileID: 729283997373446384}
   - {fileID: 217688461857789450}
   - {fileID: 8074272448240147352}
+  shootSound: {fileID: 0}
   target: {fileID: 0}
+  isAnimated: 0
+  _animation: {fileID: 0}
 --- !u!114 &-3413381531621414796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14551,8 +14554,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c060603f10f366a40a0cc5c10b62db35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opalium: 150
-  vinculum: 150
+  opalium: 200
+  vinculum: 200
 --- !u!65 &4822060410375041748
 BoxCollider:
   m_ObjectHideFlags: 0

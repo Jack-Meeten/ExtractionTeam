@@ -4851,8 +4851,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c060603f10f366a40a0cc5c10b62db35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opalium: 100
-  vinculum: 100
+  opalium: 120
+  vinculum: 120
 --- !u!1 &2634393518600885970
 GameObject:
   m_ObjectHideFlags: 0
@@ -5063,7 +5063,7 @@ MonoBehaviour:
   isAnimated: 0
   _animation: {fileID: 0}
   aOE: {fileID: 7436343319874189106}
-  quickTickDamage: 1.1
+  quickTickDamage: 1
 --- !u!65 &6150248051716846272
 BoxCollider:
   m_ObjectHideFlags: 0
