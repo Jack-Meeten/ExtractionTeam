@@ -682,6 +682,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 543450652937635171}
     m_Modifications:
+    - target: {fileID: 144559400320906465, guid: cd2f1ee080eebae4a8d6754d36dd3d50, type: 3}
+      propertyPath: CurrentHealth
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 144559400320906465, guid: cd2f1ee080eebae4a8d6754d36dd3d50, type: 3}
+      propertyPath: StartingHealth
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 6444428230397253506, guid: cd2f1ee080eebae4a8d6754d36dd3d50, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -3674,6 +3682,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 434103203, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: header
+      value: Cannon Tower(40 V, 40 O)
+      objectReference: {fileID: 0}
     - target: {fileID: 938740188, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.62263805
@@ -3694,17 +3706,49 @@ PrefabInstance:
       propertyPath: m_text
       value: Click to continue
       objectReference: {fileID: 0}
+    - target: {fileID: 944864623, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: header
+      value: Laser PD(260 V, 280 O)
+      objectReference: {fileID: 0}
     - target: {fileID: 1047576494, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 069c524ed42cfa048bdc90f8b2238883, type: 3}
+    - target: {fileID: 1147330435, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: header
+      value: Opalium Miner(250 V, 250 O)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186847016, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: header
+      value: Biohazard Tower(180 V, 240 O)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1195283733, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: header
+      value: Vinculum Miner(250 V, 250 O)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305225114, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: header
+      value: Slowness Tower(160 V, 80 O)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765969048, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: header
+      value: Artillery Tower(500 V, 800 O)
+      objectReference: {fileID: 0}
     - target: {fileID: 283310453492839963, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: grid
       value: 
       objectReference: {fileID: 1844433581}
+    - target: {fileID: 7778912571741939949, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: header
+      value: Gatling Tower(240 V, 240 O)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778912572870072035, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: header
+      value: Railgun Tower(800 V, 800 O)
+      objectReference: {fileID: 0}
     - target: {fileID: 7778912573022840107, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: header
-      value: Mortar Tower(150 V, 150 O)
+      value: Mortar Tower(200 V, 200 O)
       objectReference: {fileID: 0}
     - target: {fileID: 7778912573313827137, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: frustumSettings.baseSettings
@@ -3714,6 +3758,10 @@ PrefabInstance:
       propertyPath: frustumSettings.qualitySettings
       value: 
       objectReference: {fileID: 789115442}
+    - target: {fileID: 7778912573741308925, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
+      propertyPath: header
+      value: Flamethrower Tower(120 V, 120 O)
+      objectReference: {fileID: 0}
     - target: {fileID: 8663453637649417141, guid: 26c76ab9004725e469488fc4ac0939a8, type: 3}
       propertyPath: m_Name
       value: GameManager

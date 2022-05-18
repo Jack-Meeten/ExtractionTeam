@@ -9830,7 +9830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f4d1d3127c1e0469b9b72fa2057f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 4
+  Damage: 3
   rateOfFire: 0.1
   range: 2.5
   MuzzleFlash:
@@ -9873,8 +9873,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c060603f10f366a40a0cc5c10b62db35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opalium: 125
-  vinculum: 100
+  opalium: 260
+  vinculum: 280
 --- !u!82 &8066452463490920447
 AudioSource:
   m_ObjectHideFlags: 0

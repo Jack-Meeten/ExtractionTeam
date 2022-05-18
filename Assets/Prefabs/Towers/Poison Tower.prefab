@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c060603f10f366a40a0cc5c10b62db35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opalium: 75
-  vinculum: 100
+  opalium: 180
+  vinculum: 240
 --- !u!65 &7164053337641917140
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -369,4 +369,4 @@ MonoBehaviour:
   _collider: {fileID: 2607727276533106967}
   radius: 1.5
   shootSound: {fileID: 0}
-  tickDamage: 0.05
+  tickDamage: 0.02
