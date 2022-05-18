@@ -79,6 +79,8 @@ public class RoundSystem : MonoBehaviour
 
     [SerializeField] GameObject CameraHolder;
 
+    float expHealth = 1.12f;
+
     void Start()
     {
         TickActive = true;
@@ -116,6 +118,18 @@ public class RoundSystem : MonoBehaviour
 
         // Enemy Cap
         if (CurrentEnemiesToSpawn >= 65) CurrentEnemiesToSpawn = 65;
+        if (CurrentRound == 25)
+        {
+            expHealth = 1.18f;
+        }
+        else if (CurrentRound == 25)
+        {
+            expHealth = 1.24f;
+        }
+        else if (CurrentRound == 35)
+        {
+            expHealth = 1.48f;
+        }
     }
 
     void DayCycle()
