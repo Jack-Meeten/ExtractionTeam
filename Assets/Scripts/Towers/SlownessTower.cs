@@ -8,7 +8,7 @@ public class SlownessTower : DebuffTower
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log(other);
-        other.GetComponent<SplineFinding>().speedModifier = other.GetComponent<SplineFinding>().speedModifier * slowModifier;
+        other.GetComponent<SplineFinding>().speedModifier = slowModifier;
     }
     private void OnTriggerExit(Collider other)
     {
