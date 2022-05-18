@@ -126,7 +126,7 @@ public class RoundSystem : MonoBehaviour
         {
             expHealth = 1.12f;
         }
-        if (CurrentRound == 35)
+        if (CurrentRound == 45)
         {
             expHealth = 1.24f;
         }
